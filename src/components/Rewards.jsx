@@ -161,7 +161,7 @@ const Component = () => {
     </label>
   </div>
 </div>
-        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
           Preview Rewards
         </h1>
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
@@ -190,11 +190,12 @@ const Component = () => {
               ))}
             </div>
             <div className="mt-10 space-y-4">
-              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+              <p className="text-center text-xl text-gray-500" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
                 Get a lot more with higher tiers
               </p>
+              <p className="text-center text-xl text-gray-500" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c'}}> Your current tier: {inviteId}</p>
               <div className="flex pt-3 justify-center">
-                <button className="bg-gray-300 hover:bg-blue-600 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                   Get next tier
                 </button>
               </div>
@@ -207,4 +208,3 @@ const Component = () => {
 };
 
 export default Component;
-
