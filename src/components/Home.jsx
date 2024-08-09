@@ -29,7 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                             alt="Invicon Logo"
                             className="w-8 h-8"
                         />
-                        <h1 className="text-xl font-bold mt-2 font-helvetica">Invicon Rewards</h1>
+                        <h1 className="text-xl font-bold mt-2 font-helvetica">Invicon</h1>
                     </div>
                 </Link>
                 <button className="md:hidden" onClick={toggleSidebar}>
@@ -41,7 +41,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/dashboard"
                     className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'none' }}
+                    style={{ textDecoration: 'underline' }}
                 >
                     <UsersIcon className="h-4 w-4" />
                     Invitations
@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/rewards"
                     className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'none' }}
+                    style={{ textDecoration: 'underline' }}
                 >
                     <GiftIcon className="h-4 w-4" />
                     Rewards
@@ -57,7 +57,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="#"
                     className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'none' }}
+                    style={{ textDecoration: 'underline' }}
                 >
                     <SettingsIcon className="h-4 w-4" />
                     Settings
@@ -68,7 +68,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <div className="grid gap-1">
                     <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium font-helvetica">ABC123</span>
+                        <span className="text-sm font-medium font-helvetica">{InviteId}</span>
                         <button
                             className="bg-transparent p-2 rounded-full"
                             onClick={handleCopyReferralCode}
@@ -119,7 +119,7 @@ const InviteLinkComponent = () => {
                             {inviteLink}
                         </div>
                         <button
-                            className="bg-gray-300 hover:bg-blue-600 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md"
+                            className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md"
                             onClick={handleCopy}
                         >
                             Copy
@@ -233,10 +233,10 @@ const Component = () => {
                     </div>
                 </div>
                 <div className="max-w-3xl mx-auto mt-12">
-                    <h1 className="text-3xl font-bold" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                    <h1 className="text-3xl font-bold" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
                         Invite Rewards
                     </h1>
-                    <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
+                    <p className="text-gray-500" style={{ color: {isDarkMode} ? '#a0aec0' : '#4a5568' }}>
                         Earn rewards by inviting your friends to join.
                     </p>
                 </div>
@@ -257,7 +257,7 @@ const Component = () => {
                     className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
                     style={{ textDecoration: 'none' }}
                 > 
-                <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-600 rounded-md">
+                <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
                                 View Invites
                             </button></Link>
                         </div>
@@ -276,7 +276,7 @@ const Component = () => {
                                 <p className="text-gray-500 dark:text-gray-400"> or pay</p>
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300">${price}</h3>
                                 <button
-                                    className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                                    className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors"
                                     onClick={() => handlePayButton(tier, price)}
                                 >
                                     Buy Now
