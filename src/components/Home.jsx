@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { FiGift as GiftIcon, FiUsers as UsersIcon, FiSettings as SettingsIcon, FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 
 const useQuery = () => {
@@ -10,7 +10,7 @@ const useQuery = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const handleCopyReferralCode = () => {
-        navigator.clipboard.writeText('ABC123');
+        navigator.clipboard.writeText(inviteId);
         alert('Referral code copied to clipboard!');
     };
 
@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
             style={{ backgroundColor: "#282434" }}
         >
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between fixed items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
                         <img
@@ -39,28 +39,28 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
             <nav className="flex flex-col gap-2 mb-10">
                 <Link
+                to="/home"
+                className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
+                style={{ textDecoration: 'underline' }}
+                >
+                    <HomeIcon className="h-4 w-4" />
+                    Home 
+                </Link>
+                <Link
                     to="/dashboard"
-                    className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'underline' }}
+                    className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
+                    style={{ textDecoration: 'none' }}
                 >
                     <UsersIcon className="h-4 w-4" />
                     Invitations
                 </Link>
                 <Link
                     to="/rewards"
-                    className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'underline' }}
+                    className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
+                    style={{ textDecoration: 'none' }}
                 >
                     <GiftIcon className="h-4 w-4" />
                     Rewards
-                </Link>
-                <Link
-                    to="#"
-                    className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'underline' }}
-                >
-                    <SettingsIcon className="h-4 w-4" />
-                    Settings
                 </Link>
             </nav>
 
@@ -131,7 +131,7 @@ const InviteLinkComponent = () => {
     );
 };
 
-const InviteHandler = () => {
+let InviteHandler = () => {
     const query = useQuery();
     const inviteId = query.get('inviteId');
     const usedBy = 'newUser@example.com'; // This should be dynamically set based on the user
@@ -187,12 +187,12 @@ const Component = () => {
 
         fetchInviteData();
     }, []);
-
-    const handlePayButton = (tier, price) => {
+    /*
+    let Pay = (tier, price) => {
         // Handle the payment logic here
         alert(`Purchased ${tier} for $${price}`);
     };
-
+    */
     return (
         <div className="flex">
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -200,7 +200,7 @@ const Component = () => {
                 <div
                     className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
-                        backgroundColor: isDarkMode ? '#101424' : '#282434',
+                        backgroundColor: {isDarkMode} ? '#101424' : '#282434',
                         left: 0,
                         padding: '10px',
                         borderRadius: '5px',
@@ -234,10 +234,12 @@ const Component = () => {
                 </div>
                 <div className="max-w-3xl mx-auto mt-12">
                     <h1 className="text-3xl font-bold" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
-                        Invite Rewards
+                        How it works
                     </h1>
                     <p className="text-gray-500" style={{ color: {isDarkMode} ? '#a0aec0' : '#4a5568' }}>
-                        Earn rewards by inviting your friends to join.
+                        You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
+                        Alternatively, you can buy the tiers to get the rewards if you struggle to invite people. Prices will be shown below. <br />
+                        You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
                     </p>
                 </div>
                 <div className="max-w-3xl mx-auto grid gap-6">
@@ -252,16 +254,17 @@ const Component = () => {
                         <div className="flex items-center justify-between">
                             <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {inviteData.tier}</div>
                            
-                           <Link
-                    to="/dashboard"
-                    className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-                    style={{ textDecoration: 'none' }}
-                > 
-                <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
-                                View Invites
-                            </button></Link>
+                            <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
+                               <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
+                                   View Invites
+                               </button></Link>
                         </div>
                     </div>
+
+                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+                        Tiers
+                    </h1>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
                         {[
                             { tier: 'Tier 1', invites: 12, price: 10 },
@@ -277,7 +280,7 @@ const Component = () => {
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300">${price}</h3>
                                 <button
                                     className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors"
-                                    onClick={() => handlePayButton(tier, price)}
+                                     // onClick={() => handlePayButton(tier, price)}
                                 >
                                     Buy Now
                                 </button>
