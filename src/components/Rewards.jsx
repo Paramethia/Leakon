@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FiGift as GiftIcon, FiUsers as UsersIcon, FiSettings as SettingsIcon, FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiGift as GiftIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
 import './ToggleSwitch.css'; // Importing the CSS file
 
@@ -35,8 +35,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
       <nav className="flex flex-col gap-2 mb-10">
         <Link
+          to="/home"
+          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
+          style={{ textDecoration: 'none' }}
+        >
+          <HomeIcon className="h-4 w-4" />
+          Home
+        </Link>
+        <Link
           to="/dashboard"
-          className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
+          className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
           style={{ textDecoration: 'none' }}
         >
           <UsersIcon className="h-4 w-4" />
@@ -44,19 +52,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </Link>
         <Link
           to="/rewards"
-          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-          style={{ textDecoration: 'none' }}
+          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
+          style={{ textDecoration: 'underline' }}
         >
           <GiftIcon className="h-4 w-4" />
           Rewards
-        </Link>
-        <Link
-          to="#"
-          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted"
-          style={{ textDecoration: 'none' }}
-        >
-          <SettingsIcon className="h-4 w-4" />
-          Settings
         </Link>
       </nav>
 
@@ -64,7 +64,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <div className="grid gap-1">
           <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium font-helvetica">ABC123</span>
+            <span className="text-sm font-medium font-helvetica">{inviteId}</span>
             <button
               className="bg-transparent p-2 rounded-full"
               onClick={handleCopyReferralCode}
@@ -164,6 +164,11 @@ const Component = () => {
         <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
           Preview Rewards
         </h1>
+        <p className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+          Get leaked only fans videos of one of the most famous Only Fans models. This is very few compared to what you will get in each tier. <br />
+          You can get up to 20GB worth of videos in a single tier you unlock <br />
+          Here are the little previews of what you will get below:
+        </p>
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -208,3 +213,4 @@ const Component = () => {
 };
 
 export default Component;
+
