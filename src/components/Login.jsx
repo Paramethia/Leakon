@@ -17,11 +17,10 @@ const Login = () => {
             .then(result => {
                 console.log(result);
                 if (result.data === "Success") {
-                    console.log("Login Success");
-                    // alert('Login successful!');
+                    console.log("Logged");
                     navigate('/home');
                 } else {
-                    alert('Incorrect password! Please try again.');
+                    alert('Incorrect password or email. Try again.');
                 }
             })
             .catch(err => console.log(err));
@@ -61,12 +60,12 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105">Login</button>
+                        <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105"> Login </button>
                     </form>
                    
                   
-                 <p className="my-4  flex">Don't have an account? <Link to='/register' className='text-dark mx-2'>Signup</Link> </p>   <p className="my-4"> </p>
-                  <p><Link to='/request' className='text-dark'>Forgotten Password</Link></p>
+                 <p className="my-4  flex">Don't have an account? <Link to='/register' className='text-dark mx-2'> Register< /Link> </p>   <p className="my-4"> </p>
+                  <p><Link to='/request' className='text-dark'>I forgot the Password</Link></p>
                        
                 </div>
             </div>
