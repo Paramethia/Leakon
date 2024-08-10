@@ -164,7 +164,7 @@ const Component = () => {
         <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           Preview Rewards
         </h1>
-        <p className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+        <p className="text-center dark:text-gray-300 text-gray-700 text-2xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           Get leaked only fans videos of one of the most famous Only Fans models. This is very few compared to what you will get in each tier. <br />
           You can get up to 20GB worth of videos in a single tier you unlock <br />
           Here are the little previews of what you will get below:
