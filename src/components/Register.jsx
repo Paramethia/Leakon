@@ -19,17 +19,17 @@ const Register = () => {
 
         axios.post('https://invicon-server.onrender.com/register', { name, email, password })
             .then(result => {
-                if (result.data === "Already registered") {
-                    alert("E-mail already registered! Please Login to proceed.");
-                    navigate('/login');
-                } else {
+                if (result.data === "Account registered. Login to proceed.") {
+                    alert("Account registered. Login to proceed.");
+                    navigate('/home');
+                }/* else {
                     alert("Verification email sent. Please check your inbox.");
                     setStep(2);
-                }
+                }*/
             })
             .catch(err => console.log(err));
     }
-
+    /*
     const handleVerify = (event) => {
         event.preventDefault();
 
@@ -44,7 +44,7 @@ const Register = () => {
             })
             .catch(err => console.log(err));
     }
-
+    */
     return (
         <div className="flex h-screen overflow-hidden">
             <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)' }}></div>
@@ -87,7 +87,7 @@ const Register = () => {
                                     </label>
                                     <input
                                         type="password"
-                                        placeholder="Enter Password"
+                                        placeholder="Create password"
                                         className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                         id="exampleInputPassword1"
                                         onChange={(event) => setPassword(event.target.value)}
@@ -99,6 +99,7 @@ const Register = () => {
                             <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Login</Link></p>
                         </>
                     )}
+                    { /*
                     {step === 2 && (
                         <>
                             <h3 className="mb-6 text-2xl font-bold text-dark">Verify Email</h3>
@@ -120,6 +121,7 @@ const Register = () => {
                             </form>
                         </>
                     )}
+                    */ }
                 </div>
             </div>
         </div>
