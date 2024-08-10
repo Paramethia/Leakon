@@ -11,7 +11,7 @@ const RequestPasswordReset = () => {
       await axios.post('https://invicon-server.onrender.com/request-password-reset', { email });
       setMessage('Password reset email sent');
     } catch (error) {
-      setMessage('Error sending password reset email');
+      setMessage('Invalid email, pal.');
     }
   };
 
@@ -22,11 +22,11 @@ const RequestPasswordReset = () => {
                 <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
                 <div className="bg-white p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
-    <h3 className="mb-6 text-2xl text-center font-bold  text-dark">Reset password</h3>
+    <h3 className="mb-6 text-2xl text-center font-bold  text-dark"></h3>
 
       
       <form onSubmit={handleSubmit}>
-      <div className="mb-4 text-left">
+      <div className="mb-4 text-left">Reset password
 
         <input
           type="email"
@@ -39,7 +39,7 @@ const RequestPasswordReset = () => {
         </div>
         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105">Send Reset Email</button>
       </form>
-      {message && <h5 className='text-center pt-4'>{message}</h5>}
+      {message && <h6 className='text-center pt-4'>{message}</h6>}
     </div>
     </div>
     </div>
