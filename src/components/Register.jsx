@@ -10,7 +10,7 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    //const [verificationCode, setVerificationCode] = useState('');
+    const [verificationCode, setVerificationCode] = useState('');
     const [step, setStep] = useState(1);
     const navigate = useNavigate();
 
@@ -22,14 +22,14 @@ const Register = () => {
                 if (result.data === "Account registered. Login to proceed.") {
                     alert("Account registered. Login to proceed.");
                     navigate('/home');
-                }/* else {
+                } else {
                     alert("Verification email sent. Please check your inbox.");
                     setStep(2);
-                }*/
+                }
             })
             .catch(err => console.log(err));
     }
-    /*
+    
     const handleVerify = (event) => {
         event.preventDefault();
 
@@ -44,7 +44,7 @@ const Register = () => {
             })
             .catch(err => console.log(err));
     }
-    */
+    
     return (
         <div className="flex h-screen overflow-hidden">
             <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)' }}></div>
@@ -99,7 +99,7 @@ const Register = () => {
                             <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Login</Link></p>
                         </>
                     )}
-                    { /*
+                    
                     {step === 2 && (
                         <>
                             <h3 className="mb-6 text-2xl font-bold text-dark">Verify Email</h3>
@@ -121,7 +121,7 @@ const Register = () => {
                             </form>
                         </>
                     )}
-                    */ }
+                    
                 </div>
             </div>
         </div>
