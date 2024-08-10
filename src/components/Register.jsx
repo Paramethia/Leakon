@@ -10,8 +10,8 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [verificationCode, setVerificationCode] = useState('');
-    const [step, setStep] = useState(1);
+    //const [verificationCode, setVerificationCode] = useState('');
+    //const [step, setStep] = useState(1);
     const navigate = useNavigate();
 
     const handleRegister = (event) => {
