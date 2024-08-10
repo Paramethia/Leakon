@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
             style={{ backgroundColor: "#282434" }}
         >
-            <div className="flex justify-between fixed items-center mb-6">
+            <div className="flex justify-between items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
                         <img
@@ -200,7 +200,7 @@ const Component = () => {
                 <div
                     className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
-                        backgroundColor: {isDarkMode} ? '#101424' : '#282434',
+                        backgroundColor: isDarkMode ? '#101424' : '#282434',
                         left: 0,
                         padding: '10px',
                         borderRadius: '5px',
@@ -233,10 +233,10 @@ const Component = () => {
                     </div>
                 </div>
                 <div className="max-w-3xl mx-auto mt-12">
-                    <h1 className="text-3xl font-bold" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+                    <h1 className="text-3xl font-bold" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                         How it works
                     </h1>
-                    <p className="text-gray-500" style={{ color: {isDarkMode} ? '#a0aec0' : '#4a5568' }}>
+                    <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
                         Alternatively, you can buy the tiers to get the rewards if you struggle to invite people. Prices will be shown below. <br />
                         You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
@@ -261,7 +261,7 @@ const Component = () => {
                         </div>
                     </div>
 
-                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                         Tiers
                     </h1>
 
