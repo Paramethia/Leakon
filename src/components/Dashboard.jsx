@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
-import './ToggleSwitch.css'; // Importing the CSS file
+import './ToggleSwitch.css';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const handleCopyReferralCode = () => {
