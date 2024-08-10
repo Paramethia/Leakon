@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
-import './ToggleSwitch.css'; // Importing the CSS file
+import './ToggleSwitch.css';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const handleCopyReferralCode = () => {
@@ -161,10 +161,10 @@ const Component = () => {
     </label>
   </div>
 </div>
-        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           Preview Rewards
         </h1>
-        <p className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+        <p className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           Get leaked only fans videos of one of the most famous Only Fans models. This is very few compared to what you will get in each tier. <br />
           You can get up to 20GB worth of videos in a single tier you unlock <br />
           Here are the little previews of what you will get below:
@@ -195,10 +195,10 @@ const Component = () => {
               ))}
             </div>
             <div className="mt-10 space-y-4">
-              <p className="text-center text-xl text-gray-500" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
+              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                 Get a lot more with higher tiers
               </p>
-              <p className="text-center text-xl text-gray-500" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c'}}> Your current tier: {inviteId}</p>
+              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
               <div className="flex pt-3 justify-center">
                 <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                   Get next tier
