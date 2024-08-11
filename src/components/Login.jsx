@@ -8,13 +8,9 @@ import './Login.css'; // Make sure to import your CSS file
 
 const Header = () => {
     return ( 
-    <Header>
-        <div>
         <Helmet>
             <title> Invicon - login </title>
-       </Helmet>
-       </div>
-    </Header>
+        </Helmet>
     );
 };
 
