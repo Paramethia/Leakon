@@ -9,13 +9,9 @@ import './Register.css';
 
 const Header = () => {
     return ( 
-    <Header>
-        <div>
         <Helmet>
             <title> Invicon - register </title>
-       </Helmet>
-       </div>
-    </Header>
+        </Helmet>
     );
 };
 
