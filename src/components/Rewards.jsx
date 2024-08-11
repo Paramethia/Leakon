@@ -200,9 +200,11 @@ const Component = () => {
               </p>
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
               <div className="flex pt-3 justify-center">
+                <a href="https://t.me/daemozon">
                 <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                   Get next tier
                 </button>
+                </a>
               </div>
             </div>
           </div>
