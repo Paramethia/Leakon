@@ -1,8 +1,21 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
 import './ToggleSwitch.css';
+
+const Header = () => {
+    return ( 
+    <Header>
+        <div>
+        <Helmet>
+            <title> Invicon - rewards </title>
+        </Helmet>
+       </div>
+    </Header>
+    );
+};
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const handleCopyReferralCode = () => {
