@@ -1,10 +1,23 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import { useState } from 'react';
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
+
+const Header = () => {
+    return ( 
+    <Header>
+        <div>
+        <Helmet>
+            <title> Invicon - register </title>
+       </Helmet>
+       </div>
+    </Header>
+    );
+};
 
 const Register = () => {
     const [name, setName] = useState('');
