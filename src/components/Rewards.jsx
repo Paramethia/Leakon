@@ -7,13 +7,9 @@ import './ToggleSwitch.css';
 
 const Header = () => {
     return ( 
-    <Header>
-        <div>
         <Helmet>
             <title> Invicon - rewards </title>
         </Helmet>
-       </div>
-    </Header>
     );
 };
 
