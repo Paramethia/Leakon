@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 
@@ -9,26 +11,23 @@ const useQuery = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+
+    toast.configure();
+
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText("ABC123");
-        alert('Referral code copied to clipboard!');
+        toast.success('Referral code copied to clipboard!', {
+            position: toast.POSITION.BOTTOM_CENTER,
+            autoClose: 3000,
+        });
     };
 
     return (
-        <aside
-            className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
-                isOpen ? 'translate-x-0' : '-translate-x-full'
-            } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
-            style={{ backgroundColor: "#282434" }}
-        >
+        <aside className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${ isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`} style={{ backgroundColor: "#282434" }}>
             <div className="flex justify-between items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
-                        <img
-                            src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png"
-                            alt="Invicon Logo"
-                            className="w-8 h-8"
-                        />
+                        <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8"/>
                         <h1 className="text-xl font-bold mt-2 font-helvetica">Invicon</h1>
                     </div>
                 </Link>
@@ -38,29 +37,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </div>
 
             <nav className="flex flex-col gap-2 mb-10">
-                <Link
-                to="/home"
-                className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-                style={{ textDecoration: 'underline' }}
-                >
-                    <HomeIcon className="h-4 w-4" />
-                    Home 
+                <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'underline' }}>
+                    <HomeIcon className="h-4 w-4" /> Home 
                 </Link>
-                <Link
-                    to="/dashboard"
-                    className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-                    style={{ textDecoration: 'none' }}
-                >
-                    <UsersIcon className="h-4 w-4" />
-                    Invitations
+                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'none' }}>
+                    <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
-                <Link
-                    to="/rewards"
-                    className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-                    style={{ textDecoration: 'none' }}
-                >
-                    <GiftIcon className="h-4 w-4" />
-                    Rewards
+                <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'none' }}>
+                    <GiftIcon className="h-4 w-4" /> Rewards
                 </Link>
             </nav>
 
@@ -69,10 +53,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
                     <div className="flex items-center justify-between">
                         <span className="text-sm font-medium font-helvetica">ABC123</span>
-                        <button
-                            className="bg-transparent p-2 rounded-full"
-                            onClick={handleCopyReferralCode}
-                        >
+                        <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
                             <CopyIcon className="h-4 w-4" />
                         </button>
                     </div>
@@ -87,22 +68,33 @@ const InviteLinkComponent = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        const fetchInviteLink = async () => {
-            try {
-                const response = await axios.post('https://invicon-server.onrender.com/generate-invite', { email: 'user@example.com' }); // Replace with dynamic email
-                setInviteLink(response.data.inviteLink);
-            } catch (error) {
-                setError('Error generating invite link');
-                console.error('Error generating invite link:', error);
-            }
-        };
-
-        fetchInviteLink();
+        const existingLink = localStorage.getItem('inviteLink');
+        if (existingLink) {
+            setInviteLink(existingLink);
+        } else {
+            const fetchInviteLink = async () => {
+                try {
+                    const response = await axios.post('https://invicon-server.onrender.com/generate-invite', { email: 'user@example.com' });
+                    setInviteLink(response.data.inviteLink);
+                    localStorage.setItem('inviteLink', response.data.inviteLink);
+                } catch (error) {
+                    setError('Error generating invite link');
+                    console.error('Error generating invite link:', error);
+                }
+            };
+    
+            fetchInviteLink();
+        }
     }, []);
+
+    toast.configure();
 
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
-        alert('Invite link copied to clipboard!');
+        toast.success('Invite link copied to clipboard!', {
+            position: toast.POSITION.BOTTOM_CENTER,
+            autoClose: 3000,
+        });
     };
 
     return (
@@ -141,7 +133,7 @@ let InviteHandler = () => {
             try {
                 const response = await axios.get(`https://invicon-server.onrender.com/invite/${inviteId}`, { params: { usedBy } });
                 console.log(response.data);
-                // Redirect to registration or login page
+                window.location.href = "/register"; // Redirect to the registration page
             } catch (err) {
                 console.error(err.response.data);
             }
@@ -152,11 +144,6 @@ let InviteHandler = () => {
         }
     }, [inviteId]);
 
-    return (
-        <div>
-            {/* Render your registration or login component here */}
-        </div>
-    );
 };
 
 const Component = () => {
@@ -181,7 +168,7 @@ const Component = () => {
                 const response = await axios.get('https://invicon-server.onrender.com/invite-data', { params: { email: 'user@example.com' } }); // Replace with dynamic email
                 setInviteData(response.data);
             } catch (error) {
-                console.error('Error fetching invite data:', error);
+                console.error('Error fetching invite data', error);
             }
         };
 
@@ -257,7 +244,8 @@ const Component = () => {
                             <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
                                <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
                                    View Invites
-                               </button></Link>
+                               </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -274,10 +262,10 @@ const Component = () => {
                             { tier: 'Tier 5', invites: 100, price: 100 },
                         ].map(({ tier, invites, price }, index) => (
                             <div key={index} className="text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
-                                <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white">{tier}</h2>
-                                <p className="text-gray-500 font-semibold dark:text-gray-400">{invites} invites</p>
-                                <p className="text-gray-500 dark:text-gray-400"> or pay</p>
-                                <h3 className="text-gray-700 font-bold dark:text-gray-300">${price}</h3>
+                                <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
+                                <p className="text-gray-500 font-semibold dark:text-gray-400"> {invites} invites </p>
+                                <p className="text-gray-500 dark:text-gray-400"> or pay </p>
+                                <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
                                 <a href="https://t.me/daemozon">
                                 <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
                                     Buy Now
@@ -287,6 +275,7 @@ const Component = () => {
                         ))}
                     </div>
                 </div>
+                <InvitHandler />
             </main>
         </div>
     );
