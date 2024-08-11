@@ -1,9 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Make sure to import your CSS file
+
+const Header = () => {
+    return ( 
+    <Header>
+        <div>
+        <Helmet>
+            <title> Invicon - login </title>
+       </Helmet>
+       </div>
+    </Header>
+    );
+};
 
 const Login = () => {
     const [email, setEmail] = useState('');
