@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+
+const Header = () => {
+    return ( 
+    <Header>
+        <div>
+        <Helmet>
+            <title> Invicon - home </title>
+            <meta name="description" content="Welcome to Invicon" />
+       </Helmet>
+       </div>
+    </Header>
+    );
+};
 
 const useQuery = () => {
     return new URLSearchParams(useLocation().search);
