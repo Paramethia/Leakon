@@ -9,14 +9,10 @@ import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
     return ( 
-    <Header>
-        <div>
         <Helmet>
             <title> Invicon - home </title>
             <meta name="description" content="Welcome to Invicon" />
-       </Helmet>
-       </div>
-    </Header>
+        </Helmet>
     );
 };
 
