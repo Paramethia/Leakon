@@ -275,7 +275,7 @@ const Component = () => {
                         ))}
                     </div>
                 </div>
-                <InvitHandler />
+                <InviteHandler />
             </main>
         </div>
     );
