@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer, Bounce } from 'react-toastify';
+import'react-toastify/dist/ReactToastify.css';
 import './Register.css';
 
 const Header = () => {
@@ -28,11 +30,31 @@ const Register = () => {
 
         axios.post('https://invicon-server.onrender.com/register', { name, email, password })
             .then(result => {
-                if (result.data === "Account registered. Login to proceed.") {
-                    alert("Account registered. Login to proceed.");
+                if (result.data === "Account registered.", { name, email, password } ) {
+                    toast.error("Account registered. Login to proceed.", {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Bounce,
+                    });
                     navigate('/home');
                 } else {
-                    alert("Verification email sent. Please check your inbox.");
+                    toast.succcess("Verification email sent. Please check your inbox.", {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Bounce,
+                    });
                     setStep(2);
                 }
             })
@@ -48,13 +70,29 @@ const Register = () => {
                     alert("Registered successfully!.");
                     navigate('/home');
                 } else {
-                    alert(result.data);
+                    toast.error(result.data, {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Bounce,
+                    });
                 }
             })
             .catch(err => console.log(err));
     }
     
     return (
+        <>
+        
+        <Header />
+
+        <ToastContainer />
+
         <div className="flex h-screen overflow-hidden">
             <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)' }}></div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
@@ -134,6 +172,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
