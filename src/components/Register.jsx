@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { toast, ToastContainer, Bounce } from 'react-toastify';
+import { toast, ToastContainer, Bounce, Flip } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
 import './Register.css';
 
@@ -31,7 +31,7 @@ const Register = () => {
         axios.post('https://invicon-server.onrender.com/register', { name, email, password })
             .then(result => {
                 if (result.data === "Account registered.", { name, email, password } ) {
-                    toast.error("Account registered. Login to proceed.", {
+                    toast.warn("Account registered. Login to proceed.", {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -40,7 +40,7 @@ const Register = () => {
                         draggable: true,
                         progress: undefined,
                         theme: "dark",
-                        transition: Bounce,
+                        transition: Flip,
                     });
                     navigate('/home');
                 } else {
