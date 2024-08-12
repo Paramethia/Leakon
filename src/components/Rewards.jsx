@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer, Zoom } from 'react-toastify';
+import'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
 import './ToggleSwitch.css';
@@ -15,11 +17,27 @@ const Header = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const handleCopyReferralCode = () => {
-    navigator.clipboard.writeText('ABC123');
-    alert('Referral code copied to clipboard!');
+    navigator.clipboard.writeText('Code');
+    toast.success('Copied to clipboard! 🗒️', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+    });
   };
 
   return (
+    <>
+
+    <Header />
+
+    <ToastContainer />
+
     <aside
       className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -84,6 +102,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </div>
       </div>
     </aside>
+    </>
   );
 };
 
