@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer, Zoom } from 'react-toastify';
+import'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import './ToggleSwitch.css';
@@ -14,12 +16,29 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+
   const handleCopyReferralCode = () => {
-    navigator.clipboard.writeText('ABC123');
-    alert('Referral code copied to clipboard!');
+    navigator.clipboard.writeText('Code');
+    toast.success('Copied to clipboard! 🗒️', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+    });
   };
 
   return (
+    <>
+
+    <Header />
+
+    <ToastContainer />
+
     <aside
       className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -27,13 +46,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       style={{ backgroundColor: "#282434" }}
     >
       <div className="flex justify-between items-center mb-6">
-        <Link to="/home" style={{ textDecoration: 'none' }}>
+        <Link to="/home" style={{ textDecoration: 'none' }}> 
           <div className="text-white flex items-center gap-2">
-            <img
-              src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png"
-              alt="Invicon Logo"
-              className="w-8 h-8"
-            />
+            <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
             <h1 className="text-xl font-bold mt-2 font-helvetica">Invicon</h1>
           </div>
         </Link>
@@ -43,29 +58,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </div>
 
       <nav className="flex flex-col gap-2 mb-10">
-        <Link
-          to="/home"
-          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-          style={{ textDecoration: 'none' }}
-        >
-          <HomeIcon className="h-4 w-4" />
-          Home
+        <Link nto="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'none' }}>
+          <HomeIcon className="h-4 w-4" /> Home
         </Link>
-        <Link
-          to="/dashboard"
-          className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-          style={{ textDecoration: 'underline' }}
-        >
-          <UsersIcon className="h-4 w-4" />
-          Invitations
+        <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'underline' }}>
+          <UsersIcon className="h-4 w-4" /> Invitations
         </Link>
-        <Link
-          to="/rewards"
-          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-          style={{ textDecoration: 'none' }}
-        >
-          <GiftIcon className="h-4 w-4" />
-          Rewards
+        <Link to="/rewards" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'none' }}>
+          <GiftIcon className="h-4 w-4" /> Rewards
         </Link>
       </nav>
 
@@ -84,10 +84,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </div>
       </div>
     </aside>
+    </>
   );
 };
 
 const Component = () => {
+
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -104,7 +106,9 @@ const Component = () => {
 
   return (
     <div className="flex h-screen">
+
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+
       <main className="flex-1 flex flex-col p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
         
       <div
@@ -123,11 +127,7 @@ const Component = () => {
   </div>
   <Link to="/home" style={{ textDecoration: 'none' }} className="flex-1 md:flex-none">
     <div className="text-white flex items-center gap-2 justify-center md:justify-start">
-      <img
-        src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png"
-        alt=""
-        className="w-8 h-8"
-      />
+      <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8"/>
       <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
     </div>
   </Link>
@@ -146,7 +146,7 @@ const Component = () => {
         <div className="flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
  
         <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
-          Your invites dahsboard
+          Your invites dashboard
         </h1>
 
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-between">
