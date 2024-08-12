@@ -22,7 +22,7 @@ const useQuery = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
-    toast.configure();
+    // toast.configure();
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText("ABC123");
@@ -97,7 +97,7 @@ const InviteLinkComponent = () => {
         }
     }, []);
 
-    toast.configure();
+    // toast.configure();
 
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
