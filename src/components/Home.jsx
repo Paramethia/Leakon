@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
@@ -20,11 +20,11 @@ const useQuery = () => {
     return new URLSearchParams(useLocation().search);
 };
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen, toggleSidebar, inviteLink }) => {
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
-        toast.success('Referral code copied to clipboard!', {
+        toast.success('Copied to clipboard!', {
            position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
