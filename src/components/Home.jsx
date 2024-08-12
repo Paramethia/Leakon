@@ -178,6 +178,8 @@ let InviteHandler = () => {
 };
 
 const Component = () => {
+    const inviteLink = useState('');
+
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [inviteData, setInviteData] = useState({ invites: 0, tier: 0 });
