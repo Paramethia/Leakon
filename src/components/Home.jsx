@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
@@ -22,17 +22,24 @@ const useQuery = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
-    // toast.configure();
-
     const handleCopyReferralCode = () => {
-        navigator.clipboard.writeText("ABC123");
+        navigator.clipboard.writeText(inviteLink);
         toast.success('Referral code copied to clipboard!', {
-            position: toast.POSITION.BOTTOM_CENTER,
-            autoClose: 3000,
+           position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
         });
     };
 
     return (
+        <>
+        <ToastContainer />
         <aside className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${ isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`} style={{ backgroundColor: "#282434" }}>
             <div className="flex justify-between items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
@@ -70,10 +77,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </div>
             </div>
         </aside>
+        </>
     );
 };
 
 const InviteLinkComponent = () => {
+
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
 
@@ -97,17 +106,28 @@ const InviteLinkComponent = () => {
         }
     }, []);
 
-    // toast.configure();
-
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
         toast.success('Invite link copied to clipboard!', {
-            position: toast.POSITION.BOTTOM_CENTER,
-            autoClose: 3000,
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
         });
     };
 
     return (
+        <>
+
+        <Header />
+        
+        <ToastContainer />
+
         <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Your Invite Link</h2>
@@ -130,6 +150,7 @@ const InviteLinkComponent = () => {
                 )}
             </div>
         </div>
+        </>
     );
 };
 
