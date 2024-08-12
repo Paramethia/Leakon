@@ -17,7 +17,7 @@ const Header = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const handleCopyReferralCode = () => {
-    navigator.clipboard.writeText('ABC123');
+    navigator.clipboard.writeText('Code');
     toast.success('Code copied to clipboard! 🗒️', {
         position: "top-center",
         autoClose: 5000,
