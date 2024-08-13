@@ -43,8 +43,8 @@ const Register = () => {
                     navigate('/login');
                 } else {
                     toast.info("Welcome to Invicon 😉", {
-                        position: "top-center",
-                        autoClose: 3500,
+                       position: "top-right",
+                        autoClose: 5000,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
