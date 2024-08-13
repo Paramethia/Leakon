@@ -24,11 +24,10 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post('https://invicon-server.onrender.com/login', { email, password })
+        axios.post('https://invicon-back-end.onrender.com/login', { email, password })
             .then(result => {
-                console.log(result);
+                console.log('Server response:', result);
                 if (result.data === "Success") {
-                    console.log("Logged");
                     navigate('/home');
                 } else {
                     toast.error('Incorrect password or email. Try again.', {
@@ -44,7 +43,11 @@ const Login = () => {
                     });
                 }
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.error('Login error:', err);
+                toast.error('Login failed. Please try again later.');
+            }
+        );
     }
 
     return (
