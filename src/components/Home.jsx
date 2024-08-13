@@ -93,7 +93,7 @@ const InviteLinkComponent = () => {
         } else {
             const fetchInviteLink = async () => {
                 try {
-                    const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
+                    const response = await axios.post('https://invicon-server.onrender.com/generate-invite', { email: 'user@example.com' });
                     setInviteLink(response.data.inviteLink);
                     localStorage.setItem('inviteLink', response.data.inviteLink);
                 } catch (error) {
@@ -159,7 +159,7 @@ let InviteHandler = () => {
     useEffect(() => {
         const useInvite = async () => {
             try {
-                const response = await axios.get(`https://invicon-back-end.onrender.com/invite/${inviteId}`, { params: { usedBy } });
+                const response = await axios.get(`https://invicon-server.onrender.com/invite/${inviteId}`, { params: { usedBy } });
                 console.log(response.data);
                 window.location.href = "/register"; // Redirect to the registration page
             } catch (err) {
@@ -195,7 +195,7 @@ const Component = () => {
     useEffect(() => {
         const fetchInviteData = async () => {
             try {
-                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { params: { email: 'user@example.com' } }); // Replace with dynamic email
+                const response = await axios.get('https://invicon-server.onrender.com/invite-data', { params: { email: 'user@example.com' } }); // Replace with dynamic email
                 setInviteData(response.data);
             } catch (error) {
                 console.error('Error fetching invite data', error);
