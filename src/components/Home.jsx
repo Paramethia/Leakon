@@ -93,7 +93,7 @@ const InviteLinkComponent = () => {
         } else {
             const fetchInviteLink = async () => {
                 try {
-                    const response = await axios.post('https://invicon-server.onrender.com/generate-invite', { email: 'user@example.com' });
+                    const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
                     setInviteLink(response.data.inviteLink);
                     localStorage.setItem('inviteLink', response.data.inviteLink);
                 } catch (error) {
@@ -140,10 +140,7 @@ const InviteLinkComponent = () => {
                         <div className="bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-2 text-lg font-medium text-gray-700 dark:text-white">
                             {inviteLink}
                         </div>
-                        <button
-                            className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md"
-                            onClick={handleCopy}
-                        >
+                        <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={handleCopy}>
                             Copy
                         </button>
                     </>
@@ -162,7 +159,7 @@ let InviteHandler = () => {
     useEffect(() => {
         const useInvite = async () => {
             try {
-                const response = await axios.get(`https://invicon-server.onrender.com/invite/${inviteId}`, { params: { usedBy } });
+                const response = await axios.get(`https://invicon-back-end.onrender.com/invite/${inviteId}`, { params: { usedBy } });
                 console.log(response.data);
                 window.location.href = "/register"; // Redirect to the registration page
             } catch (err) {
@@ -198,7 +195,7 @@ const Component = () => {
     useEffect(() => {
         const fetchInviteData = async () => {
             try {
-                const response = await axios.get('https://invicon-server.onrender.com/invite-data', { params: { email: 'user@example.com' } }); // Replace with dynamic email
+                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { params: { email: 'user@example.com' } }); // Replace with dynamic email
                 setInviteData(response.data);
             } catch (error) {
                 console.error('Error fetching invite data', error);
@@ -235,11 +232,7 @@ const Component = () => {
                     </div>
                     <Link to="/home" style={{ textDecoration: 'none' }} className="flex-1 md:flex-none">
                         <div className="text-white flex items-center gap-2 justify-center md:justify-start">
-                            <img
-                                src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png"
-                                alt=""
-                                className="w-8 h-8"
-                            />
+                            <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
                             <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
                         </div>
                     </Link>
