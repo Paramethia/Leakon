@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { toast, ToastContainer, Bounce } from 'react-toastify';
+import { toast, ToastContainer, Flip, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Register.css';
 
@@ -26,10 +26,10 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-        axios.post('https://invicon-back-end.onrender.com/register', { name, email, password })
+        axios.post('https://invicon-back-end.com/register', { email, password })
             .then(result => {
-                if (result.data === "Account has been registered.. Go log in") {
-                    toast.success("Account registered successfully! Redirecting to homepage...", {
+                if (result.data === "Account has already been registered. Please log in.") {
+                    toast.warn("Already registered, pal. Go log in", {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -38,24 +38,24 @@ const Register = () => {
                         draggable: true,
                         progress: undefined,
                         theme: "dark",
-                        transition: Bounce,
+                        transition: Flip,
+                    });
+                    navigate('/login');
+                } else {
+                    toast.info("Welcome to Invicon 😉", {
+                        position: "top-center",
+                        autoClose: 3500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Slide,
                     });
                     navigate('/home');
-                } else {
-                    toast.error("Something went wrong. Please try again.", {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        transition: Bounce,
-                    });
                 }
             })
-            .catch(err => console.log(err));
     }
     
     return (
