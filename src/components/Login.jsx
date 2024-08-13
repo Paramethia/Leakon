@@ -24,7 +24,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post('https://invicon-server.onrender.com/login', { email, password })
+        axios.post('https://invicon-back-end.onrender.com/login', { email, password })
             .then(result => {
                 console.log(result);
                 if (result.data === "Success") {
