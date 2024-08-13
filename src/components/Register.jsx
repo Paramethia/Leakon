@@ -56,7 +56,8 @@ const Register = () => {
                     navigate('/home');
                 }
             })
-    }
+            .catch(err => console.log(err));
+        }
     
     return (
         <>
