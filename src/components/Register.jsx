@@ -12,7 +12,7 @@ import './Register.css';
 const Header = () => {
     return ( 
         <Helmet>
-            <title> Invicon - Register </title>
+            <title> Invicon - register </title>
         </Helmet>
     );
 };
@@ -44,7 +44,7 @@ const Register = () => {
                 } else {
                     toast.info("Welcome to Invicon 😉", {
                        position: "top-right",
-                        autoClose: 5000,
+                        autoClose: 3500,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
