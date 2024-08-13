@@ -28,37 +28,41 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-        axios.post('https://invicon-back-end.com/register', { name, email, password })
-            .then(result => {
-                if (result.data === "Account registered.", { name, email, password } ) {
-                    toast.warn("Account registered. Login to proceed.", {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        transition: Flip,
-                    });
-                    navigate('/home');
-                } else {
-                    toast.succcess("Verification email sent. Please check your inbox.", {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        transition: Bounce,
-                    });
-                    setStep(2);
-                }
-            })
-            .catch(err => console.log(err));
+        const handleRegister = (event) => {
+    event.preventDefault();
+
+    axios.post('https://invicon-back-end.onrender.com/register', { name, email, password })
+        .then(result => {
+            if (result.data === "Account has been registered.. Go log in") {
+                toast.warn("Account registered. Login to proceed.", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Flip,
+                });
+                navigate('/login');
+            } else {
+                toast.success("Verification email sent. Please check your inbox.", {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Bounce,
+                });
+                setStep(2);
+            }
+        })
+        .catch(err => console.log(err));
+}
     }
     
     const handleVerify = (event) => {
