@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
-import { toast, ToastContainer, Zoom } from 'react-toastify';
+import { toast, ToastContainer, Flip, Zoom } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
@@ -16,6 +16,7 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+
   const handleCopyReferralCode = () => {
     navigator.clipboard.writeText('Code');
     toast.success('Code copied to clipboard! 🗒️', {
@@ -86,6 +87,21 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 };
 
 const Component = () => {
+
+  let Warning = () => {
+      toast.warn("This page is still being working on", {
+         position: "top-center",
+         autoClose: 5000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         progress: undefined,
+         theme: "dark",
+         transition: Flip,        
+      });
+  };
+
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -101,7 +117,8 @@ const Component = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <>
+    <div className="flex h-screen" onLoad={Warning()}>
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <main className="flex-1 flex flex-col p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
         
@@ -140,7 +157,7 @@ const Component = () => {
         <div className="flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
     
           <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: {isDarkMode} ? '#ffffff' : '#1a202c' }}>
-            Your invites dahsboard
+            Your dashboard
           </h1>
 
           <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-between">
@@ -183,6 +200,7 @@ const Component = () => {
         </div>
       </main>
     </div>
+    </>
   );
 };
 
