@@ -28,7 +28,7 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-        axios.post('https://invicon-server.back-end.com/register', { name, email, password })
+        axios.post('https://invicon-back-end.com/register', { name, email, password })
             .then(result => {
                 if (result.data === "Account registered.", { name, email, password } ) {
                     toast.warn("Account registered. Login to proceed.", {
