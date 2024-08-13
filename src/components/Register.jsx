@@ -32,7 +32,7 @@ const Register = () => {
                 if (result.data === "Account has already been registered. Please log in.") {
                     toast.warn("Already registered, pal. Go log in", {
                         position: "top-center",
-                        autoClose: 5000,
+                        autoClose: 4000,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
@@ -41,19 +41,10 @@ const Register = () => {
                         theme: "dark",
                         transition: Flip,
                     });
-                    navigate('/login');
+                    setTimeout(() => {
+                        navigate('/login');
+                    }, 4000);
                 } else {
-                    toast.info("Welcome to Invicon 😉", {
-                        position: "top-right",
-                        autoClose: 3500,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        transition: Slide,
-                    });
                     navigate('/home');
                 }
             })
