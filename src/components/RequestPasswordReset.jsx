@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Header = () => {
     return (
         <Helmet>
-            <title> Invicon - Login </title>
+            <title> Invicon - reset request </title>
         </Helmet>
     );
 };
