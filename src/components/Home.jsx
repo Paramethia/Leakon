@@ -87,10 +87,10 @@ const InviteLinkComponent = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        const existingLink = localStorage.getItem('inviteLink');
-        if (existingLink) {
-            setInviteLink(existingLink);
-        } else {
+        // const existingLink = localStorage.getItem('inviteLink');
+    // if (existingLink) {
+            //setInviteLink(existingLink);
+      //  } else {
             const fetchInviteLink = async () => {
                 try {
                     const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
@@ -103,7 +103,7 @@ const InviteLinkComponent = () => {
             };
     
             fetchInviteLink();
-        }
+      //  }
     }, []);
 
     const handleCopy = () => {
