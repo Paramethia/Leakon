@@ -23,7 +23,7 @@ const useQuery = () => {
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     const handleCopyReferralCode = () => {
-        navigator.clipboard.writeText("No"y);
+        navigator.clipboard.writeText("No");
         toast.success('Copied to clipboard! 🗒️', {
            position: "top-center",
             autoClose: 5000,
