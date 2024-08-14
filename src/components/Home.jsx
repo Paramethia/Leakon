@@ -20,11 +20,11 @@ const useQuery = () => {
     return new URLSearchParams(useLocation().search);
 };
 
-const Sidebar = ({ isOpen, toggleSidebar, inviteLink }) => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     const handleCopyReferralCode = () => {
-        navigator.clipboard.writeText(inviteLink);
-        toast.success('Copied to clipboard!', {
+        navigator.clipboard.writeText("No"y);
+        toast.success('Copied to clipboard! 🗒️', {
            position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -81,7 +81,7 @@ const Sidebar = ({ isOpen, toggleSidebar, inviteLink }) => {
     );
 };
 
-const InviteLinkComponent = (setInviteLink) => {
+const InviteLinkComponent = () => {
 
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
@@ -108,7 +108,7 @@ const InviteLinkComponent = (setInviteLink) => {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
-        toast.success('Invite link copied to clipboard!', {
+        toast.success('Copied to clipboard! 🗒️', {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -204,7 +204,7 @@ const Component = () => {
 
         fetchInviteData();
     }, []);
-   
+
     return (
         <div className="flex">
 
