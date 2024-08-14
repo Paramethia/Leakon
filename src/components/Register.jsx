@@ -67,7 +67,7 @@ const Register = () => {
                     <form onSubmit={handleRegister}>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputName" className="block text-sm font-bold mb-2">
-                                Name
+                                Username:
                             </label>
                             <input
                                 type="text"
@@ -79,8 +79,8 @@ const Register = () => {
                             />
                         </div>
                         <div className="mb-4 text-left">
-                            <label htmlFor="exampleInputEmail1" className="block text-sm font-bold mb-2">
-                                Email Id
+                            <label htmlFor="exampleInputEmai1" className="block text-sm font-bold mb-2">
+                                Email:
                             </label>
                             <input
                                 type="email"
@@ -93,7 +93,7 @@ const Register = () => {
                         </div>
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
-                                Password
+                                Password:
                             </label>
                             <input
                                 type="password"
