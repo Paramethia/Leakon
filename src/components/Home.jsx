@@ -212,7 +212,7 @@ const Component = () => {
 
             <main className="flex-1 p-8 space-y-6" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
-                    className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
+                    className="flex fixed relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
                         backgroundColor: isDarkMode ? '#101424' : '#282434',
                         left: 0,
