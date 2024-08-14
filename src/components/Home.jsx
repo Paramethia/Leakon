@@ -81,7 +81,7 @@ const Sidebar = ({ isOpen, toggleSidebar, inviteLink }) => {
     );
 };
 
-const InviteLinkComponent = () => {
+const InviteLinkComponent = ( setInviteLink ) => {
 
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
@@ -154,14 +154,14 @@ const InviteLinkComponent = () => {
 let InviteHandler = () => {
     const query = useQuery();
     const inviteId = query.get('inviteId');
-    const usedBy = 'newUser@example.com'; // This should be dynamically set based on the user
+    const usedBy = 'newUser@example.com';
 
     useEffect(() => {
         const useInvite = async () => {
             try {
                 const response = await axios.get(`https://invicon-back-end.onrender.com/invite/${inviteId}`, { params: { usedBy } });
                 console.log(response.data);
-                window.location.href = "/register"; // Redirect to the registration page
+                window.location.href = "/register";
             } catch (err) {
                 console.error(err.response.data);
             }
@@ -175,7 +175,7 @@ let InviteHandler = () => {
 };
 
 const Component = () => {
-    const inviteLink = useState('');
+    const [inviteLink, setInviteLink] = useState('');
 
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -204,12 +204,7 @@ const Component = () => {
 
         fetchInviteData();
     }, []);
-    /*
-    let Pay = (tier, price) => {
-        // Handle the payment logic here
-        alert(`Purchased ${tier} for $${price}`);
-    };
-    */
+   
     return (
         <div className="flex">
 
@@ -258,7 +253,7 @@ const Component = () => {
                     </p>
                 </div>
                 <div className="max-w-3xl mx-auto grid gap-6">
-                    <InviteLinkComponent />
+                    <InviteLinkComponent setInviteLink={setInviteLink} />
                     <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                         <div className="mb-4">
                             <div className="flex items-center justify-between">
