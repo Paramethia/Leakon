@@ -87,23 +87,23 @@ const InviteLinkComponent = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        // const existingLink = localStorage.getItem('inviteLink');
-    // if (existingLink) {
-            //setInviteLink(existingLink);
-      //  } else {
-            const fetchInviteLink = async () => {
-                try {
-                    const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
-                    setInviteLink(response.data.inviteLink);
-                    // localStorage.setItem('inviteLink', response.data.inviteLink);
-                } catch (error) {
+       const existingLink = localStorage.getItem('inviteLink');
+       if (existingLink) {
+            setInviteLink(existingLink);
+       } else {
+           const fetchInviteLink = async () => {
+             try {
+                const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
+                setInviteLink(response.data.inviteLink);
+                localStorage.setItem('inviteLink', response.data.inviteLink);
+            } catch (error) {
                     setError('Error generating invite link');
                     console.error('Error generating invite link:', error);
-                }
-            };
+            }
+        };
     
-            fetchInviteLink();
-      //  }
+        fetchInviteLink();
+      }
     }, []);
 
     const handleCopy = () => {
