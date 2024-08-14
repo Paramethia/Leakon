@@ -81,7 +81,7 @@ const Sidebar = ({ isOpen, toggleSidebar, inviteLink }) => {
     );
 };
 
-const InviteLinkComponent = ( setInviteLink ) => {
+const InviteLinkComponent = (setInviteLink) => {
 
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
@@ -175,7 +175,7 @@ let InviteHandler = () => {
 };
 
 const Component = () => {
-    const [inviteLink, setInviteLink] = useState('');
+    const inviteLink = useState('');
 
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -253,7 +253,7 @@ const Component = () => {
                     </p>
                 </div>
                 <div className="max-w-3xl mx-auto grid gap-6">
-                    <InviteLinkComponent setInviteLink={setInviteLink} />
+                    <InviteLinkComponent />
                     <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                         <div className="mb-4">
                             <div className="flex items-center justify-between">
