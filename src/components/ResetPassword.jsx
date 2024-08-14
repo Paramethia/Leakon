@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { toast, ToastContainer, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const Header = () => {
+    return (
+        <Helmet>
+            <title> Invicon - reset password </title>
+        </Helmet>
+    );
+};
+
 
 const ResetPassword = () => {
     const [password, setPassword] = useState('');
@@ -17,8 +29,18 @@ const ResetPassword = () => {
             return;
         }
         try {
-            const response = await axios.post('https://invicon-server.onrender.com/reset-password', { token, newPassword: password });
-            alert(response.data);
+            const response = await axios.post("https://invicon-back-end.onrender.com/reset-password", { token, newPassword: password });
+            toast.info(response.data, {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Slide,
+            });
             navigate('/login');
         } catch (err) {
             setError('Error resetting password');
@@ -26,8 +48,14 @@ const ResetPassword = () => {
     };
 
     return (
+        <>
+ 
+        <Header />
+
+        <ToastContainer />
+
         <div className="flex  h-screen">
-            <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)' }}></div>
+            <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: "url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)" }}></div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
                 <div className="bg-white p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
@@ -58,7 +86,9 @@ const ResetPassword = () => {
         </form>
         </div>
         </div>
-         </div>
+        </div>
+
+        </>
     );
 };
 
