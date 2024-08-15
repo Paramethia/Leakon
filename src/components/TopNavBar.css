@@ -1,8 +1,0 @@
-.H-effect:hover {
-    transition: filter 0.3s;
-    filter: brightness(50%);
-}
-
-.static {
-    position: static;
-}
