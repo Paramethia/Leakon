@@ -123,6 +123,5 @@ const Header = () => {
         </div>
         </>
     );
-}
 
 export default Register;
