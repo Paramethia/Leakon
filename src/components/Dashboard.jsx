@@ -119,7 +119,7 @@ const Component = () => {
   return (
     <>
    
-    <ToastContainer />7
+    <ToastContainer />
 
     <div className="flex h-screen">
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
