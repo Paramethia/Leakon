@@ -40,9 +40,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     return (
         <>
+
         <ToastContainer />
+
         <aside className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${ isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`} style={{ backgroundColor: "#282434" }}>
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex static justify-between items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
                         <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8"/>
@@ -213,7 +215,7 @@ const Component = () => {
 
             <main className="flex-1 p-8 space-y-6" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
-                    className="flex static relative px-3 mb-5 items-center justify-between md:justify-start"
+                    className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
                         backgroundColor: isDarkMode ? '#101424' : '#282434',
                         left: 0,
