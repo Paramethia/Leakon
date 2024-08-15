@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import { useState } from 'react';
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Flip, Slide } from 'react-toastify';
@@ -18,6 +18,9 @@ const Header = () => {
 };
 
 const Register = () => {
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const inviteId = searchParams.get('inviteId');
     const [username, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -25,9 +28,6 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-    
-        // Assuming `inviteId` is available either in state or props
-        const inviteId = 'YOUR_INVITE_ID'; // Replace with the actual invite ID or fetch from state/props
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
