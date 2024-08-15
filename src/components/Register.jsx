@@ -18,9 +18,6 @@ const Header = () => {
 };
 
 const Register = () => {
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const inviteId = searchParams.get('inviteId');
     const [username, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -28,6 +25,9 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
+        const location = useLocation();
+        const searchParams = new URLSearchParams(location.search);
+        const inviteId = searchParams.get('inviteId');
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
