@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import './ToggleSwitch.css'; // Importing the CSS file
+import './Extra stlyles.css';
 
 
 const ToggleSwitch = ({ isDarkMode, toggleTheme }) => {
