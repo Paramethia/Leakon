@@ -6,6 +6,7 @@ import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+import './TopNavBar.css';
 
 const Header = () => {
     return ( 
@@ -54,13 +55,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </div>
 
             <nav className="flex flex-col gap-2 mb-10">
-                <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'underline' }}>
+                <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
                     <HomeIcon className="h-4 w-4" /> Home 
                 </Link>
-                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'none' }}>
+                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
-                <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline" style={{ textDecoration: 'none' }}>
+                <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <GiftIcon className="h-4 w-4" /> Rewards
                 </Link>
             </nav>
