@@ -5,7 +5,7 @@ import { toast, ToastContainer, Zoom } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
-import './ToggleSwitch.css';
+import './Extra styles.css';
 
 const Header = () => {
     return ( 
@@ -44,14 +44,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
       style={{ backgroundColor: "#282434" }}
     >
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex static justify-between items-center mb-6">
         <Link to="/home" style={{ textDecoration: 'none' }}>
           <div className="text-white flex items-center gap-2">
-            <img
-              src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png"
-              alt="Invicon Logo"
-              className="w-8 h-8"
-            />
+            <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
             <h1 className="text-xl font-bold mt-2 font-helvetica">Invicon</h1>
           </div>
         </Link>
@@ -61,29 +57,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </div>
 
       <nav className="flex flex-col gap-2 mb-10">
-        <Link
-          to="/home"
-          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-          style={{ textDecoration: 'none' }}
-        >
-          <HomeIcon className="h-4 w-4" />
-          Home
+        <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+          <HomeIcon className="h-4 w-4" /> Home
         </Link>
-        <Link
-          to="/dashboard"
-          className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-          style={{ textDecoration: 'none' }}
-        >
-          <UsersIcon className="h-4 w-4" />
-          Invitations
+        <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+          <UsersIcon className="h-4 w-4" /> Invitations
         </Link>
-        <Link
-          to="/rewards"
-          className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted hover:underline"
-          style={{ textDecoration: 'underline' }}
-        >
-          <GiftIcon className="h-4 w-4" />
-          Rewards
+        <Link to="/rewards" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
+          <GiftIcon className="h-4 w-4" /> Rewards
         </Link>
       </nav>
 
