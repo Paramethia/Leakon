@@ -18,7 +18,7 @@ const Header = () => {
 };
 
 const Register = () => {
-    const [name, setName] = useState('');
+    const [username, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-        axios.post('https://invicon-back-end.onrender.com/register', { email, password })
+        axios.post('https://invicon-back-end.onrender.com/register', { username, email, password })
             .then(result => {
                 console.log(result.data);
                 if (result.data === "Account has already been registered. Please log in.") {
