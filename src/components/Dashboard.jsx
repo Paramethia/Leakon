@@ -51,8 +51,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     <Header />
 
-    <ToastContainer />
-
     <Warning />
 
     <aside
@@ -120,6 +118,9 @@ const Component = () => {
 
   return (
     <>
+   
+    <ToastContainer />7
+
     <div className="flex h-screen">
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <main className="flex-1 flex flex-col p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
