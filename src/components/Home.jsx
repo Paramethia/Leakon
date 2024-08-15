@@ -217,50 +217,144 @@ const Component = () => {
                 <div
                     className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
-                        backgroundColor: isDarkMode ? '#282434' : '#F5F5F5',
-                        position: "fixed",
-                        top: 0,
+                        backgroundColor: isDarkMode ? '#101424' : '#282434',
                         left: 0,
-                        width: "100%",
-                        zIndex: 40,
+                        padding: '10px',
+                        borderRadius: '5px',
                     }}
                 >
-                    <div className="flex items-center">
-                        <button className="mr-5 md:hidden" onClick={toggleSidebar}>
+                    <div className={`md:hidden fixed left-12 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
+                        <button onClick={toggleSidebar}>
                             <FaBars className="h-6 w-6 text-white" />
                         </button>
-                        <Link to="/home">
-                            <img
-                                src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png"
-                                alt="Invicon Logo"
-                                className="w-12 h-12"
-                            />
-                        </Link>
                     </div>
-                    <button className="text-white ml-auto md:ml-0" onClick={toggleTheme}>
-                        {isDarkMode ? <FaSun /> : <FaMoon />}
-                    </button>
+                    <Link to="/home" style={{ textDecoration: 'none' }} className="flex-1 md:flex-none">
+                        <div className="text-white flex items-center gap-2 justify-center md:justify-start">
+                            <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
+                            <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
+                        </div>
+                    </Link>
+                    <div className="absolute top-4 right-4">
+                        <label className="switch">
+                            <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
+                            <span className="slider round">
+                                <span className="icon-container">
+                                    {isDarkMode ? <FaSun color="#fff" /> : <FaMoon color="#333" />}
+                                </span>
+                            </span>
+                        </label>
+                    </div>
                 </div>
-                <section>
-                    <h2 className={`text-3xl pt-6 pb-4 font-semibold text-center ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Welcome to Invicon!</h2>
-                    <div className="flex justify-center">
-                        <div className={`bg-[#282434] text-white p-6 rounded-lg`}>
-                            <h3 className="text-xl font-bold">Invites: {inviteData.invites}</h3>
-                            <p className="text-lg">Tier: {inviteData.tier}</p>
+                <div className="max-w-3xl mx-auto mt-12">
+                    <h1 className="text-3xl font-bold" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                        How it works
+                    </h1>
+                    <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
+                        You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
+                        Alternatively, you can buy the tiers to get the rewards if you struggle to invite people. Prices will be shown below. <br />
+                        You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
+                    </p>
+                </div>
+                <div className="max-w-3xl mx-auto grid gap-6">
+                    <InviteLinkComponent />
+                    <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+                        <div className="mb-4">
+                            <div className="flex items-center justify-between">
+                                <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
+                            </div>
+                            <p className="text-gray-500 dark:text-gray-400">You have invited a total of {inviteData.invites} people.</p>
+                        </div>
+                        <div className="flex items-center justify-between">
+                            <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {inviteData.tier}</div>
+                           
+                            <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
+                               <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
+                                   View Invites
+                               </button>
+                            </Link>
                         </div>
                     </div>
-                </section>
+
+                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                        Tiers
+                    </h1>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
+                        {[
+                            { tier: 'Tier 1', invites: 12, price: 10 },
+                            { tier: 'Tier 2', invites: 25, price: 20 },
+                            { tier: 'Tier 3', invites: 45, price: 40 },
+                            { tier: 'Tier 4', invites: 70, price: 70 },
+                            { tier: 'Tier 5', invites: 100, price: 100 },
+                        ].map(({ tier, invites, price }, index) => (
+                            <div key={index} className="text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
+                                <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
+                                <p className="text-gray-500 font-semibold dark:text-gray-400"> {invites} invites </p>
+                                <p className="text-gray-500 dark:text-gray-400"> or pay </p>
+                                <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
+                                <a href="https://t.me/daemozon">
+                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
+                                    Buy Now
+                                </button>
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <InviteHandler />
+                { /*
+                <div className="grid gap-6 p-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-bold">Select Payment Method</h2>
+                    <div>
+                      <Button variant="ghost" size="icon">
+                        <XIcon className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="grid gap-4">
+                    <div
+                      className={`rounded-lg border p-4 transition-colors hover:bg-muted cursor-pointer flex items-center justify-between ${
+                        selectedPaymentMethod === "paypal" ? "border-primary bg-primary-foreground" : "border-muted"
+                      }`}
+                      onClick={() => setSelectedPaymentMethod("paypal")}
+                    >
+                      <div className="flex items-center gap-4">
+                        <WalletCardsIcon className="h-8 w-8" />
+                        <span className="text-lg font-medium">PayPal</span>
+                      </div>
+                      {selectedPaymentMethod === "paypal" && <CheckIcon className="h-6 w-6 text-primary" />}
+                    </div>
+                    <div
+                      className={`rounded-lg border p-4 transition-colors hover:bg-muted cursor-pointer flex items-center justify-between ${
+                        selectedPaymentMethod === "crypto" ? "border-primary bg-primary-foreground" : "border-muted"
+                      }`}
+                      onClick={() => setSelectedPaymentMethod("crypto")}
+                    >
+                      <div className="flex items-center gap-4">
+                        <DollarSignIcon className="h-8 w-8" />
+                        <span className="text-lg font-medium">Crypto</span>
+                      </div>
+                      {selectedPaymentMethod === "crypto" && <CheckIcon className="h-6 w-6 text-primary" />}
+                    </div>
+                    <div
+                      className={`rounded-lg border p-4 transition-colors hover:bg-muted cursor-pointer flex items-center justify-between ${
+                        selectedPaymentMethod === "other" ? "border-primary bg-primary-foreground" : "border-muted"
+                      }`}
+                      onClick={() => setSelectedPaymentMethod("other")}
+                    >
+                      <div className="flex items-center gap-4">
+                        <CreditCardIcon className="h-8 w-8" />
+                        <span className="text-lg font-medium">Other</span>
+                      </div>
+                      {selectedPaymentMethod === "other" && <CheckIcon className="h-6 w-6 text-primary" />}
+                    </div>
+                  </div>
+                </div>
+                */ }
             </main>
         </div>
     );
 };
 
-const Home = () => (
-    <>
-        <InviteLinkComponent />
-        <Component />
-        <InviteHandler />
-    </>
-);
-
-export default Home;
+export default Component;
