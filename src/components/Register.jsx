@@ -17,6 +17,12 @@ const Header = () => {
     );
 };
 
+const Register = () => {
+    const [username, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
     const handleRegister = (event) => {
         event.preventDefault();
     
@@ -123,5 +129,6 @@ const Header = () => {
         </div>
         </>
     );
+}
 
 export default Register;
