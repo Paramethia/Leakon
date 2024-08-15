@@ -5,7 +5,7 @@ import { toast, ToastContainer, Flip, Zoom } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
-import './Extra styling.css';
+import './Extra styles.css';
 
 const Header = () => {
     return ( 
