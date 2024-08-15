@@ -83,6 +83,6 @@ input:checked + .slider:before {
 }
 
 .static {
-    /* z-index: 2; */
+    z-index: 2;
     position: static;
 }
