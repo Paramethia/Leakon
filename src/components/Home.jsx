@@ -74,7 +74,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <div className="flex items-center justify-between">
                         <span className="text-sm font-medium font-helvetica">ABC123</span>
                         <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
-                            <CopyIcon className="h-4 w-4" />
+                            <CopyIcon className="h-4 w-4 H-effect" />
                         </button>
                     </div>
                 </div>
