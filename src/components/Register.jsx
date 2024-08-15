@@ -17,39 +17,49 @@ const Header = () => {
     );
 };
 
-const Register = () => {
-    const [username, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
+const handleRegister = (event) => {
+    event.preventDefault();
 
-    const handleRegister = (event) => {
-        event.preventDefault();
+    // Assuming `inviteId` is available either in state or props
+    const inviteId = 'YOUR_INVITE_ID'; // Replace with the actual invite ID or fetch from state/props
 
-        axios.post('https://invicon-back-end.onrender.com/register', { username, email, password })
-            .then(result => {
-                console.log(result.data);
-                if (result.data === "Account has already been registered. Please log in.") {
-                    toast.warn("Already registered, pal. Go log in", {
-                        position: "top-center",
-                        autoClose: 4000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        transition: Flip,
-                    });
-                    setTimeout(() => {
-                        navigate('/login');
-                    }, 4000);
-                } else {
-                    navigate('/home');
-                }
-            })
-            .catch(err => console.log(err));
-        }
+    axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
+        .then(result => {
+            console.log(result.data);
+            if (result.data.message === "Account has already been registered. Please log in.") {
+                toast.warn("Already registered, pal. Go log in", {
+                    position: "top-center",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Flip,
+                });
+                setTimeout(() => {
+                    navigate('/login');
+                }, 4000);
+            } else {
+                navigate('/home');
+            }
+        })
+        .catch(err => {
+            console.log(err);
+            toast.error("Registration failed. Please try again.", {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Flip,
+             });
+         });
+    }
     
     return (
         <>
