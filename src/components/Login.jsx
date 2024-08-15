@@ -62,11 +62,11 @@ const Login = () => {
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
                 <div className="bg-white p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
-                    <h3 className="mb-6 text-2xl font-bold  text-dark">Login</h3>
+                    <h3 className="mb-6 text-2xl font-bold  text-dark">Log in</h3>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputEmail1" className="block text-sm font-bold mb-2">
-                                Email Id
+                                Email:
                             </label>
                             <input
                                 type="email"
@@ -79,7 +79,7 @@ const Login = () => {
                         </div>
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
-                                Password
+                                Password:
                             </label>
                             <input
                                 type="password"
@@ -90,11 +90,11 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105"> Login </button>
+                        <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105"> Submit </button>
                     </form>
                    
                   
-                 <p className="my-4  flex">Don't have an account? <Link to='/register' className='text-dark mx-2'> Register< /Link> </p>   <p className="my-4"> </p>
+                 <p className="my-4  flex">Don't have an account? <Link to='/register' className='text-dark mx-2'> Register < /Link></p>
                   <p><Link to='/request' className='text-dark'>I forgot the Password</Link></p>
                        
                 </div>
