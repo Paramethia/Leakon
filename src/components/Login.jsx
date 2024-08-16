@@ -27,7 +27,7 @@ const Login = () => {
         axios.post('https://invicon-back-end.onrender.com/login', { email, password })
             .then(result => {
                 console.log('Server response:', result);
-                if (result.data === "You are already logged in.") {
+                if (result.data === "Correct email and password") {
                     navigate('/home');
                 } else {
                     toast.error('Incorrect password or email. Try again.', {
