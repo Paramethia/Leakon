@@ -301,7 +301,6 @@ const Component = () => {
                         ))}
                     </div>
                 </div>
-                <InviteHandler />
                 { /*
                 <div className="grid gap-6 p-6">
                   <div className="flex items-center justify-between">
