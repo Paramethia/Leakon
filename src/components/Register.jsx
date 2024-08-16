@@ -32,7 +32,7 @@ const Register = () => {
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
                 console.log(result.data);
-                if (result.data.message === "Account has already been registered. Please log in.") {
+                if (result.data.message === "Account already registered.") {
                     toast.warn("Already registered, pal. Go log in", {
                         position: "top-center",
                         autoClose: 4000,
@@ -47,13 +47,13 @@ const Register = () => {
                     setTimeout(() => {
                         navigate('/login');
                     }, 4000);
-                } else {
+                } else if (result.data.message === "Registered.") {
                     navigate('/home');
                 }
             })
             .catch(err => {
                 console.log(err);
-                toast.error("Registry failed. Please try again later.", {
+                toast.error("Registration failed. Please try again later.", {
                     position: "top-center",
                     autoClose: 4000,
                     hideProgressBar: false,
