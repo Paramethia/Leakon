@@ -27,6 +27,7 @@ const Register = () => {
     const navigate = useNavigate();
 
     const handleRegister = (event) => {
+        event.preventDefault();
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
