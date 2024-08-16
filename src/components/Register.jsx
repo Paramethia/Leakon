@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { toast, ToastContainer, Flip, Slide } from 'react-toastify';
+import { toast, ToastContainer, Bounce, Flip, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Register.css';
 
@@ -52,7 +52,7 @@ const Register = () => {
             })
             .catch(err => {
                 console.log(err);
-                toast.error("Registration failed. Please try again.", {
+                toast.error("Registry failed. Please try again later.", {
                     position: "top-center",
                     autoClose: 4000,
                     hideProgressBar: false,
@@ -61,7 +61,7 @@ const Register = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "dark",
-                    transition: Flip,
+                    transition: Bounce,
                 });
             });
     }
