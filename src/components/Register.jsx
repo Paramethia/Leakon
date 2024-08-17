@@ -28,13 +28,13 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        console.log(inviteId); // Check inviteId value
+        console.log(inviteId, username, email, password ); // Check inviteId value
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
         .then(result => {
             console.log(result.data, result.data.message);
 
-            if (result.data.message === "Invite not found.") {
+            if (result.data.message === "Invalid invite link.") {
                 toast.error(result.data.message, {
                     position: "top-center",
                     autoClose: 4000,
