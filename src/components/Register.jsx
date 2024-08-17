@@ -31,7 +31,7 @@ const Register = () => {
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
-                console.log{result.data);
+                console.log(esult.data);
                 if (result.data.message === "Account already registered.") {
                     toast.warn("Already registered, pal. Go log in", {
                         position: "top-center",
