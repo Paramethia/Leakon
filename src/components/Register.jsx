@@ -28,13 +28,14 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
+        localStorage.removeItem("inviteId"); // Just for now
         console.log(inviteId); // Check inviteId value
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
         .then(result => {
             console.log(result.data);
 
-            if (result.data.message === "Invite not found") {
+            if (result.data.message === "Invite not found.") {
                 toast.error(result.data.message, {
                     position: "top-center",
                     autoClose: 4000,
@@ -46,7 +47,7 @@ const Register = () => {
                     theme: "dark",
                     transition: Bounce,
                  });
-            } else if (result.data.message === "Invite already used by this user") {
+            } else if (result.data === "Invite already used by this user.") {
                 toast.warn("You alread used this invite.", {
                     position: "top-center",
                     autoClose: 4000,
