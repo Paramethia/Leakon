@@ -28,7 +28,7 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        localstorage.remove("inviteId);
+        localStorage.remove("inviteId");
         console.log(inviteId); // Check inviteId value
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
