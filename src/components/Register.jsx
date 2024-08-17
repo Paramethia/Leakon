@@ -59,7 +59,7 @@ const Register = () => {
                     theme: "dark",
                     transition: Flip,
                 });
-            } else if (result.data.message === "Account already registered.") {
+            } else if (result.data === "Account already registered.") {
                  toast.warn("Already registered, pal. Go log in", {
                     position: "top-center",
                     autoClose: 4000,
@@ -74,7 +74,7 @@ const Register = () => {
                 setTimeout(() => {
                     navigate('/login');
                 }, 4000);
-            } else if (result.data.message === "Registered.") {
+            } else if (result.data === "Registered.") {
                 navigate('/home');
             }
 
