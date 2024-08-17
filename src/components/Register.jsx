@@ -25,6 +25,7 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    console.log(inviteId); // Check if the invite Id is taken from the invite link
 
     const handleRegister = (event) => {
         event.preventDefault();
