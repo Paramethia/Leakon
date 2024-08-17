@@ -32,6 +32,33 @@ const Register = () => {
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
                 console.log(esult.data);
+
+                if(result.data.message === "Invite not found") {
+                    toast.error(result.data.message, {
+                        osition: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Bounce,
+                    });
+                } else if (result.data.message === "Invite already used by this user") {
+                    toast.warn("You alread used this invite.", {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Flip,
+                    });
+                }
+
                 if (result.data.message === "Account already registered.") {
                     toast.warn("Already registered, pal. Go log in", {
                         position: "top-center",
