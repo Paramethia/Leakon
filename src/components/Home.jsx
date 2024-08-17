@@ -100,8 +100,8 @@ const InviteLinkComponent = () => {
                 setInviteLink(response.data.inviteLink);
                 localStorage.setItem('inviteLink', response.data.inviteLink);
             } catch (error) {
-                    setError('Error generating invite link');
-                    console.error('Error generating invite link:', error);
+                setError('Error generating invite link');
+                console.error('Error generating invite link:', error);
             }
         };
     
