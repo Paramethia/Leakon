@@ -46,7 +46,7 @@ const Register = () => {
                     progress: undefined,
                     theme: "dark",
                     transition: Bounce,
-            });
+                 });
             } else if (result.data.message === "Invite already used by this user") {
                 toast.warn("You alread used this invite.", {
                     position: "top-center",
@@ -78,20 +78,21 @@ const Register = () => {
                 navigate('/home');
             }
 
-            .catch(err => {
-                console.log(err);
-                toast.error("Registration failed. Please try again later.", {
-                    position: "top-center",
-                    autoClose: 4000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    transition: Bounce,
-                });
+        })
+        .catch(err => {
+            console.log(err);
+            toast.error("Registration failed. Please try again later.", {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
             });
+        });
     }
 
     
