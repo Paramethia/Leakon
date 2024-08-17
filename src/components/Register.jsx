@@ -32,7 +32,7 @@ const Register = () => {
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
             .then(result => {
-                console.log(esult.data);
+                console.log(result.data);
 
                 if(result.data.message === "Invite not found") {
                     toast.error(result.data.message, {
