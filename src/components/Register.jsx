@@ -45,7 +45,7 @@ const Register = () => {
                     transition: Bounce,
                  });
             } else if (result.data.message === "Invite already used by this user.") {
-                toast.warn("You alread used this invite.", {
+                toast.warn("You already used this invite.", {
                     position: "top-center",
                     autoClose: 4000,
                     hideProgressBar: false,
@@ -59,7 +59,7 @@ const Register = () => {
             } else if (result.data === "Account already registered.") {
                  toast.warn("Already registered, pal. Go log in", {
                     position: "top-center",
-                    autoClose: 4000,
+                    autoClose: 4800,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
