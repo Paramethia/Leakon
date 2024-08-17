@@ -32,7 +32,7 @@ const Register = () => {
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
         .then(result => {
-            console.log(result.data, result.data.message);
+            console.log(result.data.message, result.data.message);
 
             if (result.data.message === "Invalid invite link.") {
                 toast.error(result.data.message, {
@@ -46,7 +46,7 @@ const Register = () => {
                     theme: "dark",
                     transition: Bounce,
                  });
-            } else if (result.data === "Invite already used by this user.") {
+            } else if (result.data.message === "Invite already used by this user.") {
                 toast.warn("You alread used this invite.", {
                     position: "top-center",
                     autoClose: 4000,
