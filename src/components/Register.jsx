@@ -30,10 +30,8 @@ const Register = () => {
         event.preventDefault();
         console.log( inviteId );
     
-        axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, inviteId })
+        axios.post('https://invicon-back-end.onrender.com/register', { username, email, password })
         .then(result => {
-            console.log(result.data.message, result.data.message);
-
             if (result.data.message === "Invalid invite link.") {
                 toast.error(result.data.message, {
                     position: "top-center",
