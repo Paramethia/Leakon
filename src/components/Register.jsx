@@ -20,7 +20,7 @@ const Header = () => {
 const Register = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const inviteId = searchParams.get('inviteId');
+    let usedInvite = searchParams.get('inviteId');
     const [username, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -28,7 +28,7 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        console.log( inviteId );
+        console.log(usedInvite);
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password })
         .then(result => {
@@ -72,6 +72,7 @@ const Register = () => {
                     navigate('/login');
                 }, 4000);
             } else if (result.data === "Registered.") {
+                if (usedInvite != null) localStorage.setItem('usedInvite', usedInvite);
                 navigate('/home');
             }
 
