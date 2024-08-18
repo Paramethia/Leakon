@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from './UserContext';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
@@ -54,7 +55,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </button>
             </div>
 
-            <nav className="flex flex-col gap-2 mb-10">
+            <nav className="Navigation flex flex-col gap-2 mb-10">
                 <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
                     <HomeIcon className="h-4 w-4" /> Home 
                 </Link>
@@ -86,6 +87,7 @@ const InviteLinkComponent = () => {
 
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
+    const {username, email} = useContext(UserContext);
 
     useEffect(() => {
        const existingLink = localStorage.getItem('inviteLink');
@@ -151,17 +153,17 @@ const InviteLinkComponent = () => {
         </>
     );
 };
-/*
+
 let InviteChecker = () => {
-    const inviteId = query.get('inviteId');
-    const usedBy = 'newUser@example.com';
+    const inviteId = localStorage.getItem("usedInvite");
+    const {username, email} = useContext(UserContext);
 
     useEffect(() => {
-        const useInvite = async () => {
+        const Invitee = async () => {
             try {
-                const response = await axios.get(`https://invicon-back-end.onrender.com/invite/${inviteId}`, { params: { usedBy } });
-                console.log(response.data);
-                window.location.href = "/register";
+                const response = await axios.get(`https://invicon-back-end.onrender.com/invite-check`, { username, email, inviteId } });
+                if (response.data.message === "Invalid invite link.") console.error(response.data.message);
+                if
             } catch (err) {
                 console.error(err.response.data);
             }
@@ -173,7 +175,7 @@ let InviteChecker = () => {
     }, [inviteId]);
 
 };
-*/
+
 const Component = () => {
     const inviteLink = useState('');
 
@@ -195,7 +197,7 @@ const Component = () => {
     useEffect(() => {
         const fetchInviteData = async () => {
             try {
-                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { params: { email: 'user@example.com' } }); // Replace with dynamic email
+                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { username, email} });
                 setInviteData(response.data);
             } catch (error) {
                 console.error('Error fetching invite data', error);
@@ -206,6 +208,10 @@ const Component = () => {
     }, []);
 
     return (
+        <>
+ 
+        <inviteChecker />
+
         <div className="flex">
 
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} inviteLink={inviteLink} />
@@ -350,6 +356,8 @@ const Component = () => {
                 */ }
             </main>
         </div>
+
+        </>
     );
 };
 
