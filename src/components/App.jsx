@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
@@ -7,9 +7,13 @@ import RequestPasswordReset from './RequestPasswordReset';
 import ResetPassword from './ResetPassword';
 import Dashboard from './Dashboard';
 import Rewards from './Rewards';
+import { UserContext } from './components/UserContext';
 
 function App() {
+  const [username, setName] = useState('');
+  const [email, setEmail] = useState('');
   return (
+      <UserContext.Provider value={{ user, setUser }}>
       <Router>
         <Routes>
           <Route path="/" element={<Register />} />
@@ -22,6 +26,7 @@ function App() {
           <Route path="/rewards" element={<Rewards />} />
         </Routes>
       </Router>
+      </UserContext.Provider>
   );
 }
 
