@@ -7,7 +7,6 @@ import RequestPasswordReset from './RequestPasswordReset';
 import ResetPassword from './ResetPassword';
 import Dashboard from './Dashboard';
 import Rewards from './Rewards';
-import UserProvider from './UserContext';
 
 function App() {
   return (
