@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from './UserContext';
 import { toast, ToastContainer, Bounce, Flip, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Register.css';
@@ -21,8 +22,7 @@ const Register = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     let usedInvite = searchParams.get('inviteId');
-    const [username, setName] = useState('');
-    const [email, setEmail] = useState('');
+    const {username, setName, email, useEmail} = useContext();
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
