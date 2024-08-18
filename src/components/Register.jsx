@@ -22,7 +22,7 @@ const Register = () => {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     let usedInvite = searchParams.get('inviteId');
-    const {username, setName, email, useEmail} = useContext();
+    const {username, setName, email, setEmail} = useContext();
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
