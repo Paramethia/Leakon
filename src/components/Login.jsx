@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '.UserContext';
 import { toast, ToastContainer, Bounce } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
 import './Login.css';
@@ -17,7 +18,8 @@ const Header = () => {
 };
 
 const Login = () => {
-    const [email, setEmail] = useState('');
+    const { email, setEmail } = useContext(UserContext);
+    //const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
