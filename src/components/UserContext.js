@@ -8,8 +8,8 @@ export const UserProvider = ({ children }) => {
     const [user, setUser] = useState({ username: '', email: '' });
 
     return (
-        <UserContext.Provider value={{ user, setUser }}>
+        <UserProvider value={{ user, setUser }}>
             {children}
-        <UserContext.Provider>
+        </UserProvider>
     );
 };
