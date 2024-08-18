@@ -79,6 +79,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </div>
             </div>
         </aside>
+
         </>
     );
 };
