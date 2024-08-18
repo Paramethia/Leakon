@@ -63,7 +63,7 @@ const Register = () => {
             } else if (result.data === "Account already registered.") {
                  toast.warn("Already registered, pal. Go log in", {
                     position: "top-center",
-                    autoClose: 4800,
+                    autoClose: 4400,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -74,7 +74,7 @@ const Register = () => {
                 });
                 setTimeout(() => {
                     navigate('/login');
-                }, 4000);
+                }, 4400);
             } else if (result.data === "Registered.") {
                if (usedInvite != null && alreadyReg) {
                     toast.warn("You cannot use invite links if you already registered on this device.", {
