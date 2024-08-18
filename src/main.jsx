@@ -6,10 +6,10 @@ import Footer from './components/Footer';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <UserProvider>
-    <React.StrictMode>
+  <React.StrictMode>
+    <UserProvider>
       <App />
       {/* <Footer /> */}
-    </React.StrictMode>
-  </UserProvider>
+    </UserProvider>
+  </React.StrictMode>
 )
