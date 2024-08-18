@@ -13,7 +13,7 @@ function App() {
   const [username, setName] = useState('');
   const [email, setEmail] = useState('');
   return (
-      <UserContext.Provider value={{ user, setUser }}>
+      <UserContext.Provider value={{ username, setName, email, setEmail }}>
       <Router>
         <Routes>
           <Route path="/" element={<Register />} />
