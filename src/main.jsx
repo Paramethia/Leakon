@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App'
-import { UserProvider } from './components/UserContext'; // Use named import
+import { UserContext, UserProvider } from './components/UserContext';
 import Footer from './components/Footer';
 
 
