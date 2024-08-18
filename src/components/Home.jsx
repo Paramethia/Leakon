@@ -99,6 +99,7 @@ const InviteLinkComponent = () => {
                 const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
                 setInviteLink(response.data.inviteLink);
                 localStorage.setItem('inviteLink', response.data.inviteLink);
+                console.log(username, email);
             } catch (error) {
                 setError('Error generating invite link');
                 console.error('Error generating invite link:', error);
