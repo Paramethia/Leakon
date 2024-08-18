@@ -6,11 +6,12 @@ import Register from './Register';
 import RequestPasswordReset from './RequestPasswordReset';
 import ResetPassword from './ResetPassword';
 import Dashboard from './Dashboard';
-import Rewards from './Rewards'; // Corrected import
+import Rewards from './Rewards';
+import UserProvider from './UserContext';
 
 function App() {
   return (
-    <div>
+    <UsernameProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Register />} />
@@ -20,10 +21,10 @@ function App() {
           <Route path="/request" element={<RequestPasswordReset />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/rewards" element={<Rewards />} /> {/* Added missing route */}
+          <Route path="/rewards" element={<Rewards />} />
         </Routes>
       </Router>
-    </div>
+    </UsernameProvider>
   );
 }
 
