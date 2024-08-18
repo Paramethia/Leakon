@@ -197,7 +197,7 @@ const Component = () => {
     useEffect(() => {
         const fetchInviteData = async () => {
             try {
-                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { username, email} });
+                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { username, email });
                 setInviteData(response.data);
             } catch (error) {
                 console.error('Error fetching invite data', error);
