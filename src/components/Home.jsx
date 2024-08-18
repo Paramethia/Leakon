@@ -16,15 +16,13 @@ const Header = () => {
         </Helmet>
     );
 };
-/*
-const useQuery = () => {
-    return new URLSearchParams(useLocation().search);
-};
-*/
+
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+    let invlteLnk = localStorage.getItem('inviteLink');
+    let code = inviteLink.slice(-8);
 
     const handleCopyReferralCode = () => {
-        navigator.clipboard.writeText("No");
+        navigator.clipboard.writeText({invitelInk});
         toast.success('Copied to clipboard! 🗒️', {
            position: "top-center",
             autoClose: 5000,
@@ -72,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <div className="grid gap-1">
                     <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium font-helvetica">ABC123</span>
+                        <span className="text-sm font-medium font-helvetica">{code}</span>
                         <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
                             <CopyIcon className="h-4 w-4 H-effect" />
                         </button>
@@ -96,10 +94,9 @@ const InviteLinkComponent = () => {
        } else {
            const fetchInviteLink = async () => {
              try {
-                const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { email: 'user@example.com' });
+                const response = await axios.post('https://invicon-back-end.onrender.com/generate-invite', { username, email });
                 setInviteLink(response.data.inviteLink);
                 localStorage.setItem('inviteLink', response.data.inviteLink);
-                console.log(username, email);
             } catch (error) {
                 setError('Error generating invite link');
                 console.error('Error generating invite link:', error);
