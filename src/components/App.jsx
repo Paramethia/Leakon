@@ -7,11 +7,11 @@ import RequestPasswordReset from './RequestPasswordReset';
 import ResetPassword from './ResetPassword';
 import Dashboard from './Dashboard';
 import Rewards from './Rewards';
-import { UserContext, UserProvider } from './UserContext';
+import UserProvider from './UserContext';
 
 function App() {
   return (
-    <UsernameProvider>
+    <UserProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Register />} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/rewards" element={<Rewards />} />
         </Routes>
       </Router>
-    </UsernameProvider>
+    </UserProvider>
   );
 }
 
