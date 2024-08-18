@@ -157,6 +157,8 @@ const InviteLinkComponent = () => {
 let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     const {username, email} = useContext(UserContext);
+    let invited = false;
+    if (inviteId) invited == true;
 
     useEffect(() => {
         const Invitee = async () => {
@@ -168,8 +170,8 @@ let InviteChecker = () => {
             }
         };
 
-        if (inviteId) {
-            useInvite();
+        if (invited) {
+            Invitee();
         }
     }, [inviteId]);
 
