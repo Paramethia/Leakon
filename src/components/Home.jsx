@@ -161,7 +161,7 @@ let InviteChecker = () => {
     useEffect(() => {
         const Invitee = async () => {
             try {
-                const response = await axios.get(`https://invicon-back-end.onrender.com/invite-check`, { username, email, inviteId } });
+                const response = await axios.get(`https://invicon-back-end.onrender.com/invite-check`, { username, email, inviteId });
                 if (response.data.message === "Invalid invite link.") console.error(response.data.message);
                 if
             } catch (err) {
