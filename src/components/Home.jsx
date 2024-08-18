@@ -16,11 +16,11 @@ const Header = () => {
         </Helmet>
     );
 };
-
+/*
 const useQuery = () => {
     return new URLSearchParams(useLocation().search);
 };
-
+*/
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     const handleCopyReferralCode = () => {
@@ -108,7 +108,7 @@ const InviteLinkComponent = () => {
         fetchInviteLink();
       }
     }, []);
-
+    
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
         toast.success('Copied to clipboard! 🗒️', {
@@ -153,7 +153,29 @@ const InviteLinkComponent = () => {
         </>
     );
 };
+/*
+let InviteChecker = () => {
+    const inviteId = query.get('inviteId');
+    const usedBy = 'newUser@example.com';
 
+    useEffect(() => {
+        const useInvite = async () => {
+            try {
+                const response = await axios.get(`https://invicon-back-end.onrender.com/invite/${inviteId}`, { params: { usedBy } });
+                console.log(response.data);
+                window.location.href = "/register";
+            } catch (err) {
+                console.error(err.response.data);
+            }
+        };
+
+        if (inviteId) {
+            useInvite();
+        }
+    }, [inviteId]);
+
+};
+*/
 const Component = () => {
     const inviteLink = useState('');
 
