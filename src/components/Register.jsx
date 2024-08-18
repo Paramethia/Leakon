@@ -116,7 +116,10 @@ const Register = () => {
         });
     }
 
-    
+    function clearCache() {
+        localStorage.clear();
+    }
+
     return (
         <>
         
@@ -174,6 +177,7 @@ const Register = () => {
                     </form>
                     <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Log in</Link></p>
                 </div>
+                <button onClick="clearCache"></button>
             </div>
         </div>
         </>
