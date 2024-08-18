@@ -26,6 +26,10 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    // To check if the user already has an account on the device to prevent multiple acccount on the same acccount
+
+    let alreadyReg = localStorage.getItem("email");
+
     const handleRegister = (event) => {
         event.preventDefault();
         console.log(usedInvite);
@@ -72,8 +76,27 @@ const Register = () => {
                     navigate('/login');
                 }, 4000);
             } else if (result.data === "Registered.") {
-                if (usedInvite != null) localStorage.setItem('usedInvite', usedInvite);
-                navigate('/home');
+               if (usedInvite != null && alreadyReg) {
+                    toast.warn("You cannot use invite links if you already registered on this device.", {
+                        position: "top-center",
+                        autoClose: 5200,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Flip,
+                    });
+                    setTimeout(() => {
+                        navigate('/login');
+                    }, 5500);
+               } else {
+                    localStorage.setItem('usedInvite', usedInvite);
+                    localStorage.setItem("username", username);
+                    localStorage.setItem("email", email);
+                    navigate('/home');
+               }
             }
 
         })
