@@ -11,7 +11,6 @@ import UserProvider from './UserContext';
 
 function App() {
   return (
-    <UserProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Register />} />
@@ -24,7 +23,6 @@ function App() {
           <Route path="/rewards" element={<Rewards />} />
         </Routes>
       </Router>
-    </UserProvider>
   );
 }
 
