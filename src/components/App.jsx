@@ -7,7 +7,7 @@ import RequestPasswordReset from './RequestPasswordReset';
 import ResetPassword from './ResetPassword';
 import Dashboard from './Dashboard';
 import Rewards from './Rewards';
-import { UserContext } from './components/UserContext';
+import { UserContext } from './UserContext';
 
 function App() {
   const [username, setName] = useState('');
