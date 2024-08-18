@@ -18,11 +18,11 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-    let invlteLnk = localStorage.getItem('inviteLink');
+    let inviteLink = localStorage.getItem('inviteLink');
     let code = inviteLink.slice(-8);
 
     const handleCopyReferralCode = () => {
-        navigator.clipboard.writeText({invitelInk});
+        navigator.clipboard.writeText({inviteLink});
         toast.success('Copied to clipboard! 🗒️', {
            position: "top-center",
             autoClose: 5000,
