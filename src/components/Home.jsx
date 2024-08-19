@@ -185,7 +185,7 @@ const Component = () => {
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [inviteData, setInviteData] = useState({ invites: 0, tier: 0 });
-
+    const {username, email} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
