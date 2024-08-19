@@ -18,7 +18,7 @@ const Header = () => {
 };
 
 const Login = () => {
-    const {userrname, setName} = useContext(UserContext);
+    const {username, setName} = useContext(UserContext);
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
