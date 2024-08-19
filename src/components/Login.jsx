@@ -18,7 +18,7 @@ const Header = () => {
 };
 
 const Login = () => {
-    const {email, setEmail} = useContext(UserContext);
+    const {userrname, setName} = useContext(UserContext);
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
@@ -28,10 +28,10 @@ const Login = () => {
         axios.post('https://invicon-back-end.onrender.com/login', { email, password })
             .then(result => {
                 console.log('Server response:', result);
-                if (result.data === "Correct email and password.") {
+                if (result.data === "Correct username and password.") {
                     navigate('/home');
                 } else {
-                    toast.error('Incorrect password or email. Try again.', {
+                    toast.error('Invalid username or email. Try again.', {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -67,14 +67,15 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputEmail1" className="block text-sm font-bold mb-2">
-                                Email:
+                                Username:
                             </label>
                             <input
-                                type="email"
-                                placeholder="Enter Email"
+                                type="text"
+                                maxlength="12"
+                                placeholder="Enter username"
                                 className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputEmail1"
-                                onChange={(event) => setEmail(event.target.value)}
+                                onChange={(event) => setName(event.target.value)}
                                 required
                             />
                         </div>
@@ -83,8 +84,9 @@ const Login = () => {
                                 Password:
                             </label>
                             <input
-                                type="password"
-                                placeholder="Enter Password"
+                                type="password" 
+                                maxlength="14"
+                                placeholder="Enter password"
                                 className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputPassword1"
                                 onChange={(event) => setPassword(event.target.value)}
