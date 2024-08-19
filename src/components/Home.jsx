@@ -20,7 +20,8 @@ const Header = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     let inviteLink = localStorage.getItem('inviteLink');
-    //let code = inviteLink.slice(-8);
+    let code = "ABC123";
+    if (inviteLink) code = inviteLink.slice(-8);
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText({inviteLink});
@@ -71,7 +72,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <div className="grid gap-1">
                     <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium font-helvetica">ABC123</span>
+                        <span className="text-sm font-medium font-helvetica">{code)</span>
                         <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
                             <CopyIcon className="h-4 w-4 H-effect" />
                         </button>
@@ -207,8 +208,10 @@ const Component = () => {
                 console.error('Error fetching invite data', error);
             }
         };
-
-        fetchInviteData();
+        setTimeout(() => {
+            fetchInviteData()
+        }, 280);
+        //fetchInviteData();
     }, [username]);
 
     return (
