@@ -181,10 +181,10 @@ let InviteChecker = () => {
 
 const Component = () => {
     const inviteLink = useState('');
-
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [invites, setInvites, tier, setTier] = useState();
+    const [invites, setInvites] = useState(0);
+    const [tier, setTier] = useState(0);
     const {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
