@@ -174,7 +174,10 @@ let InviteChecker = () => {
         };
 
         if (invited) {
-            Invitee();
+            setTimeout(() => {
+                Invitee();
+            }, 288);
+            //Invitee();
         }
     }, [username]);
 
