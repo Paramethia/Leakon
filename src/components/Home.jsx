@@ -158,14 +158,14 @@ const InviteLinkComponent = () => {
 
 let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
-    const {username, email} = useContext(UserContext);
+    const {username} = useContext(UserContext);
     let invited = false;
     if (inviteId) invited == true;
 
     useEffect(() => {
         const Invitee = async () => {
             try {
-                const response = await axios.get(`https://invicon-back-end.onrender.com/invite-check`, { username, email, inviteId });
+                const response = await axios.get(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
                 if (response.data.message === "Invalid invite link.") console.error(response.data.message);
             } catch (err) {
                 console.error(err.response.data);
@@ -175,7 +175,7 @@ let InviteChecker = () => {
         if (invited) {
             Invitee();
         }
-    }, [username, email, inviteId]);
+    }, [username, inviteId]);
 
 };
 
@@ -184,8 +184,8 @@ const Component = () => {
 
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [inviteData, setInviteData] = useState({ invites: 0, tier: 0 });
-    const {username, email} = useContext(UserContext);
+    const [invites, setInvites, tier, setTier] = useState();
+    const {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
@@ -200,15 +200,16 @@ const Component = () => {
     useEffect(() => {
         const fetchInviteData = async () => {
             try {
-                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', { username, email });
-                setInviteData(response.data);
+                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', {username});
+                setInvites(response.data.invite.invites);
+                setTier(response.data.invite.tier);
             } catch (error) {
                 console.error('Error fetching invite data', error);
             }
         };
 
         fetchInviteData();
-    }, [username, email]);
+    }, [username]);
 
     return (
         <>
@@ -268,10 +269,10 @@ const Component = () => {
                             <div className="flex items-center justify-between">
                                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
                             </div>
-                            <p className="text-gray-500 dark:text-gray-400">You have invited a total of {inviteData.invites} people.</p>
+                            <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites.invites} people.</p>
                         </div>
                         <div className="flex items-center justify-between">
-                            <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {inviteData.tier}</div>
+                            <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {tier.tier}</div>
                            
                             <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
                                <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
