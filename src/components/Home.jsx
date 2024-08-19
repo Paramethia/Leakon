@@ -91,6 +91,7 @@ const InviteLinkComponent = () => {
     const {username, email} = useContext(UserContext);
 
     useEffect(() => {
+       console.log(username, email);
        const existingLink = localStorage.getItem('inviteLink');
        if (existingLink) {
             setInviteLink(existingLink);
