@@ -19,9 +19,12 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-    let inviteLink = localStorage.getItem('inviteLink');
-    let code = "ABC123";
-    if (inviteLink) code = inviteLink.slice(-8);
+    let inviteLink = "";
+    let code = "";
+    setTimeout(() => {
+        inviteLink = localStorage.getItem('inviteLink');
+        code = inviteLink.slice(-8);
+    }, 99);
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText({inviteLink});
@@ -177,7 +180,6 @@ let InviteChecker = () => {
             setTimeout(() => {
                 Invitee();
             }, 288);
-            //Invitee();
         }
     }, [username]);
 
@@ -214,7 +216,6 @@ const Component = () => {
         setTimeout(() => {
             fetchInviteData()
         }, 280);
-        //fetchInviteData();
     }, [username]);
 
     return (
