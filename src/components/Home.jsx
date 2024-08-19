@@ -165,7 +165,7 @@ let InviteChecker = () => {
     useEffect(() => {
         const Invitee = async () => {
             try {
-                const response = await axios.get(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
+                const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
                 if (response.data.message === "Invalid invite link.") console.error(response.data.message);
             } catch (err) {
                 console.error(err.response.data);
@@ -200,7 +200,7 @@ const Component = () => {
     useEffect(() => {
         const fetchInviteData = async () => {
             try {
-                const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', {username});
+                const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
                 setInvites(response.data.invites);
                 setTier(response.data.tier);
             } catch (error) {
