@@ -201,8 +201,8 @@ const Component = () => {
         const fetchInviteData = async () => {
             try {
                 const response = await axios.get('https://invicon-back-end.onrender.com/invite-data', {username});
-                setInvites(response.data.invite.invites);
-                setTier(response.data.invite.tier);
+                setInvites(response.data.invites);
+                setTier(response.data.tier);
             } catch (error) {
                 console.error('Error fetching invite data', error);
             }
