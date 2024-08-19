@@ -367,7 +367,7 @@ const Component = () => {
             </main>
         </div>
         <div className="Faoter bg-dark pt-2 text-white text-center w-full h-10 bottom-0 left-0 right-0 flex items-center justify-center">
-            <p> &copy; Invicon 2024 </p>
+            <p> &copy; Invicon 2024 </p> <br />
             <a href="mailto:kyrinkompi@gmail.com"><p>Contact developer</p></a>
         </div>
         </>
