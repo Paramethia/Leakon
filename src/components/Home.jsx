@@ -19,12 +19,11 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-    let inviteLink = "";
-    let code = "";
-    setTimeout(() => {
-        inviteLink = localStorage.getItem('inviteLink');
+    let inviteLink = inviteLink = localStorage.getItem('inviteLink');
+    let code = "ABC123";
+    if (inviteLink) {
         code = inviteLink.slice(-8);
-    }, 99);
+    };
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
