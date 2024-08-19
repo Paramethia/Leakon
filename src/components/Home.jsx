@@ -72,7 +72,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <div className="grid gap-1">
                     <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
                     <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium font-helvetica">{code)</span>
+                        <span className="text-sm font-medium font-helvetica">{code}</span>
                         <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
                             <CopyIcon className="h-4 w-4 H-effect" />
                         </button>
