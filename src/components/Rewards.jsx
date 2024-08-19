@@ -59,7 +59,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </button>
       </div>
 
-      <nav className="flex flex-col gap-2 mb-10">
+      <nav className="Navigation flex flex-col gap-2 mb-10">
         <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
           <HomeIcon className="h-4 w-4" /> Home
         </Link>
