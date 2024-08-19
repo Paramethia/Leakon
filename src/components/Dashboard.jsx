@@ -17,6 +17,9 @@ const Header = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
+  let inviteLink = localStorage.getItem('inviteLink');
+  let code = inviteLink.slice(-8);
+
   const Warning = () => {
     toast.warn("This page is getting worked on.", {
       position: "top-center",
@@ -32,7 +35,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   }
 
   const handleCopyReferralCode = () => {
-    navigator.clipboard.writeText('Code');
+    navigator.clipboard.writeText(inviteLink);
     toast.success('Code copied to clipboard! 🗒️', {
         position: "top-center",
         autoClose: 5000,
@@ -71,7 +74,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </button>
       </div>
 
-      <nav className="flex flex-col gap-2 mb-10">
+      <nav className="Navigation flex flex-col gap-2 mb-10">
         <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
           <HomeIcon className="h-4 w-4" /> Home
         </Link>
@@ -87,7 +90,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <div className="grid gap-1">
           <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium font-helvetica">ABC123</span>
+            <span className="text-sm font-medium font-helvetica">{code}</span>
             <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
               <CopyIcon className="h-4 w-4" />
             </button>
