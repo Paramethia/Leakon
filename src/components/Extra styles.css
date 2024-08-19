@@ -79,6 +79,7 @@ input:checked + .slider:before {
 
 .Navigation {
     margin-top: 5cm;
+    font-size: 20px;
 }
 
 .H-effect:hover {
