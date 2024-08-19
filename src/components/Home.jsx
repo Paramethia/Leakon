@@ -19,7 +19,7 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-    let inviteLink = inviteLink = localStorage.getItem('inviteLink');
+    let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
     if (inviteLink) {
         code = inviteLink.slice(-8);
