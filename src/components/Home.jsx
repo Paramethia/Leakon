@@ -25,7 +25,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         setTimeout(() => {
            code = inviteLink.slice(-8);
         }, 99);
-    });
+    }, [inviteLink]);
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
