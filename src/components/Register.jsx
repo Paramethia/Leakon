@@ -180,7 +180,7 @@ const Register = () => {
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Submit </button>
                     </form>
                     <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Log in</Link></p>
-                    {/* <button onClick={clearCache} className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Clear cache</button> */}    
+                    <button onClick={clearCache} className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">Clear cache</button>  
                 </div>
             </div>
         </div>
