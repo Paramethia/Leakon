@@ -21,14 +21,12 @@ const Header = () => {
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
-    if (inviteLink) code = inviteLink.slice(-8);
-    /*
+    //if (inviteLink) code = inviteLink.slice(-8);
     useEffect(() => {
         setTimeout(() => {
            code = inviteLink.slice(-8);
         }, 99);
     }, [inviteLink]);
-    */
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
         toast.success('Copied to clipboard! 🗒️', {
@@ -170,7 +168,7 @@ let InviteChecker = () => {
     if (inviteId) invited == true;
 
     useEffect(() => {
-        let {username} = useContext(UserContext);
+        {username} = useContext(UserContext);
         const Invitee = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
@@ -208,7 +206,7 @@ const Component = () => {
     };
 
     useEffect(() => {
-        let {username} = useContext(UserContext);
+        {username} = useContext(UserContext);
         const fetchInviteData = async () => {
             try {
                 const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
@@ -226,7 +224,7 @@ const Component = () => {
     return (
         <>
  
-        <inviteChecker />
+        <InviteChecker />
 
         <div className="flex">
 
