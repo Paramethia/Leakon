@@ -188,7 +188,7 @@ const Component = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
-    const {username} = useContext(UserContext);
+    let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
@@ -201,6 +201,7 @@ const Component = () => {
     };
 
     useEffect(() => {
+        {username} = useContext(UserContext);
         const fetchInviteData = async () => {
             try {
                 const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
@@ -364,7 +365,7 @@ const Component = () => {
                 */ }
             </main>
         </div>
-        <div className="Faoter bg-dark pt-2 text-white text-center w-full bottom-0 left-0 right-0 flex items-center justify-center">
+        <div className="Faoter bg-dark pt-2 text-white text-center flex items-center justify-center">
             <p> &copy; Invicon 2024 </p> <br />
             <a href="mailto:kyrinkompi@gmail.com"><p>Contact developer</p></a>
         </div>
