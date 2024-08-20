@@ -21,9 +21,7 @@ const Header = () => {
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
-    if (inviteLink) {
-        code = inviteLink.slice(-8);
-    };
+    if (inviteLink) code = inviteLink.slice(-8);
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
@@ -178,7 +176,7 @@ let InviteChecker = () => {
         if (invited) {
             setTimeout(() => {
                 Invitee();
-            }, 288);
+            }, 335);
         }
     }, [username]);
 
@@ -188,8 +186,8 @@ const Component = () => {
     const inviteLink = useState('');
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [invites, setInvites] = useState(0);
-    const [tier, setTier] = useState(0);
+    const [invites, setInvites] = useState();
+    const [tier, setTier] = useState();
     const {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
