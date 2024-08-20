@@ -165,10 +165,10 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
     let invited = false;
-    if (inviteId) invited == true;
+    if (inviteId) invited = true;
 
     useEffect(() => {
-        const Invitee = async () => {
+        const check = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
                 if (response.data.message === "Invalid invite link.") console.error(response.data.message);
@@ -179,7 +179,7 @@ let InviteChecker = () => {
 
         if (invited) {
             setTimeout(() => {
-                Invitee();
+                check();
             }, 335);
         }
     }, [username]);
@@ -205,18 +205,20 @@ const Component = () => {
     };
 
     useEffect(() => {
-        const fetchInviteData = async () => {
-            try {
-                const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
-                setInvites(response.data.invites);
-                setTier(response.data.tier);
-            } catch (error) {
-                console.error('Error fetching invite data', error);
-            }
-        };
-        setTimeout(() => {
-            fetchInviteData()
-        }, 280);
+        if (username) {
+            const fetchInviteData = async () => {
+                try {
+                    const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
+                    setInvites(response.data.invites);
+                    setTier(response.data.tier);
+                } catch (error) {
+                    console.error('Error fetching invite data', error);
+                }
+            };
+            setTimeout(() => {
+                fetchInviteData()
+            }, 280);
+        }
     }, [username]);
 
     return (
@@ -296,11 +298,11 @@ const Component = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
                         {[
-                            { tier: 'Tier 1', invites: 12, price: 10 },
-                            { tier: 'Tier 2', invites: 25, price: 20 },
-                            { tier: 'Tier 3', invites: 45, price: 40 },
-                            { tier: 'Tier 4', invites: 70, price: 70 },
-                            { tier: 'Tier 5', invites: 100, price: 100 },
+                            { tier: 'Tier 1', invites: 5, price: 10 },
+                            { tier: 'Tier 2', invites: 10, price: 20 },
+                            { tier: 'Tier 3', invites: 20, price: 40 },
+                            { tier: 'Tier 4', invites: 40, price: 70 },
+                            { tier: 'Tier 5', invites: 80, price: 100 },
                         ].map(({ tier, invites, price }, index) => (
                             <div key={index} className="text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
@@ -370,7 +372,7 @@ const Component = () => {
         </div>
         <div className="Faoter bg-dark pt-2 text-white text-center flex items-center justify-center">
             <p> &copy; Invicon 2024 </p> <br />
-            <a href="mailto:kyrinkompi@gmail.com"><p>Contact developer</p></a>
+            {/* <a href="mailto:kyrinkompi@gmail.com"><p>Contact developer</p></a> */}
         </div>
         </>
     );
