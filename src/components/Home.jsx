@@ -168,7 +168,6 @@ let InviteChecker = () => {
     if (inviteId) invited == true;
 
     useEffect(() => {
-        {username} = useContext(UserContext);
         const Invitee = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
@@ -206,7 +205,6 @@ const Component = () => {
     };
 
     useEffect(() => {
-        {username} = useContext(UserContext);
         const fetchInviteData = async () => {
             try {
                 const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
