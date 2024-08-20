@@ -201,7 +201,7 @@ const Component = () => {
     };
 
     useEffect(() => {
-        {username} = useContext(UserContext);
+        username = useContext(UserContext);
         const fetchInviteData = async () => {
             try {
                 const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
