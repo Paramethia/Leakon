@@ -28,7 +28,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    // To check if the user already has an account on the device to prevent multiple acccount on the same acccount
+    // To check if the user already has an account on the device to prevent inviting multiple acccount on the same device.
 
     let alreadyReg = localStorage.getItem("email");
 
