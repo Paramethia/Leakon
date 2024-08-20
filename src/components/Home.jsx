@@ -163,12 +163,12 @@ const InviteLinkComponent = () => {
 
 let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
-    //const {username} = useContext(UserContext);
+    let {username} = useContext(UserContext);
     let invited = false;
     if (inviteId) invited == true;
 
     useEffect(() => {
-        const {username} = useContext(UserContext);
+        let {username} = useContext(UserContext);
         const Invitee = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
@@ -193,7 +193,7 @@ const Component = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
-    //let {username} = useContext(UserContext);
+    let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
