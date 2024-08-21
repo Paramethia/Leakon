@@ -172,7 +172,7 @@ let InviteChecker = () => {
                     console.log("Invite code found.");
                 }
             } catch (err) {
-                console.error(response.data);
+                console.error(err);
             }
         };
 
