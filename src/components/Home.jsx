@@ -161,7 +161,7 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
     let invited = false;
-    if (inviteId === null) {
+    if (inviteId != null) {
         invited = true;
         console.log("Your used invite code:", inviteId);
     }
