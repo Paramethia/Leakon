@@ -178,7 +178,7 @@ let InviteChecker = () => {
                 check();
             }, 335);
         }
-    }, []);
+    }, [username]);
 
 };
 
@@ -215,7 +215,7 @@ const Component = () => {
                 fetchInviteData()
             }, 280);
         }
-    }, []);
+    }, [username]);
 
     return (
         <>
