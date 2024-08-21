@@ -92,7 +92,6 @@ const InviteLinkComponent = () => {
     const {username} = useContext(UserContext);
 
     useEffect(() => {
-       console.log(username);
        const existingLink = localStorage.getItem('inviteLink');
        if (existingLink) {
             setInviteLink(existingLink);
@@ -153,6 +152,7 @@ const InviteLinkComponent = () => {
                 )}
             </div>
         </div>
+
         </>
     );
 };
@@ -161,7 +161,10 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
     let invited = false;
-    if (inviteId === null) invited = true;
+    if (inviteId === null) {
+        invited = true;
+        console.log("Your used invite code:", inviteId);
+    }
 
     useEffect(() => {
         const check = async () => {
