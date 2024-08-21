@@ -167,9 +167,9 @@ let InviteChecker = () => {
         const check = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
-                if (response.data.message === "Invalid invite link.") console.error(response.data.message);
+                if (response.data.message === "Invalid invite code.") console.error(response.data.message);
             } catch (err) {
-                console.error(err.response.data);
+                console.error(response.data);
             }
         };
 
