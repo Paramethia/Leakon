@@ -161,7 +161,7 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
     let invited = false;
-    if (inviteId) invited = true;
+    if (inviteId === null) invited = true;
 
     useEffect(() => {
         const check = async () => {
