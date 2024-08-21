@@ -33,7 +33,6 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        console.log(usedInvite);
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
         .then(result => {
