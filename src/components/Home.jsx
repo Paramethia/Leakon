@@ -21,12 +21,7 @@ const Header = () => {
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
-    //if (inviteLink) code = inviteLink.slice(-8);
-    useEffect(() => {
-        setTimeout(() => {
-           code = inviteLink.slice(-8);
-        }, 99);
-    }, []);
+    if (inviteLink) code = inviteLink.slice(-8);
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
         toast.success('Copied to clipboard! 🗒️', {
@@ -183,6 +178,10 @@ let InviteChecker = () => {
             }, 335);
         }
     }, []);
+
+    return(
+        
+    );
 
 };
 
