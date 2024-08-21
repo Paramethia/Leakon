@@ -26,7 +26,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         setTimeout(() => {
            code = inviteLink.slice(-8);
         }, 99);
-    }, [inviteLink]);
+    }, []);
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
         toast.success('Copied to clipboard! 🗒️', {
@@ -114,7 +114,7 @@ const InviteLinkComponent = () => {
     
         fetchInviteLink();
       }
-    }, [username]);
+    }, []);
     
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
@@ -182,7 +182,7 @@ let InviteChecker = () => {
                 check();
             }, 335);
         }
-    }, [username]);
+    }, []);
 
 };
 
@@ -219,7 +219,7 @@ const Component = () => {
                 fetchInviteData()
             }, 280);
         }
-    }, [username]);
+    }, []);
 
     return (
         <>
