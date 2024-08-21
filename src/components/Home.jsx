@@ -180,10 +180,6 @@ let InviteChecker = () => {
         }
     }, []);
 
-    return(
-        
-    );
-
 };
 
 const Component = () => {
