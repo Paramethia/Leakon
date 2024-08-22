@@ -160,7 +160,7 @@ const InviteLinkComponent = () => {
 let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
-    if (inviteId) console.log("Your used the invite code:", inviteId)
+    if (inviteId !== null) console.log("Your used the invite code:", inviteId)
 
     useEffect(() => {
         const check = async () => {
@@ -168,15 +168,16 @@ let InviteChecker = () => {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
                 if (response.data.message === "Invalid invite code.") { 
                     console.error( "Error:", response.data.message);
-                } else {
+                } else if (response.data.messge === "Code found and updated data.") {
                     console.log("Invite code found.");
+                    localStorage.removeItem("usedInvite");
                 }
             } catch (err) {
                 console.error(err);
             }
         };
 
-        if (inviteId) {
+        if (inviteId !== null) {
             setTimeout(() => {
                 check();
             }, 335);
