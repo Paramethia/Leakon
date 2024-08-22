@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Helmet } from "react-helmet";
+import axios from 'axios';
+import { UserContext } from './UserContext';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Flip, Zoom } from 'react-toastify';
-import'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import './Extra styles.css';
@@ -105,9 +107,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
 const Component = () => {
 
+  const {username} = useContext(UserContext);
+  const [invitee, useInvitee] = useState();
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const darkModeStyles = { backgroundColor: '#101424' };
   const lightModeStyles = { backgroundColor: '#ffffff' };
 
@@ -137,28 +140,28 @@ const Component = () => {
             borderRadius: '5px',
           }}
        >
-  <div className={`md:hidden fixed left-12 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
-    <button onClick={toggleSidebar}>
-      <FaBars className="h-6 w-6 text-white" />
-    </button>
-  </div>
-  <Link to="/home" style={{ textDecoration: 'none' }} className="flex-1 md:flex-none">
-    <div className="text-white flex items-center gap-2 justify-center md:justify-start">
-      <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Logo" className="w-8 h-8"/>
-      <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
+      <div className={`md:hidden fixed left-12 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
+        <button onClick={toggleSidebar}>
+          <FaBars className="h-6 w-6 text-white" />
+        </button>
+      </div>
+      <Link to="/home" style={{ textDecoration: 'none' }} className="flex-1 md:flex-none">
+        <div className="text-white flex items-center gap-2 justify-center md:justify-start">
+          <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Logo" className="w-8 h-8"/>
+          <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
+        </div>
+      </Link>
+      <div className="absolute top-4  right-4">
+        <label className="switch">
+          <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
+          <span className="slider round">
+            <span className="icon-container">
+              {isDarkMode ? <FaSun color="#fff" /> : <FaMoon color="#333" />}
+            </span>
+          </span>
+        </label>
+      </div>
     </div>
-  </Link>
-  <div className="absolute top-4  right-4">
-    <label className="switch">
-      <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
-      <span className="slider round">
-        <span className="icon-container">
-          {isDarkMode ? <FaSun color="#fff" /> : <FaMoon color="#333" />}
-        </span>
-      </span>
-    </label>
-  </div>
-</div>
         
         <div className="flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
     
