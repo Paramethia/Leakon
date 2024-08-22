@@ -100,14 +100,13 @@ const Rewards = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
 
   useEffect(() => {
-      const fetchTier = async () => {
-          try {
-              const response = await axios.get(`https:/invic0n.vercel.app/tiers`);
-              setCurrentTier(resonse.data.tier);
-          } catch (error) {
-              console.error("Error fetching tier data:", error);
-      }
-      fetchTier();
+    let response = axios.post('https://invicon-back-end.onrender.com/getTier', { username })
+      .then(response => {
+        setCurrentTier(response.data.tier);
+      })
+      .catch(error => {
+        console.error('Error fetching tier:', error);
+      });
   }, [username]);
 
   const toggleTheme = () => {
@@ -225,7 +224,7 @@ const Rewards = () => {
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
               <div className="flex pt-3 justify-center">
                 {Array.from({ length: currentTier }, (_, i) => (
-                  <a href="https://t.me/daemozon" key={i}>
+                  <a href="#" key={i}>
                     <button className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                       Get tier {i + 1} reward
                     </button>
