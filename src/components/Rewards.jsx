@@ -100,13 +100,17 @@ const Rewards = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
 
   useEffect(() => {
-    let response = axios.post('https://invicon-back-end.onrender.com/getTier', { username })
-      .then(response => {
-        setCurrentTier(response.data.tier);
-      })
-      .catch(error => {
-        console.error('Error fetching tier:', error);
-      });
+        try {
+            if (response.data === "User found.") {
+                const response = axios.post(`https://invicon-back-end.onrender.com/getTIer`, { username ));
+                setCurrentTier(response.data.tier);
+            } else {
+                console.log("User not found.");
+            }
+        } catch (error) {
+            console.error('Error fetching tier:', error);
+        }
+    });
   }, [username]);
 
   const toggleTheme = () => {
