@@ -102,7 +102,7 @@ const Rewards = () => {
   useEffect(() => {
         try {
             if (response.data === "User found.") {
-                const response = axios.post(`https://invicon-back-end.onrender.com/getTIer`, { username ));
+                const response = axios.post(`https://invicon-back-end.onrender.com/getTIer`, { username });
                 setCurrentTier(response.data.tier);
             } else {
                 console.log("User not found.");
