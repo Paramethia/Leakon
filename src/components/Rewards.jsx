@@ -1,5 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
+import axios from 'axios';
 import { Helmet } from "react-helmet";
+import { UseContext } from './UseContext';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
@@ -87,14 +89,26 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   );
 };
 
-const Component = () => {
+const Rewards = () => {
+  const { username } = useContext(UserContext);
+  const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [playingIndex, setPlayingIndex] = useState(null);
   const videoRefs = useRef([]);
-
   const darkModeStyles = { backgroundColor: '#101424' };
   const lightModeStyles = { backgroundColor: '#ffffff' };
+
+  useEffect(() => {
+      const fetchTier = async () => {
+          try {
+              const response = await axios.get(`https:/invic0n.vercel.app/tiers`);
+              setCurrentTier(resonse.data.tier);
+          } catch (error) {
+              console.error("Error fetching tier data:", error);
+      }
+      fetchTier();
+  }, [username]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -104,7 +118,7 @@ const Component = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handlePlayPause = (index) => {
+  const playorpause = (index) => {
     if (playingIndex === index) {
       videoRefs.current[index].pause();
       setPlayingIndex(null);
@@ -195,7 +209,7 @@ const Component = () => {
                       controls={false}
                     />
                     <button
-                      onClick={() => handlePlayPause(index)}
+                      onClick={() => playorpause(index)}
                       className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl"
                     >
                       {playingIndex === index ? <FaPause /> : <FaPlay />}
@@ -210,11 +224,20 @@ const Component = () => {
               </p>
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
               <div className="flex pt-3 justify-center">
-                <a href="https://t.me/daemozon">
-                <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                  Get next tier
-                </button>
-                </a>
+                {Array.from({ length: currentTier }, (_, i) => (
+                  <a href="https://t.me/daemozon" key={i}>
+                    <button className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                      Get tier {i + 1} reward
+                    </button>
+                  </a>
+                ))}
+                {currentTier < 5 && (
+                  <a href="https://t.me/daemozon">
+                    <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                      Buy next tier
+                    </button>
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -224,5 +247,5 @@ const Component = () => {
   );
 };
 
-export default Component;
+export default Rewards;
 
