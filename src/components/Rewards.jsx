@@ -144,6 +144,14 @@ const Rewards = () => {
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770896/1_1_2_nldex1.mp4'
   ];
 
+  const rewardLinks = {
+    1: "https://mega.nz/folder/UZZDyKwQ#_ieBD-WQ9svGNZ3bDRtjzQ",
+    2: "https://mega.nz/folder/hAYQ0JaK#DcYvtQDi8zupIc5PvUos6Q",
+    3: "https://mega.nz/folder/aHIBxSjD#HhatRbyztC25c4Gq3JjvSA",
+    4: "https://mega.nz/folder/8SVyEATT#5DMFyVMfypmNMTvdD7nmAA/folder/5HklUQzZ",
+    5: "https://mega.nz/folder/BmswnLTa#xkUUxK_4KRyWd6OPMkNT5A"
+  };
+
   return (
     <div className="flex h-screen">
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -227,7 +235,7 @@ const Rewards = () => {
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
               <div className="flex pt-3 justify-center">
                 {Array.from({ length: currentTier }, (_, i) => (
-                  <a href="#" key={i}>
+                  <a href={rewardLinks[0]} key={i}>
                     <button className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                       Get tier {i + 1} reward
                     </button>
