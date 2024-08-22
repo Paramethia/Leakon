@@ -110,7 +110,6 @@ const Rewards = () => {
         } catch (error) {
             console.error('Error fetching tier:', error);
         }
-    });
   }, [username]);
 
   const toggleTheme = () => {
