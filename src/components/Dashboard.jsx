@@ -56,8 +56,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     <Header />
 
-    <Warning />
-
     <aside
       className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
