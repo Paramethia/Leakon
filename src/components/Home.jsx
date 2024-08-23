@@ -5,7 +5,7 @@ import axios from 'axios';
 import { UserContext } from './UserContext';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiEmail as EmailIcon, FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiEnvelope as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import './Extra styles.css';
 
@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             
             <center>
                 <a className="Contact" href="mailto:kevisbuffalo@gmail.com">
-                    <EmailIcon className="h-4 w-4" /> Contact dev
+                    <ConIcon className="h-4 w-4" /> Contact dev
                 </a>
             </center>
 
