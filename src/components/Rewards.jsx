@@ -100,17 +100,25 @@ const Rewards = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
 
   useEffect(() => {
+    const fetchTier = async () => {
         try {
-            if (response.data === "User found.") {
-                const response = axios.post(`https://invicon-back-end.onrender.com/getTIer`, { username });
+            const response = await axios.post('https://invicon-back-end.onrender.com/getTier', { username });
+
+            if (response.data.message === "User found.") {
                 setCurrentTier(response.data.tier);
             } else {
-                console.log("User not found.");
+                console.log(response.data.message);
             }
         } catch (error) {
             console.error('Error fetching tier:', error);
         }
-  }, [username]);
+    };
+
+    if (username) {
+        fetchTier();
+    }
+}, [username]);
+
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -255,7 +263,7 @@ const Rewards = () => {
                       Get tier {tier} reward
                     </button>
                   </a>
-                ))}
+                )))}
                 {currentTier < 5 && (
                   <a href="https://t.me/daemozon">
                     <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
