@@ -120,6 +120,14 @@ const Rewards = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const toggleSpoiler = (index) => {
+    setSpoilers(prev => {
+      const newSpoilers = [...prev];
+      newSpoilers[index] = !newSpoilers[index];
+      return newSpoilers;
+    });
+  };
+
   const playorpause = (index) => {
     if (playingIndex === index) {
       videoRefs.current[index].pause();
@@ -211,7 +219,7 @@ const Rewards = () => {
                   key={index}
                   className="group relative flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow-md transition-all hover:bg-gray-100 dark:bg-gray-950 dark:hover:bg-gray-800"
                 >
-                  <div className="flex-1 w-full relative">
+                  <div className={`flex-1 w-full relative ${!spoilers[index] ? 'blur-sm' : ''}`} onClick={() => toggleSpoiler(index)}>
                     <video
                       ref={(el) => (videoRefs.current[index] = el)}
                       src={link}
@@ -234,10 +242,17 @@ const Rewards = () => {
               </p>
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
               <div className="flex pt-3 justify-center">
-                {Array.from({ length: currentTier }, (_, i) => (
-                  <a href={rewardLinks[0]} key={i}>
+                {[1, 2, 3, 4, 5].map((tier) => (
+                  currentTier >= tier && (
+                  <a
+                    key={tier}
+                    href={rewardLinks[tier]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full"
+                  >
                     <button className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                      Get tier {i + 1} reward
+                      Get tier {tier} reward
                     </button>
                   </a>
                 ))}
