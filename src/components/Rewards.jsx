@@ -1,7 +1,7 @@
 import React, { useState, useRef, useContext } from 'react';
 import axios from 'axios';
 import { Helmet } from "react-helmet";
-import { UseContext } from './UserContext';
+import { UserContext } from './UserContext';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import'react-toastify/dist/ReactToastify.css';
