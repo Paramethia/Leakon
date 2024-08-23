@@ -5,7 +5,7 @@ import axios from 'axios';
 import { UserContext } from './UserContext';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiEmail as EmailIcon FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiEmail as EmailIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import './Extra styles.css';
 
@@ -21,7 +21,7 @@ const Header = () => {
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
-    if (inviteLink) code = inviteLink.slice(-8)
+    if (inviteLink) code = inviteLink.slice(-8);
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </nav>
             
             <center>
-                <a className="Contact" href="mailto:kyrinkompi@gmail.com">
+                <a className="Contact" href="mailto:kevisbuffalo@gmail.com">
                     <EmailIcon className="h-4 w-4" /> Contact dev
                 </a>
             </center>
