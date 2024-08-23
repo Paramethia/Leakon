@@ -235,16 +235,8 @@ const Rewards = () => {
                   className="group relative flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow-md transition-all hover:bg-gray-100 dark:bg-gray-950 dark:hover:bg-gray-800"
                 >
                   <div className={`flex-1 w-full relative ${!spoilers[index] ? 'blur-sm' : ''}`} onClick={() => toggleSpoiler(index)}>
-                    <video
-                      ref={(el) => (videoRefs.current[index] = el)}
-                      src={link}
-                      className="aspect-video w-full h-64 rounded-lg object-cover"
-                      controls={false}
-                    />
-                    <button
-                      onClick={() => playorpause(index)}
-                      className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl"
-                    >
+                    <spoiler><video ref={(el) => (videoRefs.current[index] = el)}  src={link} className="aspect-video w-full h-64 rounded-lg object-cover"controls={false} /></spoiler>
+                    <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
                       {playingIndex === index ? <FaPause /> : <FaPlay />}
                     </button>
                   </div>
