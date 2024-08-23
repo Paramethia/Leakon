@@ -88,7 +88,9 @@ input:checked + .slider:before {
 }
 
 .Contact {
-    font-decoration: none;
+    display: inline-block;
+    margin-top: 5cm;
+    text-decoration: none;
     transition: 0.3s;
 }
 
