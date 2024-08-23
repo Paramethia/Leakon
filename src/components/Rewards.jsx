@@ -98,6 +98,7 @@ const Rewards = () => {
   const videoRefs = useRef([]);
   const darkModeStyles = { backgroundColor: '#101424' };
   const lightModeStyles = { backgroundColor: '#ffffff' };
+  const [spoilers, setSpoilers] = useState([]);
 
   useEffect(() => {
     const fetchTier = async () => {
