@@ -79,7 +79,7 @@ input:checked + .slider:before {
 
 .Navigation {
     margin-top: 5cm;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .H-effect:hover {
@@ -93,13 +93,14 @@ input:checked + .slider:before {
 
 .Contact a {
    color: lightgrey;
+   font-size: 18px;
    text-decoration: none;
    transition: 0.3s;  
 }
 
 .Contact a:hover {
     color: #3e97ec;
-    font-size: 17px;
+    font-size: 19px;
     font-style: italic;
 }
 
