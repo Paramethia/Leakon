@@ -62,16 +62,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       </div>
 
       <nav className="Navigation flex flex-col gap-2 mb-10">
-        <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+        <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
           <HomeIcon className="h-4 w-4" /> Home
         </Link>
-        <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+        <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
           <UsersIcon className="h-4 w-4" /> Invitations
         </Link>
-        <Link to="/rewards" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
+        <Link to="/rewards" className="flex items-center text-white gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
           <GiftIcon className="h-4 w-4" /> Rewards
         </Link>
       </nav>
+
+      <center>
+        <div className="Contact">
+            <ConIcon className="h-4 w-4 inline" /> <a href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
+        </div>
+      </center>
 
       <div className="absolute bottom-0 left-0 right-0 grid gap-4 rounded-lg bg-[#282434] p-4">
         <div className="grid gap-1">
