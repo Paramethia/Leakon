@@ -1,11 +1,11 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Helmet } from "react-helmet";
 import { UserContext } from './UserContext';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
-import'react-toastify/dist/ReactToastify.css';
-import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiCopy as CopyIcon } from 'react-icons/fi';
+import 'react-toastify/dist/ReactToastify.css';
+import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
 import './Extra styles.css';
 
