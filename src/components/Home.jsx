@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             
             <center>
                 <span className="Contact">
-                    <ConIcon className="h-4 w-4" /> <a href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
+                    <ConIcon className="h-4 w-4 inline" /> <a href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
                 </span>
             </center>
 
