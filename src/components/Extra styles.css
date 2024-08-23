@@ -91,13 +91,13 @@ input:checked + .slider:before {
     margin-top: 5cm;
 }
 
-.Contact span {
+.Contact a {
    color: lightgrey;
    text-decoration: none;
    transition: 0.3s;  
 }
 
-.Contact span:hover {
+.Contact a:hover {
     color: #3e97ec;
     font-size: 17px;
     font-style: italic;
