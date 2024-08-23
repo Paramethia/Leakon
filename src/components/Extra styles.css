@@ -88,13 +88,17 @@ input:checked + .slider:before {
 }
 
 .Contact {
-    display: inline-block;
     margin-top: 5cm;
-    text-decoration: none;
-    transition: 0.3s;
 }
 
-.Contact:hover {
+.Contact span {
+   color: lightgrey;
+   text-decoration: none;
+   transition: 0.3s;  
+}
+
+.Contact span:hover {
+    color: #3e97ec;
     font-size: 17px;
     font-style: italic;
 }
