@@ -69,9 +69,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </nav>
             
             <center>
-                <a className="Contact" href="mailto:kevisbuffalo@gmail.com">
-                    <ConIcon className="h-4 w-4" /> Contact dev
-                </a>
+                    <ConIcon className="h-4 w-4" /> <a className="Contact" href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
             </center>
 
             <div className="absolute bottom-0 left-0 right-0 grid gap-4 rounded-lg bg-[#282434] p-4">
