@@ -41,7 +41,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     return (
         <>
 
-        <ToastContainer />
+        <Header />
 
         <aside
           className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
@@ -140,10 +140,6 @@ const InviteLinkComponent = () => {
     return (
         <>
 
-        <Header />
-        
-        <ToastContainer />
-
         <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Your Invite Link</h2>
@@ -234,6 +230,8 @@ const Component = () => {
 
     return (
         <>
+
+        <ToastContainer />
  
         <InviteChecker />
 
