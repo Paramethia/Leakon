@@ -57,20 +57,20 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </div>
 
             <nav className="Navigation flex flex-col gap-2 mb-10">
-                <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 text-sm font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
+                <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
                     <HomeIcon className="h-4 w-4" /> Home
                 </Link>
-                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
-                <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 text-smfont-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+                <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <GiftIcon className="h-4 w-4" /> Rewards
                 </Link>
             </nav>
             
             <center>
                 <span className="Contact">
-                    <ConIcon className="h-4 w-4" /> <a className="Contact" href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
+                    <ConIcon className="h-4 w-4" /> <a href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
                 </span>
             </center>
 
