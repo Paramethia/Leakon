@@ -166,7 +166,7 @@ const InviteLinkComponent = () => {
 let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
-    if (inviteId !== null) console.log("Your used the invite code:", inviteId)
+    if (typeof inviteId === 'string') console.log("Your used the invite code:", inviteId)
 
     useEffect(() => {
         const check = async () => {
@@ -183,10 +183,10 @@ let InviteChecker = () => {
             }
         };
 
-        if (inviteId !== null) {
+        if (typeof inviteId === 'string') {
             setTimeout(() => {
                 check();
-            }, 335);
+            }, 555);
         }
     }, [username]);
 
@@ -223,7 +223,7 @@ const Component = () => {
             };
             setTimeout(() => {
                 fetchInviteData()
-            }, 280);
+            }, 288);
         }
     }, [username]);
 
