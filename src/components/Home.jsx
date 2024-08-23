@@ -43,7 +43,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
         <ToastContainer />
 
-        <aside className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${ isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`} style={{ backgroundColor: "#282434" }}>
+        <aside
+          className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
+            isOpen ? 'translate-x-0' : '-translate-x-full'
+          } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
+          style={{ backgroundColor: "#282434" }}
+        >
             <div className="flex static justify-between items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
