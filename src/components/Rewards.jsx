@@ -234,8 +234,8 @@ const Rewards = () => {
                   key={index}
                   className="group relative flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow-md transition-all hover:bg-gray-100 dark:bg-gray-950 dark:hover:bg-gray-800"
                 >
-                  <div className={`flex-1 w-full relative ${!spoilers[index] ? 'blur-sm' : ''}`} onClick={() => toggleSpoiler(index)}>
-                    <spoiler><video ref={(el) => (videoRefs.current[index] = el)}  src={link} className="aspect-video w-full h-64 rounded-lg object-cover"controls={false} /></spoiler>
+                  <div className={"flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
+                    <video ref={(el) => (videoRefs.current[index] = el)}  src={link} className={`w-full h-full object-cover rounded-lg ${!spoilers[index] ? "blur-lg" : ""}`} controls={false} />
                     <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
                       {playingIndex === index ? <FaPause /> : <FaPlay />}
                     </button>
@@ -247,7 +247,7 @@ const Rewards = () => {
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                 Get a lot more with higher tiers
               </p>
-              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Your current tier: 0</p>
+              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Tier rewards will appear below once you unlock tiers: </p>
               <div className="flex pt-3 justify-center">
                 {[1, 2, 3, 4, 5].map((tier) => (
                   currentTier >= tier && (
@@ -259,14 +259,14 @@ const Rewards = () => {
                     className="inline-block text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full"
                   >
                     <button className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                      Get tier {tier} reward
+                      🔓 Get tier {tier} reward
                     </button>
                   </a>
                 )))}
                 {currentTier < 5 && (
                   <a href="https://t.me/daemozon">
                     <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                      Buy next tier
+                      Buy next tier 🧧
                     </button>
                   </a>
                 )}
