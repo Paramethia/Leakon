@@ -106,6 +106,8 @@ const Rewards = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
   const [spoilers, setSpoilers] = useState([]);
 
+  let moan = new Audio('.../public/ahh sound effect.mp3');
+
   useEffect(() => {
     const fetchTier = async () => {
         try {
@@ -258,7 +260,7 @@ const Rewards = () => {
                     rel="noopener noreferrer"
                     className="inline-block text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full"
                   >
-                    <button className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                    <button onMouseOver={moan.play()} className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                       🔓 Get tier {tier} reward
                     </button>
                   </a>
