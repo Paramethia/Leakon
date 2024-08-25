@@ -106,7 +106,7 @@ const Rewards = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
   const [spoilers, setSpoilers] = useState([]);
 
-  let moan = new Audio('.../public/ahh sound effect.mp3');
+  let moan = new Audio('https://res.cloudinary.com/doxalk3ms/video/upload/v1724628435/ahh_sound_effect_gukkzc.mp4');
 
   useEffect(() => {
     const fetchTier = async () => {
