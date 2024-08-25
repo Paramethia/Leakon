@@ -228,6 +228,17 @@ const Component = () => {
         }
     }, [username]);
 
+    const availableTiers = [
+        { tier: 'Tier 1', invites: 5, price: 10 },
+        { tier: 'Tier 2', invites: 10, price: 20 },
+        { tier: 'Tier 3', invites: 20, price: 40 },
+        { tier: 'Tier 4', invites: 40, price: 70 },
+        { tier: 'Tier 5', invites: 80, price: 100 },
+    ];
+
+    // Filter out the tiers that the user has already unlocked
+    const filteredTiers = availableTiers.filter((_, index) => index >= tier);
+
     return (
         <>
 
@@ -306,13 +317,7 @@ const Component = () => {
                     </h1>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
-                        {[
-                            { tier: 'Tier 1', invites: 5, price: 10 },
-                            { tier: 'Tier 2', invites: 10, price: 20 },
-                            { tier: 'Tier 3', invites: 20, price: 40 },
-                            { tier: 'Tier 4', invites: 40, price: 70 },
-                            { tier: 'Tier 5', invites: 80, price: 100 },
-                        ].map(({ tier, invites, price }, index) => (
+                        {filteredTiers.map(({ tier, invites, price }, index) => (
                             <div key={index} className="text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
                                 <p className="text-gray-500 font-semibold dark:text-gray-400"> {invites} invites </p>
