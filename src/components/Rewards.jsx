@@ -253,35 +253,35 @@ const Rewards = () => {
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
 
-              <ul style="list-style-type: circle">
+              <ul className="list-disc">
                   <li> 146MB folder of leaked Only Fans images </li>
                   <li> 16GB folder of leaked Only Fans videos </li>
               </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
 
-              <ul style="list-style-type: circle">
+              <ul className="list-disc">
                   <li> 1GB folder of leaked Only Fans images </li>
                   <li> 17GB folder of leaked Only Fans videos </li>
               </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
 
-              <ul style="list-style-type: circle">
+              <ul className="list-disc">
                   <li> 195MB folder of leaked Only Fans images </li>
                   <li> 32GB folder of leaked Only Fans videos </li>
               </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
 
-              <ul style="list-style-type: circle">
+              <ul className="list-disc">
                   <li> Ordered list of folders of Only Fans models with their names. </li>
                   <li> 20GB in total of images and videos </li>
               </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
 
-              <ul style="list-style-type: circle">
+              <ul className="list-disc">
                   <li> 5GB+ folder of leaked Amouranth images </li>
                   <li> 40GB+ folder of leaked Amouranth videos </li>
               </ul>
