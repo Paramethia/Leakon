@@ -119,7 +119,8 @@ input:checked + .slider:before {
 .Tier-info {
     margin: 0 auto;
     padding: 17px;
-    max-width: 8cm;
+    min-width: 400px;
+    max-width: 999px;
     border: 4px inset #3e424b;
 }
 
