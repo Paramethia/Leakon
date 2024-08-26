@@ -256,13 +256,14 @@ const Rewards = () => {
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
 
               <ul>
-                  <li> 146MB folder of leaked Only Fans images </li>
-                  <li> 16GB folder of leaked Only Fans videos </li>
+                  <li> 146MB folder of leaked random OF models images </li>
+                  <li> 16GB folder of leaked random OF models videos </li>
               </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
 
               <ul>
+                  <li> Ari Kytsya & Emmarb leaks and more</li>
                   <li> 1GB folder of leaked Only Fans images </li>
                   <li> 17GB folder of leaked Only Fans videos </li>
               </ul>
@@ -270,6 +271,7 @@ const Rewards = () => {
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
 
               <ul>
+                  <li> Corinna kopf, Puppiwii, Hannah owo etc. </li>
                   <li> 195MB folder of leaked Only Fans images </li>
                   <li> 32GB folder of leaked Only Fans videos </li>
               </ul>
@@ -277,15 +279,17 @@ const Rewards = () => {
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
 
               <ul>
+                  <li> Breckie hill leaks, Sophie Rain leaks, Burch twins etc and Soogsx. </li>
                   <li> Ordered list of folders of Only Fans models with their names. </li>
-                  <li> 20GB in total of images and videos </li>
+                  <li> 28GB in total of images and videos </li>
               </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
 
               <ul>
-                  <li> 5GB+ folder of leaked Amouranth images </li>
-                  <li> 40GB+ folder of leaked Amouranth videos </li>
+                  <li> All leaked OF models you can imagine </li>
+                  <li> 5GB+ folder of leaked Amouranth & Belle Delphine images </li>
+                  <li> 40GB+ folder of leaked Amouranth & Belle Delphine videos </li>
               </ul>
 
               <br />
