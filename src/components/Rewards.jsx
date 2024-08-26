@@ -291,6 +291,9 @@ const Rewards = () => {
               <br />
 
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Tier rewards will appear below once you unlock tiers: </p>
+              
+              <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{tier}</span> </p>
+
               <div className="flex pt-3 justify-center">
                 {[1, 2, 3, 4, 5].map((tier) => (
                   currentTier >= tier && (
@@ -306,10 +309,11 @@ const Rewards = () => {
                     </button>
                   </a>
                 )))}
+  
                 {currentTier < 5 && (
                   <a href="https://t.me/daemozon">
-                    <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                      Buy next tier 🧧
+                    <button className="block bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                      Buy a tier 🧧
                     </button>
                   </a>
                 )}
