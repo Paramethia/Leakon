@@ -118,8 +118,8 @@ input:checked + .slider:before {
 
 .Tier-info {
     margin: 0 auto;
-    padding: 15px;
-    border: 3px inset #3e424b;
+    padding: 17px;
+    border: 4px inset #3e424b;
 }
 
 ul {
@@ -129,4 +129,5 @@ ul {
 
 .Reward-claim button {
     display: inline-block;
+    margin-bottom: 12px;
 }
