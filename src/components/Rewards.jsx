@@ -170,11 +170,11 @@ const Rewards = () => {
   ];
 
   const rewardLinks = {
-    1: "https://mega.nz/folder/UZZDyKwQ#_ieBD-WQ9svGNZ3bDRtjzQ",
-    2: "https://mega.nz/folder/hAYQ0JaK#DcYvtQDi8zupIc5PvUos6Q",
-    3: "https://mega.nz/folder/aHIBxSjD#HhatRbyztC25c4Gq3JjvSA",
-    4: "https://mega.nz/folder/8SVyEATT#5DMFyVMfypmNMTvdD7nmAA/folder/5HklUQzZ",
-    5: "https://mega.nz/folder/BmswnLTa#xkUUxK_4KRyWd6OPMkNT5A"
+    1: "https://mega.nz/folder/hAYQ0JaK#DcYvtQDi8zupIc5PvUos6Q",
+    2: "https://mega.nz/folder/UZZDyKwQ#_ieBD-WQ9svGNZ3bDRtjzQ",
+    3: "https://mega.nz/folder/8SVyEATT#5DMFyVMfypmNMTvdD7nmAA/folder/5HklUQzZ",
+    4: "https://mega.nz/folder/BmswnLTa#xkUUxK_4KRyWd6OPMkNT5A",
+    5: "https://mega.nz/folder/aHIBxSjD#HhatRbyztC25c4Gq3JjvSA"
   };
 
   return (
@@ -246,9 +246,47 @@ const Rewards = () => {
               ))}
             </div>
             <div className="mt-10 space-y-4">
+
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                 Get a lot more with higher tiers
               </p>
+
+              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
+
+              <ul style="list-style-type: circle">
+                  <li> 146MB folder of leaked Only Fans images </li>
+                  <li> 16GB folder of leaked Only Fans videos </li>
+              </ul>
+
+              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
+
+              <ul style="list-style-type: circle">
+                  <li> 1GB folder of leaked Only Fans images </li>
+                  <li> 17GB folder of leaked Only Fans videos </li>
+              </ul>
+
+              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
+
+              <ul style="list-style-type: circle">
+                  <li> 195MB folder of leaked Only Fans images </li>
+                  <li> 32GB folder of leaked Only Fans videos </li>
+              </ul>
+
+              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
+
+              <ul style="list-style-type: circle">
+                  <li> Ordered list of folders of Only Fans models with their names. </li>
+                  <li> 20GB in total of images and videos </li>
+              </ul>
+
+              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
+
+              <ul style="list-style-type: circle">
+                  <li> 5GB+ folder of leaked Amouranth images </li>
+                  <li> 40GB+ folder of leaked Amouranth videos </li>
+              </ul>
+
+
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Tier rewards will appear below once you unlock tiers: </p>
               <div className="flex pt-3 justify-center">
                 {[1, 2, 3, 4, 5].map((tier) => (
