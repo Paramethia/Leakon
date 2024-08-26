@@ -302,17 +302,17 @@ const Rewards = () => {
                     href={rewardLinks[tier]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full"
+                    className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
                   >
-                    <button onMouseOver={moan.play()} className="Reward bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                    <button onMouseOver={moan.play()} className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md w-full">
                       🔓 Get tier {tier} reward
                     </button>
                   </a>
                 )))}
   
                 {currentTier < 5 && (
-                  <a href="https://t.me/daemozon">
-                    <button className="block bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                  <a href="https://t.me/daemozon" className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full">
+                    <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                       Buy a tier 🧧
                     </button>
                   </a>
