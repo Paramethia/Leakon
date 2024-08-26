@@ -292,7 +292,7 @@ const Rewards = () => {
 
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Tier rewards will appear below once you unlock tiers: </p>
               
-              <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{tier}</span> </p>
+              <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{currentTier}</span> </p>
 
               <div className="flex pt-3 justify-center">
                 {[1, 2, 3, 4, 5].map((tier) => (
