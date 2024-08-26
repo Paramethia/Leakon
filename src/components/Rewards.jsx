@@ -178,6 +178,9 @@ const Rewards = () => {
   };
 
   return (
+      
+    <>
+    
     <div className="flex h-screen">
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <main
@@ -286,13 +289,13 @@ const Rewards = () => {
                       <li> 35GB in total of images and videos </li>
                   </ul>
 
-              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
-
-              <ul>
-                  <li> All leaked OF models </li>
-                  <li> 5GB+ folder of leaked Amouranth & Belle Delphine images </li>
-                  <li> 44GB+ folder of leaked Amouranth & Belle Delphine videos </li>
-              </ul>
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
+    
+                  <ul>
+                      <li> All leaked OF models </li>
+                      <li> 5GB+ folder of leaked Amouranth & Belle Delphine images </li>
+                      <li> 44GB+ folder of leaked Amouranth & Belle Delphine videos </li>
+                  </ul>
 
               </div>
 
@@ -303,7 +306,6 @@ const Rewards = () => {
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{currentTier}</span> </p>
 
               <center>
-              <div className="flex pt-3 justify-center">
                 {[1, 2, 3, 4, 5].map((tier) => (
                   currentTier >= tier && (
                   <a
@@ -326,13 +328,14 @@ const Rewards = () => {
                     </button>
                   </a>
                 )}
-               </center>
-              </div>
+              </center>
             </div>
           </div>
         </div>
       </main>
     </div>
+    
+    </>
   );
 };
 
