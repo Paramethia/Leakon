@@ -305,30 +305,32 @@ const Rewards = () => {
               
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{currentTier}</span> </p>
 
-              <center>
-                {[1, 2, 3, 4, 5].map((tier) => (
-                  currentTier >= tier && (
-                  <a
-                    key={tier}
-                    href={rewardLinks[tier]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
-                  >
-                    <button onMouseOver={moan.play()} className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md w-full">
-                      🔓 Get tier {tier} reward
-                    </button>
-                  </a>
-                )))}
-                <br />
-                {currentTier < 5 && (
-                  <a href="https://t.me/daemozon" className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full">
-                    <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                      Buy a tier 🧧
-                    </button>
-                  </a>
-                )}
-              </center>
+              <div className="Reward-claim">
+                  <center>
+                    {[1, 2, 3, 4, 5].map((tier) => (
+                      currentTier >= tier && (
+                      <a
+                        key={tier}
+                        href={rewardLinks[tier]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
+                      >
+                        <button onMouseOver={moan.play()} className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md w-full">
+                          🔓 Get tier {tier} reward
+                        </button>
+                      </a>
+                    )))}
+                    <br />
+                    {currentTier < 5 && (
+                      <a href="https://t.me/daemozon" className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full">
+                        <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                          Buy a tier 🧧
+                        </button>
+                      </a>
+                    )}
+                  </center>
+              </div>
             </div>
           </div>
         </div>
