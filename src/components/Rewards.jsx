@@ -247,42 +247,44 @@ const Rewards = () => {
             </div>
             <div className="mt-10 space-y-4">
 
-              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                Get a lot more with higher tiers
-              </p>
+              <div className="Tier-info">
 
-              <br />
-
-              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
-
-              <ul>
-                  <li> 146MB folder of leaked random OF models images </li>
-                  <li> 16GB folder of leaked random OF models videos </li>
-              </ul>
-
-              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
-
-              <ul>
-                  <li> Ari Kytsya, Emmarb leaks, and more </li>
-                  <li> 1GB folder of leaked Only Fans images </li>
-                  <li> 17GB folder of leaked Only Fans videos </li>
-              </ul>
-
-              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
-
-              <ul>
-                  <li> Corinna kopf, Puppiwii, Hannah owo, etc. </li>
-                  <li> 195MB folder of leaked Only Fans images </li>
-                  <li> 32GB folder of leaked Only Fans videos </li>
-              </ul>
-
-              <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
-
-              <ul>
-                  <li> Breckie hill, Sophie Rain, Burch twins, Soogsx, etc. </li>
-                  <li> Ordered list of folders of Only Fans models with their names </li>
-                  <li> 35GB in total of images and videos </li>
-              </ul>
+                  <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                    Get a lot more with higher tiers
+                  </p>
+    
+                  <br />
+    
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
+    
+                  <ul>
+                      <li> 146MB folder of leaked random OF models images </li>
+                      <li> 16GB folder of leaked random OF models videos </li>
+                  </ul>
+    
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
+    
+                  <ul>
+                      <li> Ari Kytsya, Emmarb leaks, and more </li>
+                      <li> 1GB folder of leaked Only Fans images </li>
+                      <li> 17GB folder of leaked Only Fans videos </li>
+                  </ul>
+    
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
+    
+                  <ul>
+                      <li> Corinna kopf, Puppiwii, Hannah owo, etc. </li>
+                      <li> 195MB folder of leaked Only Fans images </li>
+                      <li> 32GB folder of leaked Only Fans videos </li>
+                  </ul>
+    
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
+    
+                  <ul>
+                      <li> Breckie hill, Sophie Rain, Burch twins, Soogsx, etc. </li>
+                      <li> Ordered list of folders of Only Fans models with their names </li>
+                      <li> 35GB in total of images and videos </li>
+                  </ul>
 
               <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
 
@@ -292,12 +294,15 @@ const Rewards = () => {
                   <li> 44GB+ folder of leaked Amouranth & Belle Delphine videos </li>
               </ul>
 
+              </div>
+
               <br />
 
               <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Tier rewards will appear below once you unlock tiers: </p>
               
-              <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{currentTier}</span> </p>
+              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> You are currently tier: <span className="text-blue-500">{currentTier}</span> </p>
 
+              <center>
               <div className="flex pt-3 justify-center">
                 {[1, 2, 3, 4, 5].map((tier) => (
                   currentTier >= tier && (
@@ -308,19 +313,20 @@ const Rewards = () => {
                     rel="noopener noreferrer"
                     className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
                   >
-                    <button onMouseOver={moan.play()} className="block bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md w-full">
+                    <button onMouseOver={moan.play()} className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md w-full">
                       🔓 Get tier {tier} reward
                     </button>
                   </a>
                 )))}
-  
+                <br />
                 {currentTier < 5 && (
                   <a href="https://t.me/daemozon" className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e] w-full">
-                    <button className="block bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                    <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                       Buy a tier 🧧
                     </button>
                   </a>
                 )}
+               </center>
               </div>
             </div>
           </div>
