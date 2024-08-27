@@ -149,12 +149,12 @@ const InviteLinkComponent = () => {
                 {error && <p className="text-red-500">{error}</p>}
                 {!error && (
                     <>
-                        <div className="bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-2 text-lg font-medium text-gray-700 dark:text-white">
-                            {inviteLink}
-                        </div>
-                        <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={handleCopy}>
-                            Copy
-                        </button>
+                    <div className="bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-2 text-lg font-medium text-gray-700 dark:text-white">
+                        {inviteLink}
+                    </div>
+                    <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={handleCopy}>
+                        Copy
+                    </button>
                     </>
                 )}
             </div>
@@ -246,7 +246,7 @@ const Component = () => {
  
         <InviteChecker />
 
-        <div className="flex">
+        <div className="flex h-screen">
 
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} inviteLink={inviteLink} />
 
