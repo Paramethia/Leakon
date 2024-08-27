@@ -252,9 +252,10 @@ const Component = () => {
 
             <main className="flex-1 space-y-6 p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
-                    className="Top-bar flex relative px-3 mb-5 items-center justify-between md:justify-start"
+                    className="Top-bar flex static px-3 mb-5 items-center justify-between"
                     style={{
                         backgroundColor: isDarkMode ? '#101424' : '#282434',
+                        top: 0,
                         left: 0,
                         padding: '10px',
                         borderRadius: '5px',
@@ -265,13 +266,13 @@ const Component = () => {
                             <FaBars className="h-6 w-6 text-white" />
                         </button>
                     </div>
-                    <Link to="/home" style={{ textDecoration: 'none' }} className="Logo flex-1 md:flex-none">
+                    <Link to="/home" style={{ textDecoration: 'none' }} className="Logo flex-1">
                         <div className="text-white flex items-center gap-2 justify-center md:justify-start">
                             <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
                             <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
                         </div>
                     </Link>
-                    <div className="Theme absolute top-4 right-4">
+                    <div className="Theme">
                         <label className="switch">
                             <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
                             <span className="slider round">
