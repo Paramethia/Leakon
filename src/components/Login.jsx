@@ -97,12 +97,13 @@ const Login = () => {
                     </form>
                    
                   
-                 <p className="my-4  flex">Don't have an account? <Link to='/register' className='text-dark mx-2'> Register < /Link></p>
+                 <p className="my-4  flex"> Don't have an account? <Link to='/register' className='text-dark mx-2'> Register </Link></p>
                   <p><Link to='/request' className='text-dark'>I forgot the Password</Link></p>
                        
                 </div>
             </div>           
         </div>
+            
         </>
     );
 }
