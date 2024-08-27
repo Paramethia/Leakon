@@ -117,7 +117,7 @@ const Dashboard = () => {
             transition: Flip,
         });
         setTimeout(() => {
-            navigate(/login);
+            navigate('/login')
         }, 3300)
     }
 
@@ -133,11 +133,11 @@ const Dashboard = () => {
             } catch (error) {
                 console.error("Error fetching invitees:", error);
             }
-        };
+        }
         if (username) {
-            fetchInvitees();
+            fetchInvitees()
         } else {
-            Notlogged();
+            NotLogged()
         }
     }, [username]);
 
