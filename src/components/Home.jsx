@@ -46,7 +46,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <aside
           className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
-          } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
+          } md:translate-x-0 md:relative md:block z-40`}
           style={{ backgroundColor: "#282434" }}
         >
             <div className="flex justify-between items-center mb-6">
