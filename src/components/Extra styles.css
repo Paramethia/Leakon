@@ -109,18 +109,6 @@ input:checked + .slider:before {
     position: static;
 }
 
-/* Home page */
-
-@media only screen and (max-width: 420px) {
-    .Link, .Stats, .Tiers {
-        padding: 12px;
-        width: 350px;
-    }
-    .Link button {
-        display: inline-block;
-    }
-}
-
 /* Rewards page */
 
 .Tier-info {
@@ -139,4 +127,30 @@ ul {
 .Reward-claim button {
     display: inline-block;
     margin-bottom: 12px;
+}
+
+/* Mobile view Portrait view */
+
+@media only screen and (max-width: 420px) {   
+
+     /* Nav bar */
+
+     aside {
+         /* Decrease width here later */
+     }
+
+    .Contact {
+        margin-top: 1cm
+    }
+
+     /* Home page */
+
+    .Link, .Stats, .Tiers {
+        padding: 12px;
+        width: 350px;
+    }
+    .Link button {
+        display: inline-block;
+    }
+
 }
