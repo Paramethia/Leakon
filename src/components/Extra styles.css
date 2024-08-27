@@ -1,3 +1,9 @@
+/* Side bar styling */
+
+aside {
+    height: 100vh;
+}
+
 /* Top bar styling */
 
 .Top-bar {
@@ -108,11 +114,6 @@ input:checked + .slider:before {
     color: #3e97ec;
     font-size: 19px;
     font-style: italic;
-}
-
-.static {
-    z-index: 2;
-    position: static;
 }
 
 /* Rewards page */
