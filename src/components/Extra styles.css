@@ -141,13 +141,23 @@ ul {
      /* Top bar */
      
      .Top-bar {
-         position: relative;
+         z-index: 2;
+         position: sticky;
+         top: 5;
      }
-
+     /*
      .ham-menu, .Theme {
-         postion: absolute;
+         postion: fixed;
+     }
+    
+     .ham-menu {
+         left: 0;
      }
 
+     .Theme {
+         
+     }
+     */
      /* Nav bar */
 
      aside {
