@@ -250,7 +250,7 @@ const Component = () => {
 
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} inviteLink={inviteLink} />
 
-            <main className="flex flex-1 p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
+            <main className="flex flex-1 space-y-6 p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
                     className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
@@ -292,7 +292,7 @@ const Component = () => {
                         You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
                     </p>
                 </div>
-                <div className="max-w-3xl mx-auto grid gap-6">
+                <div className="Stats max-w-3xl mx-auto grid gap-6">
                     <InviteLinkComponent />
                     <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                         <div className="mb-4">
@@ -316,7 +316,7 @@ const Component = () => {
                         Tiers
                     </h1>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
+                    <div className="Tiers grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
                         {filteredTiers.map(({ tier, invites, price }, index) => (
                             <div key={index} className="text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
