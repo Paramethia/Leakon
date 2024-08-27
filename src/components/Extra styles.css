@@ -158,12 +158,13 @@ ul {
 
      /* Home page */
 
-    .Link, .Stats, .Tiers {
+    .Link-gen-con, .Stats, .Tiers {
         padding: 12px;
         width: 350px;
     }
-    .Link flex button {
+    .Link-gen button {
         display: inline-block;
+        margin: 0 auto;
     }
 
 }
