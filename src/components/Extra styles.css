@@ -146,7 +146,7 @@ ul {
      }
 
     .Contact {
-        margin-top: 1.5cm
+        margin-top: 2cm
     }
 
      /* Home page */
@@ -155,7 +155,7 @@ ul {
         padding: 12px;
         width: 350px;
     }
-    .Link button {
+    .Link flex button {
         display: inline-block;
     }
 
