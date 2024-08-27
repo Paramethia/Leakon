@@ -140,7 +140,7 @@ const InviteLinkComponent = () => {
     return (
         <>
 
-        <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+        <div className="Link bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Your Invite Link</h2>
                 <p className="text-gray-500 dark:text-gray-400">Share this link with your friends to earn rewards.</p>
@@ -292,9 +292,9 @@ const Component = () => {
                         You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
                     </p>
                 </div>
-                <div className="Stats max-w-3xl mx-auto grid gap-6">
+                <div className="max-w-3xl mx-auto grid gap-6">
                     <InviteLinkComponent />
-                    <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+                    <div className="Stats bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                         <div className="mb-4">
                             <div className="flex items-center justify-between">
                                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
@@ -316,9 +316,9 @@ const Component = () => {
                         Tiers
                     </h1>
 
-                    <div className="Tiers grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
                         {filteredTiers.map(({ tier, invites, price }, index) => (
-                            <div key={index} className="text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
+                            <div key={index} className="Tier text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
                                 <p className="text-gray-500 font-semibold dark:text-gray-400"> {invites} invites </p>
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
