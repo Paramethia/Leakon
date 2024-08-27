@@ -1,3 +1,9 @@
+/* Top bar styling */
+
+.Top-bar {
+    width: 100%;
+}
+
 /* Theme button styling */
 
 .switch {
@@ -140,7 +146,7 @@ ul {
      }
 
     .Contact {
-        margin-top: 1cm
+        margin-top: 1.5cm
     }
 
      /* Home page */
