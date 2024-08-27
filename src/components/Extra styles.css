@@ -2,6 +2,7 @@
 
 aside {
     height: 100vh;
+    overflow-y: hidden;
 }
 
 /* Top bar styling */
