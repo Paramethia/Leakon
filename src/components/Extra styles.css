@@ -143,21 +143,9 @@ ul {
      .Top-bar {
          z-index: 2;
          position: sticky;
-         top: 5;
+         top: 0;
      }
-     /*
-     .ham-menu, .Theme {
-         postion: fixed;
-     }
-    
-     .ham-menu {
-         left: 0;
-     }
-
-     .Theme {
-         
-     }
-     */
+     
      /* Nav bar */
 
      aside {
