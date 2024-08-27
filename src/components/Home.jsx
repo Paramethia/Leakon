@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           } md:translate-x-0 md:relative md:block fixed z-40 top-0 bottom-0`}
           style={{ backgroundColor: "#282434" }}
         >
-            <div className="flex static justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-6">
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
                         <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8"/>
@@ -252,7 +252,7 @@ const Component = () => {
 
             <main className="flex-1 p-8 space-y-6" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
-                    className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
+                    className="flex static px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
                         backgroundColor: isDarkMode ? '#101424' : '#282434',
                         left: 0,
@@ -260,7 +260,7 @@ const Component = () => {
                         borderRadius: '5px',
                     }}
                 >
-                    <div className={`md:hidden fixed left-12 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
+                    <div className={`md:hidden left-12 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
                         <button onClick={toggleSidebar}>
                             <FaBars className="h-6 w-6 text-white" />
                         </button>
