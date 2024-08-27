@@ -22,20 +22,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   let inviteLink = localStorage.getItem('inviteLink');
   let code = inviteLink.slice(-8);
 
-  const Warning = () => {
-    toast.warn("This page is getting worked on.", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Flip,
-      });
-  }
-
   const handleCopyReferralCode = () => {
     navigator.clipboard.writeText(inviteLink);
     toast.success('Code copied to clipboard! 🗒️', {
@@ -118,6 +104,23 @@ const Dashboard = () => {
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
+    let NotLogged = () => {
+        toast.error("You are not logged in.", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+        });
+        setTimeout(() => {
+            navigate(/login);
+        }, 3300)
+    }
+
     useEffect(() => {
         const fetchInvitees = async () => {
             try {
@@ -131,8 +134,11 @@ const Dashboard = () => {
                 console.error("Error fetching invitees:", error);
             }
         };
-
-        fetchInvitees();
+        if (username) {
+            fetchInvitees();
+        } else {
+            Notlogged();
+        }
     }, [username]);
 
     const toggleTheme = () => {
