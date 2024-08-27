@@ -97,6 +97,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 };
 
 const Dashboard = () => {
+    const navigate = useNavigate();
     const { username } = useContext(UserContext);
     const [invitees, setInvitees] = useState([]);
     const [isDarkMode, setIsDarkMode] = useState(true);
