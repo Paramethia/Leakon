@@ -252,7 +252,7 @@ const Component = () => {
 
             <main className="flex-1 space-y-6 p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
-                    className="Top-bar flex static px-3 mb-5 items-center justify-between"
+                    className="Top-bar flex fixed px-3 mb-5 items-center justify-between"
                     style={{
                         backgroundColor: isDarkMode ? '#101424' : '#282434',
                         top: 0,
