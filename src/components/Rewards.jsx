@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Helmet } from "react-helmet";
 import { UserContext } from './UserContext';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -96,6 +97,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 };
 
 const Rewards = () => {
+  const navigate = useNavigate();
   const { username } = useContext(UserContext);
   const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -107,6 +109,23 @@ const Rewards = () => {
   const [spoilers, setSpoilers] = useState([]);
 
   let moan = new Audio('https://res.cloudinary.com/doxalk3ms/video/upload/v1724628435/ahh_sound_effect_gukkzc.mp4');
+
+  let NotLogged = () => {
+        toast.error("You are not logged in.", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+        });
+        setTimeout(() => {
+            navigate('/login');
+        }, 3300)
+    }
 
   useEffect(() => {
     const fetchTier = async () => {
@@ -125,6 +144,8 @@ const Rewards = () => {
 
     if (username) {
         fetchTier();
+    } else {
+        NotLogged()
     }
 }, [username]);
 
