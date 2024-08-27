@@ -112,10 +112,13 @@ input:checked + .slider:before {
 /* Home page */
 
 @media only screen and (max-width: 420px) {
-    .Link, .State, .Tiers {
-        width: 400px;
-        padding: 8px;
-    }    
+    .Link, .Stats, .Tiers {
+        padding: 12px;
+        width: 350px;
+    }
+    .Link button, .Stats button, {
+        display: inline-block;
+    }
 }
 
 /* Rewards page */
