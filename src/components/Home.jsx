@@ -116,7 +116,7 @@ const InviteLinkComponent = () => {
             transition: Flip,
         });
         setTimeout(() => {
-            navigate(/login);
+            navigate('/login');
         }, 3300)
     }
 
