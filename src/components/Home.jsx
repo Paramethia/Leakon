@@ -250,7 +250,7 @@ const Component = () => {
 
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} inviteLink={inviteLink} />
 
-            <main className="flex-1 p-8 space-y-6" style={isDarkMode ? darkModeStyles : lightModeStyles}>
+            <main className="flex-1 p-8 space-y-6 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                 <div
                     className="flex relative px-3 mb-5 items-center justify-between md:justify-start"
                     style={{
