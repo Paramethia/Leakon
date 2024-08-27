@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './UserContext';
+import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
@@ -97,10 +98,27 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 };
 
 const InviteLinkComponent = () => {
-
+    const navigate = useNavigate();
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
     const {username} = useContext(UserContext);
+
+    let NotLogged = () => {
+        toast.error("You are not logged in.", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+        });
+        setTimeout(() => {
+            navigate(/login);
+        }, 3300)
+    }
 
     useEffect(() => {
        const existingLink = localStorage.getItem('inviteLink');
@@ -117,10 +135,13 @@ const InviteLinkComponent = () => {
                 console.error('Error generating invite link:', error);
             }
         };
-    
-        fetchInviteLink();
+        if (username) {
+            fetchInviteLink()
+        } else {
+            NotLogged()
+        }
       }
-    }, []);
+    }, [username]);
     
     const handleCopy = () => {
         navigator.clipboard.writeText(inviteLink);
@@ -223,6 +244,7 @@ const Component = () => {
                     console.error('Error fetching invite data', error);
                 }
             };
+            
             setTimeout(() => {
                 fetchInviteData()
             }, 288);
