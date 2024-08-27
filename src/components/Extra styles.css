@@ -116,7 +116,7 @@ input:checked + .slider:before {
         padding: 12px;
         width: 350px;
     }
-    .Link button, .Stats button, {
+    .Link button {
         display: inline-block;
     }
 }
