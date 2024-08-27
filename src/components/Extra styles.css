@@ -138,11 +138,20 @@ ul {
 /* Mobile view Portrait view */
 
 @media only screen and (max-width: 435px) {   
+     /* Top bar */
+     
+     .Top-bar {
+         position: relative;
+     }
+
+     .ham-menu, .Theme {
+         postion: absolute;
+     }
 
      /* Nav bar */
 
      aside {
-         /* Decrease width here later */
+         width: 14.5rem;
      }
 
     .Contact {
