@@ -160,7 +160,7 @@ const Dashboard = () => {
                 <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
                 <main className="flex-1 flex flex-col p-8 overflow-auto" style={isDarkMode ? darkModeStyles : lightModeStyles}>
                     <div
-                        className="Top-bar flex px-3 mb-5 items-center justify-between"
+                        className="Top-bar w-full flex px-3 mb-5 items-center justify-between"
                         style={{
                             backgroundColor: isDarkMode ? '#101424' : '#282434',
                             padding: '10px',
