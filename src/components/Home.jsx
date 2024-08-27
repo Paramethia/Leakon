@@ -140,12 +140,12 @@ const InviteLinkComponent = () => {
     return (
         <>
 
-        <div className="Link bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+        <div className="Link-gen-con bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Your Invite Link</h2>
                 <p className="text-gray-500 dark:text-gray-400">Share this link with your friends to earn rewards.</p>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="Link-gen flex items-center justify-between">
                 {error && <p className="text-red-500">{error}</p>}
                 {!error && (
                     <>
