@@ -11,7 +11,8 @@ aside {
 /* Top bar styling */
 
 .Top-bar {
-    max-width: 955px;
+    margin: 0 auto;
+    max-width: 768px;
 }
 
 /* Theme button styling */
