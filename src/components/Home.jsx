@@ -171,6 +171,9 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
 
+    if (inviteId != null) console.log("Your used the invite code:", inviteId)
+        console.log(typeof inviteId);
+
     let NotLogged = () => {
         toast.error("You are not logged in!", {
             position: "top-center",
@@ -189,7 +192,6 @@ let InviteChecker = () => {
     }
 
     useEffect(() => {
-        if (inviteId != null) console.log("Your used the invite code:", inviteId)
         const check = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
@@ -208,7 +210,7 @@ let InviteChecker = () => {
             setTimeout(() => {
                 check()
             }, 555);
-        } else {
+        } else if (!username) {
             NotLogged()
         }
     }, [username]);
