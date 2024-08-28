@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { toast, ToastContainer, Zoom } from 'react-toastify';
+import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause } from 'react-icons/fa';
@@ -120,7 +120,7 @@ const Rewards = () => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-            transition: Flip,
+            transition: Bounce,
         });
         setTimeout(() => {
             navigate('/login');
