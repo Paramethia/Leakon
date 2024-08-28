@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
 import { Link } from 'react-router-dom';
-import { toast, ToastContainer, Flip, Zoom } from 'react-toastify';
+import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
@@ -116,7 +116,7 @@ const Dashboard = () => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-            transition: Flip,
+            transition: Bounce,
         });
         setTimeout(() => {
             navigate('/login')
