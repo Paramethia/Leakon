@@ -204,7 +204,7 @@ let InviteChecker = () => {
             transition: Flip,
         });
         setTimeout(() => {
-            navigate('/login');
+            navigateTo('/login');
         }, 3300)
     }
 
