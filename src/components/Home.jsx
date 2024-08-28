@@ -187,11 +187,29 @@ const InviteLinkComponent = () => {
 };
 
 let InviteChecker = () => {
+    const navigateTo = useNavigate();
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
-    if (typeof inviteId === 'string') console.log("Your used the invite code:", inviteId)
+
+    let NotLogged = () => {
+        toast.error("You are not logged in.", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+        });
+        setTimeout(() => {
+            navigate('/login');
+        }, 3300)
+    }
 
     useEffect(() => {
+        if (inviteId != null) console.log("Your used the invite code:", inviteId)
         const check = async () => {
             try {
                 const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
@@ -206,10 +224,12 @@ let InviteChecker = () => {
             }
         };
 
-        if (typeof inviteId === 'string') {
+        if (inviteId != null && username) {
             setTimeout(() => {
-                check();
+                check()
             }, 555);
+        } else {
+            NotLogged()
         }
     }, [username]);
 
