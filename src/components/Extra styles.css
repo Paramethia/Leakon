@@ -141,9 +141,7 @@ ul {
     margin-bottom: 12px;
 }
 
-/* Mobile view Portrait view */
-
-@media only screen and (max-width: 435px) {   
+@media only screen and (max-width: 768px) {
      /* Top bar */
      
      .Top-bar {
@@ -151,6 +149,11 @@ ul {
          position: sticky;
          top: 0;
      }
+}
+
+/* Mobile view Portrait view */
+
+@media only screen and (max-width: 435px) {   
      
      /* Nav bar */
 
