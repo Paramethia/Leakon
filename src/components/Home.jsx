@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
-import { toast, ToastContainer, Zoom } from 'react-toastify';
+import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
@@ -98,27 +98,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 };
 
 const InviteLinkComponent = () => {
-    const navigate = useNavigate();
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
     const {username} = useContext(UserContext);
-
-    let NotLogged = () => {
-        toast.error("You are not logged in.", {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            transition: Flip,
-        });
-        setTimeout(() => {
-            navigate('/login');
-        }, 3300)
-    }
 
     useEffect(() => {
        const existingLink = localStorage.getItem('inviteLink');
@@ -137,8 +119,6 @@ const InviteLinkComponent = () => {
         };
         if (username) {
             fetchInviteLink()
-        } else {
-            NotLogged()
         }
       }
     }, [username]);
@@ -192,7 +172,7 @@ let InviteChecker = () => {
     let {username} = useContext(UserContext);
 
     let NotLogged = () => {
-        toast.error("You are not logged in.", {
+        toast.error("You are not logged in!", {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: false,
@@ -201,7 +181,7 @@ let InviteChecker = () => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-            transition: Flip,
+            transition: Bounce,
         });
         setTimeout(() => {
             navigateTo('/login');
