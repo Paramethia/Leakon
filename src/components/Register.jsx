@@ -63,6 +63,8 @@ const Register = () => {
                 setTimeout(() => {
                     navigate('/login');
                 }, 4400);
+            } else if (result.data === "Username already taken.") {
+                SetUsernameError("This username is already in use.")
             } else if (result.data === "Registered.") {
                if (usedInvite != null && alreadyReg) {
                     toast.warn("You cannot use invite links if you already registered on this device.", {
