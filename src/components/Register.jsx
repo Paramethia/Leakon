@@ -25,6 +25,7 @@ const Register = () => {
     const {username, setName} = useContext(UserContext);
     const {email, setEmail} =  useContext(UserContext);
     const [password, setPassword] = useState('');
+    const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
 
     // To check if the user already has an account on the device to prevent inviting multiple acccount on the same device.
@@ -34,20 +35,15 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-        // Check for spaces in the username
-        if (/\s/.test(username)) {
-            toast.warn("Username should not contain spaces.", {
-                position: "top-center",
-                autoClose: 4000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Bounce,
-            });
+        // Regular expression to check for invalid characters in the username
+        let usernameVal = /^[a-zA-Z0-9._]+$/;
+
+        // Check for spaces or invalid characters in the username
+        if (!usernameVal.test(username)) {
+            setUsernameError("Username can only contain letters, numbers, underscores, and periods.");
             return;
+        } else {
+            setUsernameError(''); // Clear the error if the username is valid
         }
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
@@ -128,13 +124,14 @@ const Register = () => {
                             </label>
                             <input
                                 type="text"
-                                maxlength="12"
+                                maxlength="14"
                                 placeholder="Create username"
                                 className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputName"
                                 onChange={(event) => setName(event.target.value)}
                                 required
                             />
+                            {usernameError && <p className="text-red-500 text-sm mt-1">{usernameError}</p>} {/* Error message */}
                         </div>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputEmai1" className="block text-sm font-bold mb-2">
@@ -156,7 +153,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="password"
-                                maxlength="14"
+                                maxlength="17"
                                 placeholder="Create password"
                                 className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputPassword1"
