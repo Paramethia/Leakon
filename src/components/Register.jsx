@@ -33,6 +33,22 @@ const Register = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
+
+        // Check for spaces in the username
+        if (/\s/.test(username)) {
+            toast.warn("Username should not contain spaces.", {
+                position: "top-center",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+            return;
+        }
     
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
         .then(result => {
@@ -91,11 +107,7 @@ const Register = () => {
             });
         });
     }
-
-    function clearCache() {
-        localStorage.clear();
-    }
-
+   
     return (
         <>
         
@@ -155,7 +167,6 @@ const Register = () => {
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Submit </button>
                     </form>
                     <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Log in</Link></p>
-                    {/* <button onClick={clearCache} className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Clear cache </button> */}
                 </div>
             </div>
         </div>
