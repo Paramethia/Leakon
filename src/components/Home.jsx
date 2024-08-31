@@ -317,6 +317,7 @@ const Component = () => {
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
+                    <InviteLinkComponent />
                     <div className="Stats bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                         { loading ? (
                             <center>
@@ -324,7 +325,6 @@ const Component = () => {
                             </center>
                         ) : (
                          <>
-                            <InviteLinkComponent />
                             <div className="mb-4">
                                 <div className="flex items-center justify-between">
                                     <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
