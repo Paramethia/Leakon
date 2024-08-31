@@ -247,7 +247,7 @@ const Component = () => {
             
         setTimeout(() => {
             fetchInviteData()
-        }, 288);
+        }, 428);
     }, [username]);
 
     const availableTiers = [
