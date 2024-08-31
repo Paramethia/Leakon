@@ -121,6 +121,23 @@ input:checked + .slider:before {
     font-style: italic;
 }
 
+/* Loader */
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #000 #0000;
+  animation: load 1s infinite;
+}
+
+@keyframes load {
+    to {
+        transform: rotate(.5turn)
+    }
+}
+
 /* Rewards page */
 
 .Tier-info {
