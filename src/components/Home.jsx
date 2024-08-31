@@ -222,7 +222,7 @@ const Component = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
-    let {username} = useContext(UserContext);
+    let username = localStorage.getItem("username");
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
@@ -235,22 +235,20 @@ const Component = () => {
     };
 
     useEffect(() => {
-        if (username) {
-            const fetchInviteData = async () => {
-                try {
-                    const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
-                    setInvites(response.data.invites);
-                    setTier(response.data.tier);
-                } catch (error) {
-                    console.error('Error fetching invite data', error);
-                }
-            };
+        const fetchInviteData = async () => {
+             try {
+                const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
+                setInvites(response.data.invites);
+                setTier(response.data.tier);
+             } catch (error) {
+                console.error('Error fetching invite data', error);
+             }
+        };
             
-            setTimeout(() => {
-                fetchInviteData()
-            }, 288);
-        }
-    }, [username]);
+        setTimeout(() => {
+            fetchInviteData()
+        }, 288);
+    }, []);
 
     const availableTiers = [
         { tier: 'Tier 1', invites: 5, price: 10 },
