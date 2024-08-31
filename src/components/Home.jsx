@@ -318,13 +318,13 @@ const Component = () => {
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
                     <div className="Stats bg-white dark:bg-gray-800 shadow rounded-lg p-6">
-                       { Loading ? (
-                           <div className="flex justify-center items-center">
-                               <div className="loader"></div>
-                           </div>
-                       ) : (
+                        { loading ? (
+                            <center>
+                                <div className="loader"></div>
+                            </center>
+                        ) : (
                          <>
-                        <InviteLinkComponent />
+                            <InviteLinkComponent />
                             <div className="mb-4">
                                 <div className="flex items-center justify-between">
                                     <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
@@ -340,9 +340,9 @@ const Component = () => {
                                    </button>
                                 </Link>
                             </div>
-                        </div>
                         </>
-                      )}
+                        )}
+                    </div>
                     <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                         Tiers
                     </h1>
