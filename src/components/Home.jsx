@@ -220,6 +220,7 @@ const Component = () => {
     const inviteLink = useState('');
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [loading, setLoading] = useState(true); // New loading state
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
     let {username} = useContext(UserContext);
@@ -242,6 +243,8 @@ const Component = () => {
                 setTier(response.data.tier);
              } catch (error) {
                 console.error('Error fetching invite data', error);
+             } finally {
+                 setLoading(false)
              }
         };
             
@@ -312,27 +315,34 @@ const Component = () => {
                         Alternatively, you can buy the tiers to get the rewards if you struggle to invite people. Prices will be shown below. <br />
                         You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
                     </p>
-                </div>
+                </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
-                    <InviteLinkComponent />
                     <div className="Stats bg-white dark:bg-gray-800 shadow rounded-lg p-6">
-                        <div className="mb-4">
-                            <div className="flex items-center justify-between">
-                                <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
+                       { Loading ? (
+                           <div className="flex justify-center items-center">
+                               <div className="loader"></div>
+                           </div>
+                       ) : (
+                         <>
+                        <InviteLinkComponent />
+                            <div className="mb-4">
+                                <div className="flex items-center justify-between">
+                                    <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
+                                </div>
+                                <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
                             </div>
-                            <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
+                            <div className="flex items-center justify-between">
+                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {tier}</div>
+                               
+                                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
+                                   <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
+                                       View Invites
+                                   </button>
+                                </Link>
+                            </div>
                         </div>
-                        <div className="flex items-center justify-between">
-                            <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {tier}</div>
-                           
-                            <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
-                               <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
-                                   View Invites
-                               </button>
-                            </Link>
-                        </div>
-                    </div>
-
+                        </>
+                      )}
                     <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
                         Tiers
                     </h1>
