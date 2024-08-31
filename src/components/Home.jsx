@@ -117,9 +117,7 @@ const InviteLinkComponent = () => {
                 console.error('Error generating invite link:', error);
             }
         };
-        if (username) {
-            fetchInviteLink()
-        }
+        if (username) fetchInviteLink()
       }
     }, [username]);
     
@@ -170,8 +168,7 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
 
-    if (inviteId != null) console.log("Your used the invite code:", inviteId)
-        console.log(typeof inviteId);
+    if (inviteId) console.log("Your registered using the invite code:", inviteId)
 
     let NotLogged = () => {
         toast.error("You are not logged in!", {
@@ -204,14 +201,13 @@ let InviteChecker = () => {
                 console.error(err);
             }
         };
-
-        if (inviteId && username) {
-            setTimeout(() => {
+        setTimeout(() => {
+            if (inviteId && username) {
                 check()
-            }, 555);
-        } else if (!username) {
-            NotLogged()
-        }
+            } else if (!username) {
+                NotLogged()
+            }
+        }, 555);
     }, [username]);
 
 };
@@ -220,7 +216,7 @@ const Component = () => {
     const inviteLink = useState('');
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [loading, setLoading] = useState(true); // New loading state
+    const [loading, setLoading] = useState(true);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
     let {username} = useContext(UserContext);
