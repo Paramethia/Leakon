@@ -76,7 +76,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             
             <center>
                 <div className="Contact">
-                    <ConIcon className="h-4 w-4 inline" /> <a href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
+                    <ConIcon className="h-4 w-4 inline" /> <a href="mailto:kyrinkompi@gmail.com"> Contact dev </a>
                 </div>
             </center>
 
@@ -205,7 +205,7 @@ let InviteChecker = () => {
             }
         };
 
-        if (inviteId != null && username) {
+        if (inviteId && username) {
             setTimeout(() => {
                 check()
             }, 555);
