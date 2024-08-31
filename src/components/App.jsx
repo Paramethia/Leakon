@@ -12,6 +12,15 @@ import { UserContext } from './UserContext';
 function App() {
   const [username, setName] = useState('');
   const [email, setEmail] = useState('');
+
+ // Check localStorage on app load
+  useEffect(() => {
+    const storedUsername = localStorage.getItem('username');
+    const storedEmail = localStorage.getItem('email');
+    if (storedUsername) setName(storedUsername);
+    if (storedEmail) setEmail(storedEmail);
+  }, []);
+
   return (
       <UserContext.Provider value={{ username, setName, email, setEmail }}>
       <Router>
