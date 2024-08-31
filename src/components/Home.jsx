@@ -222,7 +222,7 @@ const Component = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
-    let username = localStorage.getItem("username");
+    let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
 
@@ -248,7 +248,7 @@ const Component = () => {
         setTimeout(() => {
             fetchInviteData()
         }, 288);
-    }, []);
+    }, [username]);
 
     const availableTiers = [
         { tier: 'Tier 1', invites: 5, price: 10 },
