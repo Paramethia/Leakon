@@ -202,11 +202,8 @@ let InviteChecker = () => {
             }
         };
         setTimeout(() => {
-            if (inviteId && username) {
-                check()
-            } else if (!username) {
-                NotLogged()
-            }
+            if (inviteId && username) check()
+            if (!username) NotLogged()
         }, 555);
     }, [username]);
 
@@ -308,8 +305,8 @@ const Component = () => {
                     </h1>
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
-                        Alternatively, you can buy the tiers to get the rewards if you struggle to invite people. Prices will be shown below. <br />
-                        You can check the previews of what <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500">rewards</span> </Link> you will get in the rewards page.
+                        Alternatively, you can buy the tiers to get the rewards instantly if you are unable to invite people. Prices will be shown below. <br />
+                        You can check the previews of what rewards you will get in the <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500"> rewards page </span> </Link>.
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
@@ -347,7 +344,7 @@ const Component = () => {
                         {filteredTiers.map(({ tier, invites, price }, index) => (
                             <div key={index} className="Tier text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
-                                <p className="text-gray-500 font-semibold dark:text-gray-400"> {invites} invites </p>
+                                <p className="text-gray-500 font-semibold dark:text-gray-400"> Reach {invites} invites </p>
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
                                 <a href="https://t.me/daemozon">
