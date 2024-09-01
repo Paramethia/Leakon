@@ -170,7 +170,7 @@ let InviteChecker = () => {
 
     if (inviteId) console.log("Your registered using the invite code:", inviteId)
 
-    let NotLogged = () => {
+    let notLogged = () => {
         toast.error("You are not logged in!", {
             position: "top-center",
             autoClose: 3000,
@@ -188,23 +188,28 @@ let InviteChecker = () => {
     }
 
     useEffect(() => {
-        const check = async () => {
-            try {
-                const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, {username, inviteId});
-                if (response.data.message === "Invalid invite code.") { 
-                    console.error( "Error:", response.data.message);
-                } else if (response.data.message === "Code found and updated data.") {
-                    console.log("Invite code found.");
-                    localStorage.removeItem("usedInvite");
+        if (!username) {
+            // If username is not set, then it assumes you are not registered.
+            notLogged();
+        } else {
+            const check = async () => {
+                try {
+                    const response = await axios.post(`https://invicon-back-end.onrender.com/invite-check`, { username, inviteId });
+                    if (response.data.message === "Invalid invite code.") {
+                        console.error("Error:", response.data.message);
+                    } else if (response.data.message === "Code found and updated data.") {
+                        console.log("Invite code found.");
+                        localStorage.removeItem("usedInvite");
+                    }
+                } catch (err) {
+                    console.error(err);
                 }
-            } catch (err) {
-                console.error(err);
+            };
+
+            if (inviteId) {
+                check();
             }
-        };
-        setTimeout(() => {
-            if (inviteId && username) check()
-            if (!username) NotLogged()
-        }, 555);
+        }
     }, [username]);
 
 };
@@ -306,7 +311,7 @@ const Component = () => {
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
                         Alternatively, you can buy the tiers to get the rewards instantly if you are unable to invite people. Prices will be shown below. <br />
-                        You can check the previews of what rewards you will get in the <Link to="/rewards" style={{ textDecoration: 'underline' }}> <span className="hover:text-blue-500"> rewards page </span> </Link>.
+                        You can check the previews of what rewards you will get in the <Link to="/rewards" style={{ textDecoration: 'underline' }}><span id="R-page"> rewards page </span></Link>.
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
