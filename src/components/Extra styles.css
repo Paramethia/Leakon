@@ -123,6 +123,15 @@ input:checked + .slider:before {
 
 /* Loader */
 
+#R-page {
+    color: #0077b8;
+}
+
+#R-page:hover {
+    text-decoration: wavy underline;
+    color: #900604;
+}
+
 .loader {
   width: 50px;
   aspect-ratio: 1;
