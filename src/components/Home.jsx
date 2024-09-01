@@ -309,7 +309,7 @@ const Component = () => {
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
                         Alternatively, you can buy the tiers to get the rewards instantly if you are unable to invite people. Prices will be shown below. <br />
-                        You can check the previews of what rewards you will get in the <Link to="/rewards"> <span id="R-page"> rewards page </span> </Link>.
+                        You can check the previews of what rewards you will get in the <Link id="R-page" to="/rewards"> rewards page </Link>.
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
