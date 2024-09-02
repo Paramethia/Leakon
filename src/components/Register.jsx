@@ -41,32 +41,57 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-    // Regular expression to check for invalid characters in the username
-    let usernameVal = /^[a-zA-Z0-9._]+$/;
+        // Regular expression to check for invalid characters in the username
+        let usernameVal = /^[a-zA-Z0-9._]+$/;
 
-    // Check for spaces or invalid characters in the username
-    if (!usernameVal.test(username)) {
-        setUsernameError("Username can only contain letters, numbers, underscores, or periods.");
-        return;
-    } else {
-        setUsernameError(''); // Clear the error if the username is valid
-    }
+        // Check for spaces or invalid characters in the username
+        if (!usernameVal.test(username)) {
+            setUsernameError("Username can only contain letters, numbers, underscores, or periods.");
+            return;
+        } else {
+            setUsernameError(''); // Clear the error if the username is valid
+        }
 
-    if (alreadyReg) {
-        setWarning("Don't create another account while already registered on this device! Fucking log in or resest your password if you forgot!!");
-        setTimeout(() => {
-            navigate('/login');
-        }, 5800);
-    } else if (usedInvite && alreadyReg) {
-        setWarning("You cannot use invite links if you already registered on this device.");
-        setTimeout(() => {
-            navigate('/login');
-        }, 4850);
-    } else {
-        axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
-        .then(result => {
-            if (result.data === "Account already registered.") {
-                 toast.warn("Already registered, pal. Go log in", {
+        if (alreadyReg) {
+            setWarning("Don't create another account while already registered on this device! Fucking log in or resest your password if you forgot!!");
+            setTimeout(() => {
+                navigate('/login');
+            }, 5800);
+        } else if (usedInvite && alreadyReg) {
+            setWarning("You cannot use invite links if you already registered on this device.");
+            setTimeout(() => {
+                navigate('/login');
+            }, 4850);
+        } else {
+            axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
+            .then(result => {
+                if (result.data === "Account already registered.") {
+                    toast.warn("Already registered, pal. Go log in", {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Flip,
+                    });
+                    setTimeout(() => {
+                        navigate('/login');
+                    }, 4400);
+                } else if (result.data === "Username already taken.") {
+                    setUsernameError("This username is already in use.")
+                } else if (result.data === "Registered.") {
+                    localStorage.setItem('usedInvite', usedInvite);
+                    localStorage.setItem("username", username);
+                    localStorage.setItem("email", email);
+                    navigate('/home');
+                }
+            })
+            .catch(err => {
+                console.log(err);
+                toast.error("Registration failed. Please try again later.", {
                     position: "top-center",
                     autoClose: 4000,
                     hideProgressBar: false,
@@ -75,36 +100,12 @@ const Register = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "dark",
-                    transition: Flip,
+                    transition: Bounce,
                 });
-                setTimeout(() => {
-                    navigate('/login');
-                }, 4400);
-            } else if (result.data === "Username already taken.") {
-                setUsernameError("This username is already in use.")
-            } else if (result.data === "Registered.") {
-                localStorage.setItem('usedInvite', usedInvite);
-                localStorage.setItem("username", username);
-                localStorage.setItem("email", email);
-                navigate('/home');
-            }
-        })
-        .catch(err => {
-            console.log(err);
-            toast.error("Registration failed. Please try again later.", {
-                position: "top-center",
-                autoClose: 4000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Bounce,
             });
-        });   
+        }   
     }
-
+  
     function clearCache() {
         localStorage.clear()
     }
