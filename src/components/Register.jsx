@@ -27,7 +27,11 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
-    //const [emailWarning, setEmailWarning] = useState("");
+    const [emailWarning, setEmailWarning] = useState("");
+
+    function eWarning() {
+        setEmailWarning("Ensure your email is valid.");
+    }
 
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
@@ -37,23 +41,34 @@ const Register = () => {
     const handleRegister = (event) => {
         event.preventDefault();
 
-        // Regular expression to check for invalid characters in the username
-        let usernameVal = /^[a-zA-Z0-9._]+$/;
+    // Regular expression to check for invalid characters in the username
+    let usernameVal = /^[a-zA-Z0-9._]+$/;
 
-        // Check for spaces or invalid characters in the username
-        if (!usernameVal.test(username)) {
-            setUsernameError("Username can only contain letters, numbers, underscores, or periods.");
-            return;
-        } else {
-            setUsernameError(''); // Clear the error if the username is valid
-        }
-    
+    // Check for spaces or invalid characters in the username
+    if (!usernameVal.test(username)) {
+        setUsernameError("Username can only contain letters, numbers, underscores, or periods.");
+        return;
+    } else {
+        setUsernameError(''); // Clear the error if the username is valid
+    }
+
+    if (alreadyReg) {
+        setWarning("Don't create another account while already registered on this device! Fucking log in or resest your password if you forgot!!");
+        setTimeout(() => {
+            navigate('/login');
+        }, 5800);
+    } else if (usedInvite && alreadyReg) {
+        setWarning("You cannot use invite links if you already registered on this device.");
+        setTimeout(() => {
+            navigate('/login');
+        }, 4850);
+    } else {
         axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
         .then(result => {
             if (result.data === "Account already registered.") {
                  toast.warn("Already registered, pal. Go log in", {
                     position: "top-center",
-                    autoClose: 4400,
+                    autoClose: 4000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -68,24 +83,11 @@ const Register = () => {
             } else if (result.data === "Username already taken.") {
                 setUsernameError("This username is already in use.")
             } else if (result.data === "Registered.") {
-               if (alreadyReg) {
-                   setWarning("Don't create another account if you already registered on this device! Fucking log in or resest your password if you forgot!!");
-                   setTimeout(() => {
-                      navigate('/login');
-                   }, 5800);
-               } else if (usedInvite && alreadyReg) {
-                    setWarning("You cannot use invite links if you already registered on this device.");
-                    setTimeout(() => {
-                        navigate('/login');
-                    }, 4850);
-               } else {
-                    localStorage.setItem('usedInvite', usedInvite);
-                    localStorage.setItem("username", username);
-                    localStorage.setItem("email", email);
-                    navigate('/home');
-               }
+                localStorage.setItem('usedInvite', usedInvite);
+                localStorage.setItem("username", username);
+                localStorage.setItem("email", email);
+                navigate('/home');
             }
-
         })
         .catch(err => {
             console.log(err);
@@ -100,7 +102,7 @@ const Register = () => {
                 theme: "dark",
                 transition: Bounce,
             });
-        });
+        });   
     }
 
     function clearCache() {
@@ -134,7 +136,7 @@ const Register = () => {
                                 onChange={(event) => setName(event.target.value)}
                                 required
                             />
-                            {usernameError && <p className="text-red-500 text-sm mt-1">{usernameError}</p>} {/* Error message */}
+                            {usernameError && <p className="text-red-500 text-sm mt-1">{usernameError}</p>}
                         </div>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputEmai1" className="block text-sm font-bold mb-2">
@@ -147,9 +149,11 @@ const Register = () => {
                                 className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputEmail1"
                                 onChange={(event) => setEmail(event.target.value)}
+                                onClick={(eWarning())}
                                 required
                             />
                         </div>
+                        {emailWarning && <p className="text-orange-600 text-sm mt-1">{emailWarning}</p>}
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
@@ -164,7 +168,7 @@ const Register = () => {
                                 required
                             />
                         </div>
-                        {warning && <p className="text-red-500 text-sm mt-1">{warning}</p>} {/* Warning message */}
+                        {warning && <p className="text-red-500 text-sm mt-1">{warning}</p>}
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Submit </button>
                     </form>
                     <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Log in</Link></p>
