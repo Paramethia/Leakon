@@ -40,7 +40,7 @@ const Register = () => {
 
         // Check for spaces or invalid characters in the username
         if (!usernameVal.test(username)) {
-            setUsernameError("Username can only contain letters, numbers, underscores, and periods.");
+            setUsernameError("Username can only contain letters, numbers, underscores, or periods.");
             return;
         } else {
             setUsernameError(''); // Clear the error if the username is valid
