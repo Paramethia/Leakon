@@ -158,6 +158,12 @@ input:checked + .slider:before {
     }
 }
 
+/* Dashboard page */
+
+.Invitees {
+    max-width: 768px;
+}
+
 /* Rewards page */
 
 .Tier-info {
