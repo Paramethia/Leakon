@@ -160,9 +160,8 @@ input:checked + .slider:before {
 
 /* Dashboard page */
 
-main {
+.Invitees-con {
     max-width: 768px;
-    margin: 0 auto;
 }
 
 .Invitees {
