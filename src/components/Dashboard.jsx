@@ -197,8 +197,8 @@ const Dashboard = () => {
                     <div className="flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
                         {invitees.length > 0 ? (
                             invitees.map((invitee, index) => (
-                                <div key={index} className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-between">
-                                    <div className="Invitee flex items-center gap-2">
+                                <div key={index} className="Invitees bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-between">
+                                    <div className="flex items-center gap-2">
                                         <svg className="w-10 h-10 rounded-full" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                         </svg>
