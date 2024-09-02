@@ -162,6 +162,7 @@ input:checked + .slider:before {
 
 .Invitees-con {
     max-width: 768px;
+    margin: 0 auto;
 }
 
 .Invitees {
