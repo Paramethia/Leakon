@@ -149,7 +149,7 @@ const InviteLinkComponent = () => {
                 {!error && (
                     <>
                     <div className="Link bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-2 text-lg font-medium text-gray-700 dark:text-white">
-                        {inviteLink} <button id="copyB-1" onClick={handleCopy}> Copy </button>
+                        {inviteLink} 
                     </div>
                     <button id="copyB-2" onClick={handleCopy}>
                         Copy
