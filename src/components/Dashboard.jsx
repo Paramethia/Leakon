@@ -194,7 +194,7 @@ const Dashboard = () => {
                         Your dashboard
                     </h1>
 
-                    <div className="flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
+                    <div className="Invitees-con flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
                         {invitees.length > 0 ? (
                             invitees.map((invitee, index) => (
                                 <div key={index} className="Invitees bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-between">
