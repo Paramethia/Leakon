@@ -76,7 +76,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             
             <center>
                 <div className="Contact">
-                    <ConIcon className="h-4 w-4 inline" /> <a href="mailto:kyrinkompi@gmail.com"> Contact dev </a>
+                    <ConIcon className="h-4 w-4 inline" /> <a href="mailto:kevisbuffalo@gmail.com"> Contact dev </a>
                 </div>
             </center>
 
@@ -149,9 +149,9 @@ const InviteLinkComponent = () => {
                 {!error && (
                     <>
                     <div className="Link bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-2 text-lg font-medium text-gray-700 dark:text-white">
-                        {inviteLink}
+                        {inviteLink} <button id="copyB-1" onClick={handleCopy}> Copy </button>
                     </div>
-                    <button className="bg-gray-300 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={handleCopy}>
+                    <button id="copyB-2" onClick={handleCopy}>
                         Copy
                     </button>
                     </>
@@ -323,12 +323,12 @@ const Component = () => {
                          <>
                             <div className="mb-4">
                                 <div className="flex items-center justify-between">
-                                    <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Total Invites</h2>
+                                    <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Stats</h2>
                                 </div>
                                 <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
                             </div>
                             <div className="flex items-center justify-between">
-                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Current tier: {tier}</div>
+                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier - {tier}</div>
                                
                                 <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
                                    <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
