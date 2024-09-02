@@ -32,7 +32,7 @@ const Register = () => {
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
     let alreadyReg = localStorage.getItem("email");
-    let [waring, setWarning] = useState("");
+    let [warning, setWarning] = useState("");
 
     const handleRegister = (event) => {
         event.preventDefault();
