@@ -150,7 +150,7 @@ input:checked + .slider:before {
 
 #copyB-1:hover,# copyB-2:hover {
     background: #0077b8;
-}y
+}
 
 .loader {
   width: 50px;
