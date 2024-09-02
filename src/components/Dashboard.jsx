@@ -194,6 +194,7 @@ const Dashboard = () => {
                         Your dashboard
                     </h1>
 
+                    <center>
                     <div className="Invitees-con flex-1 flex flex-col overflow-y-auto p-6 space-y-4">
                         {invitees.length > 0 ? (
                             invitees.map((invitee, index) => (
@@ -214,6 +215,7 @@ const Dashboard = () => {
                             </div>
                         )}
                     </div>
+                    </center>
                 </main>
             </div>
         </>
