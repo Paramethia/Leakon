@@ -27,10 +27,12 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
+    //const [emailWarning, setEmailWarning] = useState("");
 
-    // To check if the user already has an account on the device to prevent inviting multiple acccount on the same device.
+    // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
     let alreadyReg = localStorage.getItem("email");
+    let [waring, setWarning] = useState("");
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -66,21 +68,16 @@ const Register = () => {
             } else if (result.data === "Username already taken.") {
                 setUsernameError("This username is already in use.")
             } else if (result.data === "Registered.") {
-               if (usedInvite && alreadyReg) {
-                    toast.warn("You cannot use invite links if you already registered on this device.", {
-                        position: "top-center",
-                        autoClose: 5200,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                        transition: Flip,
-                    });
+               if (alreadyReg) {
+                   setWarning("Don't create another account if you already registered on this device! Fucking log in or resest your password if you forgot!!");
+                   setTimeout(() => {
+                      navigate('/login');
+                   }, 5800);
+               } else if (usedInvite && alreadyReg) {
+                    setWarning("You cannot use invite links if you already registered on this device.");
                     setTimeout(() => {
                         navigate('/login');
-                    }, 5500);
+                    }, 4850);
                } else {
                     localStorage.setItem('usedInvite', usedInvite);
                     localStorage.setItem("username", username);
@@ -167,6 +164,7 @@ const Register = () => {
                                 required
                             />
                         </div>
+                        {warning && <p className="text-red-500 text-sm mt-1">{warning}</p>} {/* Warning message */}
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Submit </button>
                     </form>
                     <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Log in</Link></p>
