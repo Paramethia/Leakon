@@ -27,12 +27,16 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
-    const [emailWarning, setEmailWarning] = useState("");
-
+    //const [emailWarning, setEmailWarning] = useState("");
+    /*
     function eWarning() {
         setEmailWarning("Ensure your email is valid.");
+            
+        setTimeout(() => {
+           setEmailWarning("");
+        }, 3000)
     }
-
+    */
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
     let alreadyReg = localStorage.getItem("email");
@@ -150,11 +154,10 @@ const Register = () => {
                                 className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputEmail1"
                                 onChange={(event) => setEmail(event.target.value)}
-                                onClick={(eWarning())}
                                 required
                             />
                         </div>
-                        {emailWarning && <p className="text-orange-600 text-sm mt-1">{emailWarning}</p>}
+                        {/* emailWarning && <p className="text-orange-600 text-sm mt-1">{emailWarning}</p> */}
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
