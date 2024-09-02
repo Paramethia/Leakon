@@ -151,7 +151,7 @@ const InviteLinkComponent = () => {
                     <div className="Link bg-gray-200 dark:bg-gray-800 rounded-md px-4 py-2 text-lg font-medium text-gray-700 dark:text-white">
                         {inviteLink} 
                     </div>
-                    <button id="copyB-2" onClick={handleCopy}>
+                    <button id="copyB" onClick={handleCopy}>
                         Copy
                     </button>
                     </>
