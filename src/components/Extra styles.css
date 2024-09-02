@@ -134,13 +134,9 @@ input:checked + .slider:before {
 }
 
 #copyB-1, #copyB-2 {
-    background: #e2e8f0;
+    background: #d1d5db;
     color: #1a202c;
-    padding: 1rem;
-    /*
-    padding-top: 0.5rem:
-    padding-bottom: 0.5rem;
-    */
+    padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 #copyB-1 {
@@ -148,7 +144,7 @@ input:checked + .slider:before {
     margin-left: 4px;
 }
 
-#copyB-1:hover,# copyB-2:hover {
+#copyB-1:hover, #copyB-2:hover {
     background: #0077b8;
 }
 
