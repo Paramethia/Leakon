@@ -5,7 +5,6 @@ aside {
     top: 0;
     bottom: 0;
     height: 100vh;
-    overflow-y: hidden;
 }
 
 /* Top bar styling */
@@ -216,7 +215,7 @@ ul {
         margin: 0 auto;
     }
 
-    copyB {
+    #copyB {
         display: block;
         margin: 0 auto;
     }
