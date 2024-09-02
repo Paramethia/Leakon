@@ -133,6 +133,25 @@ input:checked + .slider:before {
     color: #900604;
 }
 
+copyB-1, copyB-2 {
+    background: #e2e8f0;
+    color: #1a202c;
+    padding: 1rem;
+    /*
+    padding-top: 0.5rem:
+    padding-bottom: 0.5rem;
+    */
+    border-radius: 5px;
+}
+copyB-1 {
+    display: none;
+    margin-left: 4px;
+}
+
+copyB-1:hover, copyB-2:hover {
+    background: #0077b8;
+}y
+
 .loader {
   width: 50px;
   aspect-ratio: 1;
@@ -203,6 +222,13 @@ ul {
     }
     .Link-gen button {
         margin: 0 auto;
+    }
+
+    copyB-1 {
+        display: inline;
+    }
+    copyB-2 {
+        display: none;
     }
 
 }
