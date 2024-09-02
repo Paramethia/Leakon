@@ -18,8 +18,10 @@ const RequestPasswordReset = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://invicon-back-end.onrender.com/request-password-reset', { email });
-        toast.info('Password reset email sent', {
+      const response = await axios.post('https://invicon-back-end.onrender.com/request-password-reset', { email });
+      
+      if (response.data.message === "Password reset email sent") {
+        toast.info('Email sent. Check your inbox.', {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -30,20 +32,36 @@ const RequestPasswordReset = () => {
           theme: "dark",
           transition: Slide,
         });
+      }
     } catch (error) {
-        toast.error('Invalid email, dawg.', {
-          position: "top-center",
-          autoClose: 2800,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-        });
+        if (error.response && error.response.status === 404) {
+          toast.error('Email not found, dawg.', {
+            position: "top-center",
+            autoClose: 2800,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+          });
+        } else {
+          toast.error('An error occurred. Please try again.', {
+            position: "top-center",
+            autoClose: 2800,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+          });
+        }
     }
-  };
+};
+
 
   return (
     <>
@@ -52,7 +70,7 @@ const RequestPasswordReset = () => {
 
     <ToastContainer />
 
-    <div className="flex  h-screen">
+    <div className="flex h-screen">
       <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)' }}></div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
           <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
