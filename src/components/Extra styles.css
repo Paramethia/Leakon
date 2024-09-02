@@ -140,7 +140,7 @@ input:checked + .slider:before {
 }
 
 #copyB:hover {
-    background: #0077b8;
+    background: #3b82f6;
 }
 
 .loader {
@@ -211,13 +211,9 @@ ul {
     .Link {
         display: block;
     }
-    .Link-gen button {
-        margin: 0 auto;
-    }
 
     #copyB {
-        display: block;
-        margin: 0 auto;
+        margin-left: 2px;
     }
 
 }
