@@ -57,7 +57,7 @@ const Register = () => {
         }
 
         if (alreadyReg) {
-            setWarning("Don't create another account while already registered on this device! Fucking log in or resest your password if you forgot!!");
+            setWarning("Don't create another account while already registered on this device! Fucking log in or reset your password if you forgot!!");
             setTimeout(() => {
                 navigate('/login');
             }, 5800);
