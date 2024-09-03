@@ -61,7 +61,7 @@ const Register = () => {
             setTimeout(() => {
                 navigate('/login');
             }, 5800);
-        } else if (usedInvite && alreadyReg) {
+        } else if (usedInvite != null && alreadyReg) {
             setWarning("You cannot use invite links if you already registered on this device.");
             setTimeout(() => {
                 navigate('/login');
