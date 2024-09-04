@@ -214,24 +214,24 @@ let InviteChecker = () => {
 
 const PaymentOptions = ({ onClose }) => {
     return (
-        <div className="Payment-options fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-80 relative">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
+            <div className="Payment-options bg-gray-400 dark:bg-gray-800 rounded-lg p-6 w-80 relative">
                 <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-white">
                     <FaTimesCircle className="w-6 h-6" />
                 </button>
                 <h2 className="text-lg font-bold text-gray-700 dark:text-white mb-4 text-center">Select Payment Method</h2>
                 <div className="grid gap-4">
-                    <a href="#">
-                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaPaypal className="w-6 h-6 mr-2" /> PayPal </button>
+                    <a href="https://www.paypal.com/paypalme/KyrinKompi" target="_blank">
+                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaPaypal className="w-6 h-6 mr-2 inline" /> PayPal </button>
                     </a>
                     <p className="text-xs text-white mt-1">
                         <span className="font-bold">NOTE:</span> Ensure you include a message with your username when sending the money.
                     </p>
-                    <a href="https://t.me/daemozon">
-                        <FaBitcoin className="w-6 h-6 mr-2" /> <button className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">Crypto</button>
+                    <a href="https://t.me/daemozon" target="_blank">
+                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaBitcoin className="w-6 h-6 mr-2 inline" /> Crypto </button>
                     </a>
                     <a href="https://t.me/daemozon">
-                        <FaWallet className="w-6 h-6 mr-2" /> <button className="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600">Other</button>
+                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaWallet className="w-6 h-6 mr-2 inline" /> Other </button>
                     </a>
                 </div>
             </div>
