@@ -152,9 +152,24 @@ input:checked + .slider:before {
   animation: load 1s infinite;
 }
 
+.Payment-options {
+    animation: slide 0.8s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+/* Animations */
+
 @keyframes load {
     to {
         transform: rotate(.5turn)
+    }
+}
+
+@keyframes slide {
+    from {
+        margin-left: 80%;
+    } to {
+        margin-left: 0%;
     }
 }
 
