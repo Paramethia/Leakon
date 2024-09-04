@@ -96,6 +96,33 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   );
 };
 
+const PaymentOptions = ({ onClose }) => {
+    return (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
+            <div className="Payment-options bg-gray-300 dark:bg-gray-800 rounded-lg p-6 w-80 relative">
+                <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-white">
+                    <FaTimesCircle className="w-6 h-6" />
+                </button>
+                <h2 className="text-lg font-bold text-gray-700 dark:text-white mb-4 text-center">Select Payment Method</h2>
+                <div className="grid gap-4">
+                    <a href="https://www.paypal.com/paypalme/KyrinKompi" target="_blank">
+                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaPaypal className="w-6 h-6 mr-2 inline" /> PayPal </button>
+                    </a>
+                    <p className="text-xs text-black">
+                        <span className="font-bold">NOTE:</span> Ensure you include a message with your username when sending the money.
+                    </p>
+                    <a href="https://t.me/daemozon" target="_blank">
+                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaBitcoin className="w-6 h-6 mr-2 inline" /> Crypto </button>
+                    </a>
+                    <a href="https://t.me/daemozon">
+                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaWallet className="w-6 h-6 mr-2 inline" /> Other </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const Rewards = () => {
   const navigate = useNavigate();
   const { username } = useContext(UserContext);
@@ -149,24 +176,23 @@ const Rewards = () => {
     }
 }, [username]);
 
-
-  const toggleTheme = () => {
+const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const toggleSidebar = () => {
+const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-  };
+};
 
-  const toggleSpoiler = (index) => {
+const toggleSpoiler = (index) => {
     setSpoilers(prev => {
       const newSpoilers = [...prev];
       newSpoilers[index] = !newSpoilers[index];
       return newSpoilers;
     });
-  };
+};
 
-  const playorpause = (index) => {
+const playorpause = (index) => {
     if (playingIndex === index) {
       videoRefs.current[index].pause();
       setPlayingIndex(null);
@@ -178,6 +204,14 @@ const Rewards = () => {
       setPlayingIndex(index);
     }
   };
+
+  const payOptionsOpen = () => {
+       setIsPaymentConOpen(true);
+  }
+
+  const payOptionsClose = () => {
+       setIsPaymentConOpen(false)
+  }
 
   const videoLinks = [
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721763778/Sophie_Rain_spiderman_OF_vid_zo9uq2.mp4',
@@ -341,11 +375,9 @@ const Rewards = () => {
                     )))}
 
                     {currentTier < 5 && (
-                      <a href="https://t.me/daemozon" className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]">
-                        <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
+                        <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={payOptionsOpen}>
                           Buy a tier 🧧
                         </button>
-                      </a>
                     )}
                   </center>
               </div>
@@ -354,7 +386,7 @@ const Rewards = () => {
         </div>
       </main>
     </div>
-    
+        { isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} /> }
     </>
   );
 };
