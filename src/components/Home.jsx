@@ -387,7 +387,7 @@ const Component = () => {
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
                                 <a href="https://t.me/daemozon">
-                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors" {/* onClick={payOptionsOpen} */}>
+                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors"> {/* onClick={payOptionsOpen} Add this later*/}
                                     Buy Now
                                 </button>
                                 </a>
