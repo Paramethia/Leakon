@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
-import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle } from 'react-icons/fa';
 import './Extra styles.css';
 
 const Header = () => {
@@ -212,6 +212,33 @@ let InviteChecker = () => {
 
 };
 
+const PaymentOptions = ({ onClose }) => {
+    return (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-80 relative">
+                <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-white">
+                    <FaTimesCircle className="w-6 h-6" />
+                </button>
+                <h2 className="text-lg font-bold text-gray-700 dark:text-white mb-4 text-center">Select Payment Method</h2>
+                <div className="grid gap-4">
+                    <a href="#">
+                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaPaypal className="w-6 h-6 mr-2" /> PayPal </button>
+                    </a>
+                    <p className="text-xs text-white mt-1">
+                        <span className="font-bold">NOTE:</span> Ensure you include a message with your username when sending the money.
+                    </p>
+                    <a href="https://t.me/daemozon">
+                        <FaBitcoin className="w-6 h-6 mr-2" /> <button className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">Crypto</button>
+                    </a>
+                    <a href="https://t.me/daemozon">
+                        <FaWallet className="w-6 h-6 mr-2" /> <button className="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600">Other</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const Component = () => {
     const inviteLink = useState('');
     const [isDarkMode, setIsDarkMode] = useState(true);
@@ -222,6 +249,7 @@ const Component = () => {
     let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
+    const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
 
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
@@ -230,6 +258,14 @@ const Component = () => {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+
+    const payOptionsOpen = () {
+        setIsPaymentConOpen(true);
+    }
+
+    const payOptionsClose = () {
+        setIsPaymentConOpen(false)
+    }
 
     useEffect(() => {
         const fetchInviteData = async () => {
@@ -351,7 +387,7 @@ const Component = () => {
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
                                 <a href="https://t.me/daemozon">
-                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors">
+                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors" {/* onClick={payOptionsOpen} */}>
                                     Buy Now
                                 </button>
                                 </a>
@@ -359,59 +395,9 @@ const Component = () => {
                         ))}
                     </div>
                 </div>
-                { /*
-                <div className="grid gap-6 p-6">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-2xl font-bold">Select Payment Method</h2>
-                    <div>
-                      <Button variant="ghost" size="icon">
-                        <XIcon className="h-5 w-5" />
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="grid gap-4">
-                    <div
-                      className={`rounded-lg border p-4 transition-colors hover:bg-muted cursor-pointer flex items-center justify-between ${
-                        selectedPaymentMethod === "paypal" ? "border-primary bg-primary-foreground" : "border-muted"
-                      }`}
-                      onClick={() => setSelectedPaymentMethod("paypal")}
-                    >
-                      <div className="flex items-center gap-4">
-                        <WalletCardsIcon className="h-8 w-8" />
-                        <span className="text-lg font-medium">PayPal</span>
-                      </div>
-                      {selectedPaymentMethod === "paypal" && <CheckIcon className="h-6 w-6 text-primary" />}
-                    </div>
-                    <div
-                      className={`rounded-lg border p-4 transition-colors hover:bg-muted cursor-pointer flex items-center justify-between ${
-                        selectedPaymentMethod === "crypto" ? "border-primary bg-primary-foreground" : "border-muted"
-                      }`}
-                      onClick={() => setSelectedPaymentMethod("crypto")}
-                    >
-                      <div className="flex items-center gap-4">
-                        <DollarSignIcon className="h-8 w-8" />
-                        <span className="text-lg font-medium">Crypto</span>
-                      </div>
-                      {selectedPaymentMethod === "crypto" && <CheckIcon className="h-6 w-6 text-primary" />}
-                    </div>
-                    <div
-                      className={`rounded-lg border p-4 transition-colors hover:bg-muted cursor-pointer flex items-center justify-between ${
-                        selectedPaymentMethod === "other" ? "border-primary bg-primary-foreground" : "border-muted"
-                      }`}
-                      onClick={() => setSelectedPaymentMethod("other")}
-                    >
-                      <div className="flex items-center gap-4">
-                        <CreditCardIcon className="h-8 w-8" />
-                        <span className="text-lg font-medium">Other</span>
-                      </div>
-                      {selectedPaymentMethod === "other" && <CheckIcon className="h-6 w-6 text-primary" />}
-                    </div>
-                  </div>
-                </div>
-                */ }
             </main>
         </div>
-
+        {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
         </>
     );
 };
