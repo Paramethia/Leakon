@@ -215,7 +215,7 @@ let InviteChecker = () => {
 const PaymentOptions = ({ onClose }) => {
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
-            <div className="Payment-options bg-gray-400 dark:bg-gray-800 rounded-lg p-6 w-80 relative">
+            <div className="Payment-options bg-gray-300 dark:bg-gray-800 rounded-lg p-6 w-80 relative">
                 <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-white">
                     <FaTimesCircle className="w-6 h-6" />
                 </button>
@@ -224,7 +224,7 @@ const PaymentOptions = ({ onClose }) => {
                     <a href="https://www.paypal.com/paypalme/KyrinKompi" target="_blank">
                         <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaPaypal className="w-6 h-6 mr-2 inline" /> PayPal </button>
                     </a>
-                    <p className="text-xs text-white mt-1">
+                    <p className="text-xs text-black">
                         <span className="font-bold">NOTE:</span> Ensure you include a message with your username when sending the money.
                     </p>
                     <a href="https://t.me/daemozon" target="_blank">
