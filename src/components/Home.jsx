@@ -214,7 +214,7 @@ let InviteChecker = () => {
 
 const PaymentOptions = ({ onClose }) => {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
+        <div className="Payment-options fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-80 relative">
                 <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-white">
                     <FaTimesCircle className="w-6 h-6" />
@@ -386,11 +386,9 @@ const Component = () => {
                                 <p className="text-gray-500 font-semibold dark:text-gray-400"> Reach {invites} invites </p>
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
-                                <a href="https://t.me/daemozon">
-                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors"> {/* onClick={payOptionsOpen} Add this later*/}
+                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors" onClick={payOptionsOpen}> {/* onClick={payOptionsOpen} Add this later*/}
                                     Buy Now
                                 </button>
-                                </a>
                             </div>
                         ))}
                     </div>
