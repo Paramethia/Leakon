@@ -259,11 +259,11 @@ const Component = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
-    const payOptionsOpen = () {
+    const payOptionsOpen = () => {
         setIsPaymentConOpen(true);
     }
 
-    const payOptionsClose = () {
+    const payOptionsClose = () => {
         setIsPaymentConOpen(false)
     }
 
