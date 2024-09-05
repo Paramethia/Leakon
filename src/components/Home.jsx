@@ -298,8 +298,6 @@ const Component = () => {
 
     return (
         <>
-
-        <ToastContainer />
  
         <InviteChecker />
 
@@ -316,6 +314,8 @@ const Component = () => {
                         borderRadius: '5px',
                     }}
                 >
+                    <ToastContainer />
+                    
                     <div className={`ham-menu md:hidden left-12 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
                         <button onClick={toggleSidebar}>
                             <FaBars className="h-6 w-6 text-white" />
