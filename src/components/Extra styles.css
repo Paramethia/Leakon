@@ -120,12 +120,6 @@ input:checked + .slider:before {
     font-style: italic;
 }
 
-/* Containers */
-
-.Link-gen-con, .Stats, .Tier {
-    width: 100%
-}
-
 /* Loader */
 
 #R-page {
@@ -240,6 +234,7 @@ ul {
 
     .Link-gen-con, .Stats, .Tier {
         padding: 12px;
+        max-width: 311px;
     }
     .Link {
         display: block;
