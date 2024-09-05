@@ -4,8 +4,9 @@ import App from './components/App'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
+inject()
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  inject();
   <React.StrictMode>
       <App />
   </React.StrictMode>
