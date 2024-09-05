@@ -364,7 +364,7 @@ const Component = () => {
                                 <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
                             </div>
                             <div className="flex items-center justify-between">
-                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier - {tier}</div>
+                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier: {tier}</div>
                                
                                 <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
                                    <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
@@ -375,18 +375,19 @@ const Component = () => {
                         </>
                         )}
                     </div>
-                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                        Tiers
-                    </h1>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
+                        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                            Tiers
+                        </h1>
+                        
                         {filteredTiers.map(({ tier, invites, price }, index) => (
                             <div key={index} className="Tier text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
                                 <p className="text-gray-500 font-semibold dark:text-gray-400"> Reach {invites} invites </p>
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
                                 <h3 className="text-gray-700 font-bold dark:text-gray-300"> ${price} </h3>
-                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors" onClick={payOptionsOpen}> {/* onClick={payOptionsOpen} Add this later*/}
+                                <button className="mt-auto bg-gray-300 dark:bg-gray-700 text-gray-900 py-2 px-4 rounded-lg hover:bg-blue-500 transition-colors" onClick={payOptionsOpen}>
                                     Buy Now
                                 </button>
                             </div>
