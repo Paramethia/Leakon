@@ -60,9 +60,9 @@ const Login = () => {
 
         <div className="flex  h-screen">
             <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1723931827/Invicon_register_or_log_in_image_xfeg1y.png)' }}></div>
-            <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
+            <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-400">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
-                <div className="bg-white p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
+                <div className="bg-gray-300 p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
                     <h3 className="mb-6 text-2xl font-bold  text-dark">Log in</h3>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4 text-left">
@@ -73,7 +73,7 @@ const Login = () => {
                                 type="text"
                                 maxlength="14"
                                 placeholder="Enter username"
-                                className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                className="form-control block w-full bg-gray-200 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputEmail1"
                                 onChange={(event) => setName(event.target.value)}
                                 required
@@ -87,7 +87,7 @@ const Login = () => {
                                 type="password" 
                                 maxlength="17"
                                 placeholder="Enter password"
-                                className="form-control block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                className="form-control block w-full bg-gray-200 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputPassword1"
                                 onChange={(event) => setPassword(event.target.value)}
                                 required
