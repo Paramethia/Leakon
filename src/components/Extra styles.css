@@ -212,6 +212,7 @@ ul {
 }
 
 @media only screen and (max-width: 780px) {
+    
      /* Top bar */
      
      .Top-bar {
@@ -223,17 +224,13 @@ ul {
 
 /* Mobile view Portrait view */
 
-@media only screen and (max-width: 455px) {   
-
-     main {
-         max-width: 420px;
-     }
+@media only screen and (max-width: 435px) {   
      
-     /* Nav bar */
+    /* Nav bar */
 
-     aside {
-         width: 14.5rem;
-     }
+    aside {
+        width: 14.5rem;
+    }
 
     .Contact {
         margin-top: 2cm
@@ -241,7 +238,7 @@ ul {
 
      /* Home page */
 
-    .Link-gen-con, .Stats, .Tiers {
+    .Link-gen-con, .Stats, .Tier {
         padding: 12px;
     }
     .Link {
