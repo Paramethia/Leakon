@@ -139,7 +139,7 @@ const InviteLinkComponent = () => {
     return (
         <>
 
-        <div className="Link-gen-con bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+        <div className="Link-gen-con w-full bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Your Invite Link</h2>
                 <p className="text-gray-500 dark:text-gray-400">Share this link with your friends to earn rewards.</p>
@@ -350,7 +350,7 @@ const Component = () => {
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
                     <InviteLinkComponent />
-                    <div className="Stats bg-white dark:bg-gray-800 shadow rounded-lg p-6">
+                    <div className="Stats w-full bg-white dark:bg-gray-800 shadow rounded-lg p-6">
                         { loading ? (
                             <center>
                                 <div className="loader"></div>
@@ -376,13 +376,14 @@ const Component = () => {
                         )}
                     </div>
 
+                    <h1 className="w-full text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                        Tiers
+                    </h1>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
-                        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                            Tiers
-                        </h1>
                         
                         {filteredTiers.map(({ tier, invites, price }, index) => (
-                            <div key={index} className="Tier text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
+                            <div key={index} className="Tier w-full text-center bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex flex-col">
                                 <h2 className="text-lg font-bold text-2xl text-gray-700 dark:text-white"> {tier} </h2>
                                 <p className="text-gray-500 font-semibold dark:text-gray-400"> Reach {invites} invites </p>
                                 <p className="text-gray-500 dark:text-gray-400"> or pay </p>
