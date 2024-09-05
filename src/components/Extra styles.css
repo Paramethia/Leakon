@@ -120,6 +120,12 @@ input:checked + .slider:before {
     font-style: italic;
 }
 
+/* Containers */
+
+.Link-gen-con, .Stats, .Tier {
+    width: 100%
+}
+
 /* Loader */
 
 #R-page {
@@ -151,6 +157,8 @@ input:checked + .slider:before {
   border-color: #000 #0000;
   animation: load 1s infinite;
 }
+
+/* Payment options container */
 
 .Payment-options {
     animation: slide 0.8s ease-in-out;
@@ -215,7 +223,11 @@ ul {
 
 /* Mobile view Portrait view */
 
-@media only screen and (max-width: 435px) {   
+@media only screen and (max-width: 455px) {   
+
+     main {
+         max-width: 420px;
+     }
      
      /* Nav bar */
 
@@ -231,7 +243,6 @@ ul {
 
     .Link-gen-con, .Stats, .Tiers {
         padding: 12px;
-        width: 350px;
     }
     .Link {
         display: block;
