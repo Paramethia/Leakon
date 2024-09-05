@@ -364,7 +364,7 @@ const Component = () => {
                                 <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
                             </div>
                             <div className="flex items-center justify-between">
-                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier: {tier}</div>
+                                <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier - {tier}</div>
                                
                                 <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 text-sm font-medium font-helvetica transition-colors hover:bg-muted" style={{ textDecoration: 'none' }}> 
                                    <button className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 hover:bg-blue-500 rounded-md"> 
