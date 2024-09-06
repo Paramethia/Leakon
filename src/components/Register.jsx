@@ -34,7 +34,7 @@ const Register = () => {
         setTimeout(() => {
             note.style.display = 'none'
         }, 3200 );
-    }, []);
+    });
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
@@ -67,7 +67,7 @@ const Register = () => {
             }, 4850);
         } else {
             if (email) axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
-            if {!email) axios.post('https://invicon-back-end.onrender.com/register', { username, password, usedInvite })
+            if (!email) axios.post('https://invicon-back-end.onrender.com/register', { username, password, usedInvite })
             .then(result => {
                 if (result.data === "Account already registered.") {
                     toast.warn("Already registered, pal. Go log in", {
