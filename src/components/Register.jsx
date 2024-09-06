@@ -66,8 +66,8 @@ const Register = () => {
                 navigate('/login');
             }, 4850);
         } else {
-            if (email) axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
-            if (!email) axios.post('https://invicon-back-end.onrender.com/register', { username, password, usedInvite })
+            axios.post('https://invicon-back-end.onrender.com/register', { username, email, password, usedInvite })
+            //if (!email) axios.post('https://invicon-back-end.onrender.com/register', { username, password, usedInvite })
             .then(result => {
                 if (result.data === "Account already registered.") {
                     toast.warn("Already registered, pal. Go log in", {
