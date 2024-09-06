@@ -155,7 +155,7 @@ const Register = () => {
                         </div>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputEmai1" className="block text-sm font-bold mb-2">
-                                Email:
+                                Email (optional):
                             </label>
                             <input
                                 type="email"
@@ -167,7 +167,7 @@ const Register = () => {
                                 onChange={(event) => setEmail(event.target.value)}
                             />
                         </div>
-                          <p Id="Email-note"> Email is not required if you think you can remember your password. </p>
+                          <p Id="Email-note"> Ensure you remember your password if you don't put in your email. </p>
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
