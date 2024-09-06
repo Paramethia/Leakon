@@ -30,7 +30,7 @@ const Register = () => {
     const [emailNote, setEmailNote] = useState("");
 
     function note() = {
-        setEmailNote("Email is not required if you think you can remeber your password.);
+        setEmailNote("Email is not required if you think you can remeber your password.");
         // Disappear after 3.2 seconds
         setTimeout(() => {
             setEmailNote("");
