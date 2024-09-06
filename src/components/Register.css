@@ -13,3 +13,7 @@
     animation: slideIn 1s ease-out;
   }
   
+#Email-note {
+    text-size: 8px;
+    color: #ed7117;
+}
