@@ -134,6 +134,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="text"
+                                minlength="3"
                                 maxlength="14"
                                 placeholder="Create username"
                                 className="form-control block w-full bg-gray-200 px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -149,12 +150,12 @@ const Register = () => {
                             </label>
                             <input
                                 type="email"
+                                minlengh="12"
                                 maxlength="35"
                                 placeholder="Enter email"
                                 className="form-control block w-full bg-gray-200 px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 id="exampleInputEmail1"
                                 onChange={(event) => setEmail(event.target.value)}
-                                required
                             />
                         </div>
                         {/* emailWarning && <p className="text-orange-600 text-sm mt-1">{emailWarning}</p> */}
@@ -164,6 +165,7 @@ const Register = () => {
                             </label>
                             <input
                                 type="password"
+                                minlength="4"
                                 maxlength="17"
                                 placeholder="Create password"
                                 className="form-control block w-full bg-gray-200 px-3 py-2 border border-gray-500 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
