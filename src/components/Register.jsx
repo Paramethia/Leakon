@@ -30,7 +30,7 @@ const Register = () => {
     let note = document.getElementById("Email-note");
 
     setTimeout(() => {
-        note.style.dispaly = 'none'
+        note.style.display = 'none'
     }, 3200 );
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
