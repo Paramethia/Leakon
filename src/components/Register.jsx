@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
-import { useState, useContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from "react-router-dom";
 import axios from 'axios';
