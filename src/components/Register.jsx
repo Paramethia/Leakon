@@ -27,16 +27,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
-    const [emailNote, setEmailNote] = useState("");
-
-    function note() {
-        setEmailNote("Email is not required if you think you can remeber your password.");
-        return (<p className="text-orange-600 text-sm mt-1">{emailNote}</p>);
-        // Disappear after 3.2 seconds
-        setTimeout(() => {
-            setEmailNote("");
-        }, 3200 );
-    }
+    // const [emailNote, setEmailNote] = useState("");
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
@@ -159,7 +150,7 @@ const Register = () => {
                                 onChange={(event) => setEmail(event.target.value)}
                             />
                         </div>
-                          { note() }
+                          <p className="text-orange-600 text-sm mt-1"> Email is not required if you think you can remember your password. </p>
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
