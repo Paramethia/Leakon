@@ -150,7 +150,7 @@ const Register = () => {
                                 onChange={(event) => setEmail(event.target.value)}
                             />
                         </div>
-                          <p className="text-orange-600 text-sm mt-1"> Email is not required if you think you can remember your password. </p>
+                          <p Id="Email-note"> Email is not required if you think you can remember your password. </p>
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
