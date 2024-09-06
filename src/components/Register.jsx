@@ -27,7 +27,11 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
-    // const [emailNote, setEmailNote] = useState("");
+    let note = document.getElementById("Email-note");
+
+    setTimeout(() => {
+        note.style.dispaly = 'none'
+    }, 3200 );
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
