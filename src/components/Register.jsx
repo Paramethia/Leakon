@@ -29,7 +29,7 @@ const Register = () => {
     const navigate = useNavigate();
     const [emailNote, setEmailNote] = useState("");
 
-    function note() = {
+    function note() {
         setEmailNote("Email is not required if you think you can remeber your password.");
         // Disappear after 3.2 seconds
         setTimeout(() => {
