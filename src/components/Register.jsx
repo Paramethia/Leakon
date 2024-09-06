@@ -31,6 +31,7 @@ const Register = () => {
 
     function note() {
         setEmailNote("Email is not required if you think you can remeber your password.");
+        return (<p className="text-orange-600 text-sm mt-1">{emailNote}</p>);
         // Disappear after 3.2 seconds
         setTimeout(() => {
             setEmailNote("");
@@ -159,7 +160,6 @@ const Register = () => {
                             />
                         </div>
                           { note() }
-                          { emailNote && <p className="text-orange-600 text-sm mt-1">{emailNote}</p> }
                         <div className="mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
