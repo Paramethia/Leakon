@@ -417,11 +417,13 @@ const Component = () => {
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-8 w-8" mouseover="appear()" mouseout="disappear()" />
             </a>
+            {/*
             <div className="Footer">
                 <p>
                   &copy; Invicon 2024
                 </p>
             </div>
+            */}
         </div>
         {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
         </>
