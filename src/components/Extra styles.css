@@ -175,11 +175,22 @@ input:checked + .slider:before {
 }
 
 #d-texxt {
+    z-index: 2;
     position: fixed;
     bottom: 15px;
     right: 17px;
     font-size: 11px;
     color: #999ea1;
+}
+
+/* Footer */
+
+.Footer {
+    background-color: #363636;
+    padding-top: 0.5rem;
+    color: lightgrey;
+    width: 100%;
+    height: 2.5rem;
 }
 
 /* Animations */
