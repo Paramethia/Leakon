@@ -137,11 +137,6 @@ const Rewards = () => {
   const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
 
   let moan = new Audio('https://res.cloudinary.com/doxalk3ms/video/upload/v1724628435/ahh_sound_effect_gukkzc.mp4');
-  let rButton = document.getElementById('reward-button');
-  
-  rButton.addEventListener('mouseover', event => {
-      moan.play()
-  })
 
   let NotLogged = () => {
         toast.error("You are not logged in.", {
