@@ -251,6 +251,16 @@ const Component = () => {
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
 
+    let discord = docuement.getElementById("discord");
+    let dText = document.getElementById("d-text");
+
+    discord.addEventListener('mouseover', event => {
+        dText.style.display = 'inline'
+    });
+    discord.addEventListener('mouseeout', event => {
+        dText.style.dispplay = 'none'
+    });
+
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
     };
@@ -396,11 +406,12 @@ const Component = () => {
                     </div>
                 </div>
             </main>
+            <span id="d-text"> Join our discord server? </span>
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-8 w-8" />
             </a>
             {/*
-            <div className="bg-dark pt-2 text-white text-center w-full h-10 bottom-0 left-0 right-0 flex items-center justify-center">
+            <div className="Footer">
                 <p>
                   &copy; Invicon 2024
                 </p>
