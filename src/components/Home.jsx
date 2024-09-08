@@ -82,11 +82,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
             <div className="absolute bottom-0 left-0 right-0 grid gap-4 rounded-lg bg-[#282434] p-4">
                 <div className="grid gap-1">
-                    <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
+                    <h3 className="text-sm font-bold font-helvetica">Your Referral Code:</h3>
                     <div className="flex items-center justify-between">
                         <span className="text-sm font-medium font-helvetica">{code}</span>
                         <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
-                            <CopyIcon className="h-4 w-4 H-effect" />
+                            <CopyIcon id="copy-icon" className="h-4 w-4 H-effect" />
                         </button>
                     </div>
                 </div>
@@ -250,16 +250,7 @@ const Component = () => {
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
-    /*
-    let dText = document.getElementById("d-text");
-     
-    function appear() {
-        dText.style.display = 'inline'
-    }
-    function disappear() {
-        dText.style.display = 'none'
-    }
-    */
+    
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
     };
@@ -405,7 +396,6 @@ const Component = () => {
                     </div>
                 </div>
             </main>
-            <span id="d-text"> Join our discord server? </span>
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-8 w-8" />
             </a>
