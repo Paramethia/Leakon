@@ -174,14 +174,8 @@ input:checked + .slider:before {
     color: #99aab5;
 }
 
-#d-texxt {
-    display: none;
-    z-index: 2;
-    position: fixed;
-    bottom: 15px;
-    right: 17px;
-    font-size: 11px;
-    color: #999ea1;
+#copy-icon {
+    margin-right: 17px;
 }
 
 /* Footer */
