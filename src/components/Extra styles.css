@@ -174,8 +174,8 @@ input:checked + .slider:before {
     color: #99aab5;
 }
 
-#copy-icon {
-    margin-right: 17px;
+.r-code {
+    width: 172px;
 }
 
 /* Footer */
