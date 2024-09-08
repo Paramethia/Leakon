@@ -399,11 +399,13 @@ const Component = () => {
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-8 w-8" />
             </a>
+            {/*
             <div className="bg-dark pt-2 text-white text-center w-full h-10 bottom-0 left-0 right-0 flex items-center justify-center">
                 <p>
                   &copy; Invicon 2024
                 </p>
             </div>
+            */}
         </div>
         {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
         </>
