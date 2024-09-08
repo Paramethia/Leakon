@@ -396,7 +396,7 @@ const Component = () => {
                     </div>
                 </div>
             </main>
-            <a id="anc-d">
+            <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-6 w-6" />
             </a>
             <div className="bg-dark pt-2 text-white text-center w-full h-10 fixed bottom-0 left-0 right-0 flex items-center justify-center">
