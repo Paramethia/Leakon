@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
-import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle } from 'react-icons/fa';
+import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
 import './Extra styles.css';
 
 const Header = () => {
@@ -396,6 +396,14 @@ const Component = () => {
                     </div>
                 </div>
             </main>
+            <a id="anc-d">
+                <FaDiscord id="discord" className="h-6 w-6" />
+            </a>
+            <div className="bg-dark pt-2 text-white text-center w-full h-10 fixed bottom-0 left-0 right-0 flex items-center justify-center">
+                <p>
+                  &copy; Invicon 2024
+                </p>
+            </div>
         </div>
         {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
         </>
