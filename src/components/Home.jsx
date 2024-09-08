@@ -415,7 +415,7 @@ const Component = () => {
             </main>
             <span id="d-text"> Join our discord server? </span>
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
-                <FaDiscord id="discord" className="h-8 w-8" mouseover="appear()" mouseout="disappear()" />
+                <FaDiscord id="discord" className="h-8 w-8" onmouseover="appear()" onmouseout="disappear()" />
             </a>
             {/*
             <div className="Footer">
