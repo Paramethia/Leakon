@@ -164,7 +164,7 @@ input:checked + .slider:before {
 #discord {
     color: #7289da;
     position: fixed;
-    bottom: 12px;
+    bottom: 80px;
     right: 14px;
     margin: 20px 10px;
     z-index: 2;
@@ -175,7 +175,7 @@ input:checked + .slider:before {
 }
 
 .r-code {
-    width: 172px;
+    width: 135px;
 }
 
 /* Footer */
