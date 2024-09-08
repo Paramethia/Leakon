@@ -165,7 +165,7 @@ input:checked + .slider:before {
     color: #7289da;
     position: fixed;
     bottom: 12px;
-    right: 8px;
+    right: 14px;
     margin: 20px 10px;
     z-index: 2;
 }
@@ -258,6 +258,10 @@ ul {
     */
     #copyB {
         margin-left: 2px;
+    }
+
+    #discord {
+        right: 5px;
     }
 
 }
