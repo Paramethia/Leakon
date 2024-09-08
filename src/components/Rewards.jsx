@@ -141,7 +141,7 @@ const Rewards = () => {
   
   rButton.addEventListener('mouseover', event => {
       moan.play()
-  }}
+  })
 
   let NotLogged = () => {
         toast.error("You are not logged in.", {
