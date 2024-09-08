@@ -250,8 +250,7 @@ const Component = () => {
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
-
-    //let discord = document.getElementById("discord");
+    /*
     let dText = document.getElementById("d-text");
      
     function appear() {
@@ -260,13 +259,6 @@ const Component = () => {
     function disappear() {
         dText.style.display = 'none'
     }
-    /*
-    discord.addEventListener('mouseover', event => {
-        dText.style.display = 'inline'
-    });
-    discord.addEventListener('mouseeout', event => {
-        dText.style.dispplay = 'none'
-    });
     */
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
@@ -415,7 +407,7 @@ const Component = () => {
             </main>
             <span id="d-text"> Join our discord server? </span>
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
-                <FaDiscord id="discord" className="h-8 w-8" onmouseover="appear()" onmouseout="disappear()" />
+                <FaDiscord id="discord" className="h-8 w-8" />
             </a>
             {/*
             <div className="Footer">
