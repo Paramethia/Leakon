@@ -251,7 +251,7 @@ const Component = () => {
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
 
-    let discord = docuement.getElementById("discord");
+    let discord = document.getElementById("discord");
     let dText = document.getElementById("d-text");
 
     discord.addEventListener('mouseover', event => {
@@ -410,13 +410,11 @@ const Component = () => {
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-8 w-8" />
             </a>
-            {/*
             <div className="Footer">
                 <p>
                   &copy; Invicon 2024
                 </p>
             </div>
-            */}
         </div>
         {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
         </>
