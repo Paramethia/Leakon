@@ -175,6 +175,7 @@ input:checked + .slider:before {
 }
 
 #d-texxt {
+    display: none;
     z-index: 2;
     position: fixed;
     bottom: 15px;
