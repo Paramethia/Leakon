@@ -159,6 +159,16 @@ input:checked + .slider:before {
     animation-iteration-count: 1;
 }
 
+/* Floating icons */
+
+#discord {
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    margin: 20px 10px;
+    z-index: 2;
+}
+
 /* Animations */
 
 @keyframes load {
