@@ -226,11 +226,11 @@ const playorpause = (index) => {
   ];
 
   const rewardLinks = {
-    1: "https://mega.nz/folder/hAYQ0JaK#DcYvtQDi8zupIc5PvUos6Q",
-    2: "https://mega.nz/folder/UZZDyKwQ#_ieBD-WQ9svGNZ3bDRtjzQ",
-    3: "https://mega.nz/folder/8SVyEATT#5DMFyVMfypmNMTvdD7nmAA/folder/5HklUQzZ",
-    4: "https://mega.nz/folder/BmswnLTa#xkUUxK_4KRyWd6OPMkNT5A",
-    5: "https://mega.nz/folder/aHIBxSjD#HhatRbyztC25c4Gq3JjvSA"
+    1: "https://mega.nz/folder/EeclATSK#u2bjWNziBSUfuBobG_wF3g",
+    2: "https://mega.nz/folder/V38zESTR#iapYzbC-dzi6Fa1-IQTLhw",
+    3: "https://mega.nz/folder/hAYQ0JaK#DcYvtQDi8zupIc5PvUos6Q",
+    4: "https://mega.nz/folder/UZZDyKwQ#_ieBD-WQ9svGNZ3bDRtjzQ",
+    5: "https://mega.nz/folder/wrECSRIL#tRCMug-6v4nvcI8xc_1KCA"
   };
 
   return (
@@ -309,44 +309,47 @@ const playorpause = (index) => {
 
 
                <div className="Tier-info">
+
+                  <h4 className="text center text-orange-500"> Download not necessary if you do not have enough storage for these </h4>
     
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
     
                   <ul>
-                      <li> 146MB folder of leaked random OF models images </li>
-                      <li> 16GB folder of leaked random OF models videos </li>
-                  </ul>
+                      <li> Esterbone OF leaks. </li>
+                      <li> 344MB folder of leaked Only Fans  images. </li>
+                      <li> 4GB+ folder of leaked Only Fans videos. </li>
+                  </ul>y
     
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
     
                   <ul>
-                      <li> Ari Kytsya, Emmarb leaks, and more </li>
-                      <li> 1GB folder of leaked Only Fans images </li>
-                      <li> 17GB folder of leaked Only Fans videos </li>
+                      <li> Previous reward + dreamy_moo, Ari Kytsya, & emarr_bb leaks. </li>
+                      <li> 464 folder of leaked images. </li>
+                      <li> 8GB+ folder of leaked videos. </li>
                   </ul>
     
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
     
                   <ul>
-                      <li> Corinna kopf, Puppiwii, Hannah owo, etc. </li>
-                      <li> 195MB folder of leaked Only Fans images </li>
-                      <li> 32GB folder of leaked Only Fans videos </li>
+                      <li> Previous rewards + melztube, Corinna Kopf, Puppiwii, & hannah_owo. </li>
+                      <li> 446MB folder of leaked images. </li>
+                      <li> 16GB+ folder of leaked videos. </li>
                   </ul>
     
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
     
                   <ul>
-                      <li> Breckie hill, Sophie Rain, Burch twins, Soogsx, etc. </li>
-                      <li> Ordered list of folders of Only Fans models with their names </li>
-                      <li> 35GB in total of images and videos </li>
+                      <li> Previous rewards + Soogsx, Breckie Hill, Addison Ivy, & Burch twins. </li>
+                      <li> 1GB+ folder of leaked images </li>
+                      <li> 17GB+ folder of leaked videos. </li>
                   </ul>
 
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
     
                   <ul>
-                      <li> All leaked OF models </li>
-                      <li> 5GB+ folder of leaked Amouranth & Belle Delphine images </li>
-                      <li> 44GB+ folder of leaked Amouranth & Belle Delphine videos </li>
+                      <li> All OF rewards mentioned above + Sophie Rain, xmimirose, Amouranth & Belle Delphine. </li>
+                      <li> 4GB+ folder of leaked images. </li>
+                      <li> 19GB+ folder of leaked  videos. </li>
                   </ul>
 
               </div>
