@@ -230,7 +230,10 @@ const playorpause = (index) => {
     2: "https://mega.nz/folder/V38zESTR#iapYzbC-dzi6Fa1-IQTLhw",
     3: "https://mega.nz/folder/hAYQ0JaK#DcYvtQDi8zupIc5PvUos6Q",
     4: "https://mega.nz/folder/UZZDyKwQ#_ieBD-WQ9svGNZ3bDRtjzQ",
-    5: "https://mega.nz/folder/wrECSRIL#tRCMug-6v4nvcI8xc_1KCA"
+    5: "https://mega.nz/folder/wrECSRIL#tRCMug-6v4nvcI8xc_1KCA",
+    6: "https://mega.nz/folder/BmswnLTa#xkUUxK_4KRyWd6OPMkNT5A",
+    7: "https://mega.nz/folder/8SVyEATT#5DMFyVMfypmNMTvdD7nmAA/folder/5HklUQzZ",
+    8: "https://mega.nz/folder/Ey0CAJqB#4CifPoAezIX-FYijWY_nTQ"
   };
 
   return (
@@ -323,7 +326,7 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
     
                   <ul>
-                      <li> Previous reward + dreamy_moo, Ari Kytsya, & emarr_bb leaks. </li>
+                      <li> Previous reward + dreamymoo & arikytsya leaks. </li>
                       <li> 464 folder of leaked images. </li>
                       <li> 8GB+ folder of leaked videos. </li>
                   </ul>
@@ -331,7 +334,7 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + melztube, Corinna Kopf, Puppiwii, & hannah_owo. </li>
+                      <li> Previous rewards + melztube, Puppiwii & hannah_owo. </li>
                       <li> 446MB folder of leaked images. </li>
                       <li> 16GB+ folder of leaked videos. </li>
                   </ul>
@@ -339,7 +342,7 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + Soogsx, Breckie Hill, Addison Ivy, & Burch twins. </li>
+                      <li> Previous rewards + Soogsx, Breckie Hill & Addison Ivy. </li>
                       <li> 1GB+ folder of leaked images </li>
                       <li> 17GB+ folder of leaked videos. </li>
                   </ul>
@@ -347,9 +350,30 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
     
                   <ul>
-                      <li> All OF rewards mentioned above + Sophie Rain, xmimirose, Amouranth & Belle Delphine. </li>
+                      <li> Previous rewards + Corinna Kopf, emarr_bb & xmimirose. </li>
                       <li> 4GB+ folder of leaked images. </li>
                       <li> 19GB+ folder of leaked  videos. </li>
+                  </ul>
+
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Sixth tier rewards: </h2>
+    
+                  <ul>
+                      <li> Previous rewards + Multi-pack folders of many OFs models. </li>
+                      <li> 34GB+ folder of leaked images & videos. </li>
+                  </ul>
+
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Seventh tier rewards: </h2>
+    
+                  <ul>
+                      <li> Previous rewards + Amouranth, levanabanana & Burch twins. </li>
+                      <li> 58GB+ folder of leaked images & videos. </li>
+                  </ul>
+
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Eighth tier rewards: </h2>
+    
+                  <ul>
+                      <li> All of the above rewards + Sophie Rain, Belle Delphine & a lot more. </li>
+                      <li> 200GB+ folder of leaked images & videos. </li>
                   </ul>
 
               </div>
@@ -363,7 +387,7 @@ const playorpause = (index) => {
 
               <div className="Reward-claim">
                   <center>
-                    {[1, 2, 3, 4, 5].map((tier) => (
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
                       <a
                         key={tier}
@@ -396,4 +420,3 @@ const playorpause = (index) => {
 };
 
 export default Rewards;
-
