@@ -318,7 +318,7 @@ const playorpause = (index) => {
                       <li> Esterbone OF leaks. </li>
                       <li> 344MB folder of leaked Only Fans  images. </li>
                       <li> 4GB+ folder of leaked Only Fans videos. </li>
-                  </ul>y
+                  </ul>
     
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
     
