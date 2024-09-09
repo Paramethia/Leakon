@@ -239,7 +239,7 @@ const PaymentOptions = ({ onClose }) => {
     );
 };
 
-const Component = () => {
+const Home = () => {
     const inviteLink = useState('');
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -288,9 +288,12 @@ const Component = () => {
     const availableTiers = [
         { tier: 'Tier 1', invites: 5, price: 10 },
         { tier: 'Tier 2', invites: 10, price: 20 },
-        { tier: 'Tier 3', invites: 20, price: 40 },
-        { tier: 'Tier 4', invites: 40, price: 70 },
-        { tier: 'Tier 5', invites: 80, price: 100 },
+        { tier: 'Tier 3', invites: 20, price: 35 },
+        { tier: 'Tier 4', invites: 35, price: 50 },
+        { tier: 'Tier 5', invites: 50, price: 60 },
+        { tier: 'Tier 6', invites: 70, price: 80 },
+        { tier: 'Tier 7', invites: 85, price: 100 },
+        { tier: 'Tier 8', invites: 100, price: 120 }
     ];
 
     // Filter out the tiers that the user has already unlocked
@@ -399,17 +402,10 @@ const Component = () => {
             <a href="https://discord.gg/qN4w9ckCPQ" target="_blank">
                 <FaDiscord id="discord" className="h-8 w-8" />
             </a>
-            {/*
-            <div className="Footer">
-                <p>
-                  &copy; Invicon 2024
-                </p>
-            </div>
-            */}
         </div>
         {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
         </>
     );
 };
 
-export default Component;
+export default Home;
