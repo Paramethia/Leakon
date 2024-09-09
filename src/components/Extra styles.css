@@ -188,22 +188,6 @@ input:checked + .slider:before {
     height: 2.5rem;
 }
 
-/* Animations */
-
-@keyframes load {
-    to {
-        transform: rotate(.5turn)
-    }
-}
-
-@keyframes slide {
-    from {
-        margin-left: 80%;
-    } to {
-        margin-left: 0%;
-    }
-}
-
 /* Dashboard page */
 
 .Invitees-con {
@@ -224,6 +208,11 @@ input:checked + .slider:before {
     border: 4px inset #3e424b;
 }
 
+.Tier-info h4 {
+    font-size: 17px;
+    color: #ed7014;
+}
+
 ul {
     list-style-type: circle;
     color: #3e97ec;
@@ -234,12 +223,23 @@ ul {
     margin-bottom: 12px;
 }
 
-/* Rewards page */
+/* Animations */
 
-h4 {
-    font-size: 17px;
-    color: #ed7014;
+@keyframes load {
+    to {
+        transform: rotate(.5turn)
+    }
 }
+
+@keyframes slide {
+    from {
+        margin-left: 80%;
+    } to {
+        margin-left: 0%;
+    }
+}
+
+/* Other devices designs */
 
 @media only screen and (max-width: 780px) {
     
