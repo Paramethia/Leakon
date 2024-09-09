@@ -269,15 +269,19 @@ ul {
 
      /* Home page */
 
-    .Link-gen-con, .Stats, .Tier {
+    .Link-gen-con, .Stats {
         max-width: 380px;
         min-width: 300px;
     }
-    /*
-    .Link {
-        display: block;
+    .Tier {
+        margin: 0 auto;
+        width: 180px;
+        height: 250px;
     }
-    */
+    .Tier button {
+        width: 125px;
+    }
+
     #copyB {
         margin-left: 2px;
     }
