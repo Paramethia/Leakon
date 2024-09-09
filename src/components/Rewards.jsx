@@ -218,10 +218,10 @@ const playorpause = (index) => {
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721763778/Sophie_Rain_spiderman_OF_vid_zo9uq2.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770897/Sophie_rain_leak_nmfi8v.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770907/Sophie_rain_leak_2_cgxlrh.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770894/Family_snap_ubyku1.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770893/dasdssadsad_yff0wm.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770894/956416_1_tfeaq3.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770895/csbombshell_pqcqzz.mp4',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916461/Preview_OF_leak_by_Leakon_akoxgy.mp4',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916552/Preview_OF_leak_by_Leakon_5_mb0zju.mp4',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916592/Preview_OF_leak_by_Leakon_8_qidwuc.mp4',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916650/Preview_OF_leak_by_Leakon_12_sb3ni4.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770896/1_1_2_nldex1.mp4'
   ];
 
