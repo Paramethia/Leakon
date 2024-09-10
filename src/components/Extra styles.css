@@ -99,7 +99,7 @@ input:checked + .slider:before {
 }
 
 .H-effect:hover {
-    transition: filter 0.3s;
+    transition: 0.3s;
     filter: brightness(50%);
 }
 
@@ -213,10 +213,17 @@ input:checked + .slider:before {
     color: #ed7014;
     margin-bottom: 18px;
 }
+.Tier-info a {
+    color: #3e97ec;
+}
+.Tier-info a:hover {
+    text-decoration: wavy underline;
+    color: #a1045a;
+}
 
 ul {
     list-style-type: circle;
-    color: #3e97ec;
+    color: #bebdb8;
 }
 
 .Reward-claim button {
