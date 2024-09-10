@@ -300,8 +300,8 @@ const playorpause = (index) => {
                   </div>
                 </div>
               ))}
-              <center><button id="dis-button" href="https://discord.gg/qN4w9ckCPQ" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2"> Check out more free previews here </button></center>
             </div>
+            <center><button id="dis-button" href="https://discord.gg/qN4w9ckCPQ"> Check out more free previews here </button></center>
 
             <div className="mt-10 space-y-4">
 
