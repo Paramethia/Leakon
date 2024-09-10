@@ -200,6 +200,20 @@ input:checked + .slider:before {
 
 /* Rewards page */
 
+#dis-button {
+    width: 180px;
+    height: 35px;
+    margin-top: 35px;
+    padding: 5px;
+    font-size: 1rem;
+    color: #48494b;
+    background: #808589; 
+}
+#dis-button:hover{
+    background: #84effd;
+    border: 1px solid #48494b;
+}
+
 .Tier-info {
     margin: 0 auto;
     padding: 17px;
