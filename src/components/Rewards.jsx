@@ -301,7 +301,7 @@ const playorpause = (index) => {
                 </div>
               ))}
             </div>
-            <center><a href="https://discord.gg/qN4w9ckCPQ" target="_blank"><button id="dis-button"> Check out more free previews here </button></a></center>
+            <center><a href="https://discord.gg/qN4w9ckCPQ" target="_blank"><button id="dis-button"> Check more free previews here </button></a></center>
 
             <div className="mt-10 space-y-4">
 
