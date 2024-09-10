@@ -301,7 +301,7 @@ const Home = () => {
 
     return (
         <>
- 
+
         <InviteChecker />
 
         <div className="flex h-screen">
@@ -379,9 +379,17 @@ const Home = () => {
                         )}
                     </div>
 
-                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                        Tiers
-                    </h1>
+                    {tier < 8 && (
+                        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                            Tiers
+                        </h1>
+                    )}
+
+                    {tier === 8 && (
+                        <h3 className="text-center dark:text-gray-300 text-gray-700 text-xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                            You have reached the highest tier. Go claim your rewards in the rewards page.
+                        </h3>
+                    )}
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
                         
@@ -403,7 +411,9 @@ const Home = () => {
                 <FaDiscord id="discord" className="h-8 w-8" />
             </a>
         </div>
+        
         {isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} />}
+
         </>
     );
 };
