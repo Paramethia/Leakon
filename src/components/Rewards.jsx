@@ -301,20 +301,19 @@ const playorpause = (index) => {
                 </div>
               ))}
             </div>
-            <center><button id="dis-button" href="https://discord.gg/qN4w9ckCPQ"> Check out more free previews here </button></center>
+            <center><a href="https://discord.gg/qN4w9ckCPQ" target="_blank"><button id="dis-button"> Check out more free previews here </button></a></center>
 
             <div className="mt-10 space-y-4">
 
                <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                   Get a lot more with higher tiers
+                  Get a lot more with higher tiers.
                </p>
     
                <br />
 
-
                <div className="Tier-info">
 
-                  <h4> Download not necessary if you do not have enough storage for these </h4>
+                  <h4> Download not necessary </h4>
     
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
     
@@ -351,7 +350,7 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + <a href="https://www.instagram.com/corinnakopf/" target="_blank">Corinna Kopf</a>, <a href="https://www.instagram.com/emar_bb/?hl=en" target="_blank">emarr_bb</a>_bb & <a href="https://x.com/xmimirxse?lang=en" target="_blank">xmimirose</a>. </li>
+                      <li> Previous rewards + <a href="https://www.instagram.com/corinnakopf/" target="_blank">Corinna Kopf</a>, <a href="https://www.instagram.com/emar_bb/?hl=en" target="_blank">emarr_bb</a> & <a href="https://x.com/xmimirxse?lang=en" target="_blank">xmimirose</a>. </li>
                       <li> 4GB+ folder of leaked images. </li>
                       <li> 19GB+ folder of leaked  videos. </li>
                   </ul>
