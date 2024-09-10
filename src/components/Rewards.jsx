@@ -42,8 +42,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     <Header />
 
-    <ToastContainer />
-
     <aside
         className={`w-64 bg-[#282434] text-white flex flex-col p-6 transition-transform transform ${
            isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -236,10 +234,11 @@ const playorpause = (index) => {
     8: "https://mega.nz/folder/Ey0CAJqB#4CifPoAezIX-FYijWY_nTQ"
   };
 
-  return (
-      
-    <>
-    
+  return (    
+    <>  
+
+    <ToastContainer />
+
     <div className="flex h-screen">
     <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     <main
@@ -301,7 +300,9 @@ const playorpause = (index) => {
                   </div>
                 </div>
               ))}
+              <button id="dis-button"> Check out more free previewes here </button>
             </div>
+
             <div className="mt-10 space-y-4">
 
                <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
@@ -318,7 +319,7 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
     
                   <ul>
-                      <li> Esterbron OF leaks. </li>
+                      <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
                       <li> 344MB folder of leaked Only Fans  images. </li>
                       <li> 4GB+ folder of leaked Only Fans videos. </li>
                   </ul>
@@ -326,7 +327,9 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier rewards: </h2>
     
                   <ul>
-                      <li> Previous reward + dreamymoo & arikytsya leaks. </li>
+                      <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & 
+                          <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. 
+                      </li>
                       <li> 464 folder of leaked images. </li>
                       <li> 8GB+ folder of leaked videos. </li>
                   </ul>
@@ -334,7 +337,10 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + melztube, Puppiwii & hannah_owo. </li>
+                      <li> Previous rewards + <a href="https://www.instagram.com/AriKytsya/" target="_blank">Ari Kytsya</a>, 
+                          <a href="https://www.instagram.com/puppiwii/?hl=en" target="_blank">puppiwii</a> & 
+                          <a href="https://www.instagram.com/_hannah_0w0/?hl=en" target="_blank">hannah_owo</a>. 
+                      </li>
                       <li> 446MB folder of leaked images. </li>
                       <li> 16GB+ folder of leaked videos. </li>
                   </ul>
@@ -342,7 +348,10 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + Soogsx, Breckie Hill & Addison Ivy. </li>
+                      <li> Previous rewards + <a href="https://www.instagram.com/soogsx__/?hl=en" target="_blank">Soogsx</a>, 
+                          <a href="https://www.instagram.com/breckiehill/?hl=en" target="_blank">Breckie Hill</a> & 
+                          <a href="https://www.instagram.com/addisonivvy/?hl=en" target="_blank">Addison Ivy.</a> 
+                      </li>
                       <li> 1GB+ folder of leaked images </li>
                       <li> 17GB+ folder of leaked videos. </li>
                   </ul>
@@ -350,7 +359,10 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + Corinna Kopf, emarr_bb & xmimirose. </li>
+                      <li> Previous rewards + <a href="https://www.instagram.com/corinnakopf/" target="_blank">Corinna Kopf</a>, 
+                          <a href="https://www.instagram.com/emar_bb/?hl=en" target="_blank">emarr_bb</a>_bb & 
+                          <a href="https://x.com/xmimirxse?lang=en" target="_blank">xmimirose</a>. 
+                      </li>
                       <li> 4GB+ folder of leaked images. </li>
                       <li> 19GB+ folder of leaked  videos. </li>
                   </ul>
@@ -365,14 +377,19 @@ const playorpause = (index) => {
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Seventh tier rewards: </h2>
     
                   <ul>
-                      <li> Previous rewards + Amouranth, levanabanana & Burch twins. </li>
+                      <li> Previous rewards + <a href="https://x.com/amouranth" target="_blank">Amouranth</a>, 
+                          <a href="https://x.com/levanabanana1?lang=en" target="_blank">levanabanana</a> & 
+                          <a href="https://www.tiktok.com/@burchtwinsxo?lang=en" target="_blank">Burch twins.</a> 
+                      </li>
                       <li> 58GB+ folder of leaked images & videos. </li>
                   </ul>
 
                   <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Eighth tier rewards: </h2>
     
                   <ul>
-                      <li> All of the above rewards + Sophie Rain, Belle Delphine & a lot more. </li>
+                      <li> All of the above rewards + <a href="https://www.instagram.com/sophieraiin/" target="_blank">Sophie Rain</a>, 
+                          <a href="https://x.com/bunnydelphine" target="_blank">Belle Delphine</a> & a lot more. 
+                      </li>
                       <li> 200GB+ folder of leaked images & videos. </li>
                   </ul>
 
@@ -414,7 +431,9 @@ const playorpause = (index) => {
         </div>
       </main>
     </div>
+
         { isPaymentConOpen && <PaymentOptions onClose={payOptionsClose} /> }
+
     </>
   );
 };
