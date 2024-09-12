@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
                 <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
-                    <GiftIcon className="h-4 w-4" /> Rewards
+                    <GiftIcon className="h-4 w-4" /> Leaks
                 </Link>
             </nav>
             
@@ -142,7 +142,7 @@ const InviteLinkComponent = () => {
         <div className="Link-gen-con bg-white dark:bg-gray-800 shadow rounded-lg p-6">
             <div className="mb-4">
                 <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Your Invite Link</h2>
-                <p className="text-gray-500 dark:text-gray-400">Share this link with your friends to earn rewards.</p>
+                <p className="text-gray-500 dark:text-gray-400">Share this link with your friends to earn leaks.</p>
             </div>
             <div className="Link-gen flex items-center justify-between">
                 {error && <p className="text-red-500">{error}</p>}
@@ -346,9 +346,9 @@ const Home = () => {
                         How it works
                     </h1>
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
-                        You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger rewards for each tier. <br />
-                        Alternatively, you can buy the tiers to get the rewards instantly if you are unable to invite people. Prices will be shown below. <br />
-                        You can check the previews of what rewards you will get in the <Link id="R-page" to="/rewards"> rewards page </Link>.
+                        You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger leaks for each tier. <br />
+                        Alternatively, you can buy the tiers to get instant access to the leaks if you are unable to invite people. Prices will be shown below. <br />
+                        You can check the previews of what rewards you will get in the <Link id="R-page" to="/rewards"> leaks page </Link>.
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
