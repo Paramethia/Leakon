@@ -85,7 +85,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <div className="r-code flex items-center justify-between">
             <span className="text-sm font-medium font-helvetica">{code}</span>
             <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
-              <CopyIcon id="copy-icon" className="h-4 w-4" />
+              <CopyIcon id="copy-icon" className="h-4 w-4 H-effect" />
             </button>
           </div>
         </div>
