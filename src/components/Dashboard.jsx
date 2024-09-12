@@ -82,10 +82,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className="absolute bottom-0 left-0 right-0 grid gap-4 rounded-lg bg-[#282434] p-4">
         <div className="grid gap-1">
           <h3 className="text-sm font-bold font-helvetica">Your Referral Code</h3>
-          <div className="flex items-center justify-between">
+          <div className="r-code flex items-center justify-between">
             <span className="text-sm font-medium font-helvetica">{code}</span>
             <button className="bg-transparent p-2 rounded-full" onClick={handleCopyReferralCode}>
-              <CopyIcon className="h-4 w-4" />
+              <CopyIcon id="copy-icon" className="h-4 w-4" />
             </button>
           </div>
         </div>
@@ -191,7 +191,7 @@ const Dashboard = () => {
                     </div>
                     
                     <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                        Your dashboard
+                        Dashboard
                     </h1>
 
                     <center>
