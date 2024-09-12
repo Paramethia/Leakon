@@ -315,7 +315,7 @@ const playorpause = (index) => {
 
                   <h4> Download not necessary </h4>
     
-                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier rewards: </h2>
+                  <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
     
                   <ul>
                       <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
