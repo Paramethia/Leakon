@@ -319,7 +319,7 @@ const playorpause = (index) => {
     
                   <ul>
                       {/* <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li> */}
-                      <li> 2.1GB{/* 113MB */ snap chat leaked teen nudes. </li>
+                      <li> 2.1GB{/* 113MB */} snap chat leaked teen nudes. </li>
                       {/* <li> 344MB folder of leaked OF images. </li> */}
                       <li> 4GB+ folder of leaked OF content. </li>
                   </ul>
