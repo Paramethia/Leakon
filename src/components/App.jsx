@@ -32,7 +32,7 @@ function App() {
           <Route path="/request" element={<RequestPasswordReset />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/leaks" element={Leaks />} />
+          <Route path="/leaks" element={<Leaks />} />
         </Routes>
       </Router>
       </UserContext.Provider>
