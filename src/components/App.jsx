@@ -6,7 +6,7 @@ import Register from './Register';
 import RequestPasswordReset from './RequestPasswordReset';
 import ResetPassword from './ResetPassword';
 import Dashboard from './Dashboard';
-import Rewards from './Rewards';
+import Leaks from './Leaks';
 import { UserContext } from './UserContext';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           <Route path="/request" element={<RequestPasswordReset />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/rewards" element={<Rewards />} />
+          <Route path="/leaks" element={Leaks />} />
         </Routes>
       </Router>
       </UserContext.Provider>
