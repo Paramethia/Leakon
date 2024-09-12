@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
-                <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+                <Link to="/leaks" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <CameraIcon className="h-4 w-4" /> Leaks
                 </Link>
             </nav>
@@ -348,7 +348,7 @@ const Home = () => {
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger leaks for each tier. <br />
                         Alternatively, you can buy the tiers to get instant access to the leaks if you are unable to invite people. Prices will be shown below. <br />
-                        You can check the previews of what rewards you will get in the <Link id="R-page" to="/rewards"> leaks page </Link>.
+                        You can check the previews of what rewards you will get in the <Link id="R-page" to="/leaks"> leaks page </Link>.
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
