@@ -6,7 +6,7 @@ import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FiHome as HomeIcon, FiGift as GiftIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
 import './Extra styles.css';
 
@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
                 <Link to="/rewards" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
-                    <GiftIcon className="h-4 w-4" /> Leaks
+                    <CameraIcon className="h-4 w-4" /> Leaks
                 </Link>
             </nav>
             
