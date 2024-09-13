@@ -74,6 +74,8 @@ const Register = () => {
             };
             if (email) {
                 requestBody.email = email;
+            } else {
+                requestBody.email === null;
             }
     
             axios.post('https://invicon-back-end.onrender.com/register', requestBody)
