@@ -217,10 +217,12 @@ const playorpause = (index) => {
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770897/Sophie_rain_leak_nmfi8v.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770907/Sophie_rain_leak_2_cgxlrh.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916461/Preview_OF_leak_by_Leakon_akoxgy.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916552/Preview_OF_leak_by_Leakon_5_mb0zju.mp4',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1726268596/Leak_preview_4_rfspvo.mov',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916592/Preview_OF_leak_by_Leakon_8_qidwuc.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916650/Preview_OF_leak_by_Leakon_12_sb3ni4.mp4',
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770896/1_1_2_nldex1.mp4'
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1726269420/Leak_preview_vid_2_jk9u6d.mp4',
+    'https://video.twimg.com/ext_tw_video/1604680661385854976/pu/vid/320x706/-JJrnzxsYDuDbWsx.mp4?tag=124',
+    'https://video.twimg.com/ext_tw_video/1615548183693639680/pu/vid/264x480/U2AOYNHKsAQluEBb.mp4?tag=12',
+    'https://video.twimg.com/ext_tw_video/1605345387388305411/pu/vid/592x1280/d5HK50CLMhytB5s5.mp4?tag=12'
   ];
 
   const rewardLinks = {
