@@ -131,7 +131,7 @@ const Register = () => {
         <ToastContainer />
 
         <div className="flex h-screen overflow-hidden">
-            <div className="hidden items-center md:flex md:w-1/2 bg-auto bg-black" style={{/* backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png)', 
+            <div className="hidden md:flex items-center justify-center md:w-1/2 bg-auto bg-black" style={{/* backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png)', 
                  backgroundSize: 'cover', backgroundPosition: 'center', backfaceVisibility: 'hidden', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'                                                           
             */}}>
                <video src="https://res.cloudinary.com/doxalk3ms/video/upload/v1726318414/Preview_slide_show_shortened_nm2d1x.mov" autoplay muted loop alt="Registration video"> You browser does not support the video tag. </video>
