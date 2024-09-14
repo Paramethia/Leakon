@@ -132,7 +132,7 @@ const Register = () => {
 
         <div className="flex h-screen overflow-hidden">
             <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png)', 
-                 backgroundSize: 'cover', backfaceVisibility: 'hidden', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'                                                           
+                 backgroundSize: 'cover', backgroundPosition: 'center', backfaceVisibility: 'hidden', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'                                                           
             }}>
             </div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-400">
