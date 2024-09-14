@@ -131,9 +131,10 @@ const Register = () => {
         <ToastContainer />
 
         <div className="flex h-screen overflow-hidden">
-            <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png)', 
+            <div className="hidden md:block md:w-1/2 bg-auto" {/*style={{ backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png)', 
                  backgroundSize: 'cover', backgroundPosition: 'center', backfaceVisibility: 'hidden', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'                                                           
-            }}>
+            }} */}>
+               <img src="https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png" className="w-full h-screen" alt="Registration image" />
             </div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-400">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
