@@ -12,6 +12,11 @@
   .slide-in {
     animation: slideIn 1s ease-out;
   }
+
+video {
+    width: 380px;
+    height: 580px;
+}
   
 #Email-note {
     font-size: 12px;
