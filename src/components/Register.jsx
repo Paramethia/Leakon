@@ -33,7 +33,7 @@ const Register = () => {
     
         setTimeout(() => {
             note.style.display = 'none'
-        }, 3800 );
+        }, 4800 );
     });
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
