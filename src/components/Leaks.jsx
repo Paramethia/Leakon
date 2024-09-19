@@ -123,7 +123,8 @@ const PaymentOptions = ({ onClose }) => {
 
 const Leaks = () => {
   const navigate = useNavigate();
-  const { username } = useContext(UserContext);
+  let { username } = useContext(UserContext);
+  const storedUsername = localStorage.getItem("username");
   const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -133,8 +134,9 @@ const Leaks = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
   const [spoilers, setSpoilers] = useState([]);
   const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
-
   let moan = new Audio('https://res.cloudinary.com/doxalk3ms/video/upload/v1724628435/ahh_sound_effect_gukkzc.mp4');
+
+  if (storedUsername) username = storedUsername;
 
   let NotLogged = () => {
         toast.error("You are not logged in.", {
