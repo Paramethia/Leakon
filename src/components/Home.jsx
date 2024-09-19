@@ -168,7 +168,6 @@ let InviteChecker = () => {
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
     const storedUsername = localStorage.getItem('username');
-    const storedEmail = localStorage.getItem('email');
 
     if (storedUsername) username = storedUsername;
     if (inviteId) console.log("Your registered using the invite code:", inviteId)
