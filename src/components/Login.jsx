@@ -21,6 +21,7 @@ const Login = () => {
     const {username, setName} = useContext(UserContext);
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    let storedUsername = localStorage.getItem("username"):
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -29,6 +30,8 @@ const Login = () => {
             .then(result => {
                 console.log('Server response:', result);
                 if (result.data === "Correct username and password.") {
+                    if(storedUsername) localStorage.removeItem("username");
+                    localStorage.setItem("username", username);
                     navigate('/home');
                 } else {
                     toast.error('Invalid username or email. Try again.', {
