@@ -101,10 +101,6 @@ const InviteLinkComponent = () => {
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
     let {username} = useContext(UserContext);
-    const storedUsername = localStorage.getItem('username');
-    const storedEmail = localStorage.getItem('email');
-    if (storedUsername) username = storedUsername;
-    if (storedEmail) username = storedEmail;
 
     useEffect(() => {
        const existingLink = localStorage.getItem('inviteLink');
@@ -171,6 +167,10 @@ let InviteChecker = () => {
     const navigateTo = useNavigate();
     const inviteId = localStorage.getItem("usedInvite");
     let {username} = useContext(UserContext);
+    const storedUsername = localStorage.getItem('username');
+    const storedEmail = localStorage.getItem('email');
+    if (storedUsername) setName(storedUsername);
+    if (storedEmail) setEmail(storedEmail);
 
     if (inviteId) console.log("Your registered using the invite code:", inviteId)
 
