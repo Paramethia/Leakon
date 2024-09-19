@@ -98,13 +98,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
 const Dashboard = () => {
     const navigate = useNavigate();
-    const { username } = useContext(UserContext);
+    let { username } = useContext(UserContext);
+    const storedUsername = localStorage.getItem("username");
     const [invitees, setInvitees] = useState([]);
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
+
+    if (storedUsername) username = storedUsername;
 
     let NotLogged = () => {
         toast.error("You are not logged in.", {
