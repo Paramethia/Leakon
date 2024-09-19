@@ -189,7 +189,7 @@ let InviteChecker = () => {
 
     useEffect(() => {
         if (!username) {
-            // If username is not set, then it assumes you are not registered.
+            // If username is not set, then it assumes you are not logged in.
             notLogged();
         } else {
             const check = async () => {
@@ -209,7 +209,6 @@ let InviteChecker = () => {
             if (inviteId) check()
         }
     }, [username]);
-
 };
 
 const PaymentOptions = ({ onClose }) => {
