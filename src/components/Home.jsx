@@ -289,7 +289,7 @@ const Home = () => {
         { tier: 'Tier 1', invites: 4, price: 8 },
         { tier: 'Tier 2', invites: 10, price: 15 },
         { tier: 'Tier 3', invites: 20, price: 25 },
-        { tier: 'Tier 4', invites: 35, price: 40 },
+        { tier: 'Tier 4', invites: 35, price: 40 }
         {/*
         { tier: 'Tier 5', invites: 50, price: 60 },
         { tier: 'Tier 6', invites: 70, price: 80 },
