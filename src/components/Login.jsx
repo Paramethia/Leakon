@@ -34,7 +34,7 @@ const Login = () => {
                     localStorage.setItem("username", username);
                     navigate('/home');
                 } else {
-                    toast.error('Invalid username or email. Try again.', {
+                    toast.error('Invalid username or password. Try again.', {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
