@@ -100,7 +100,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 const InviteLinkComponent = () => {
     const [inviteLink, setInviteLink] = useState('');
     const [error, setError] = useState('');
-    const {username} = useContext(UserContext);
+    let {username} = useContext(UserContext);
     const storedUsername = localStorage.getItem('username');
     const storedEmail = localStorage.getItem('email');
     if (storedUsername) username = storedUsername;
