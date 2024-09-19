@@ -286,14 +286,16 @@ const Home = () => {
     }, [username]);
 
     const availableTiers = [
-        { tier: 'Tier 1', invites: 5, price: 8 },
+        { tier: 'Tier 1', invites: 4, price: 8 },
         { tier: 'Tier 2', invites: 10, price: 15 },
         { tier: 'Tier 3', invites: 20, price: 25 },
         { tier: 'Tier 4', invites: 35, price: 40 },
+        {/*
         { tier: 'Tier 5', invites: 50, price: 60 },
         { tier: 'Tier 6', invites: 70, price: 80 },
         { tier: 'Tier 7', invites: 85, price: 100 },
         { tier: 'Tier 8', invites: 100, price: 120 }
+        */
     ];
 
     // Filter out the tiers that the user has already unlocked
