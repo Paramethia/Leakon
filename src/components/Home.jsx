@@ -295,7 +295,7 @@ const Home = () => {
         { tier: 'Tier 6', invites: 70, price: 80 },
         { tier: 'Tier 7', invites: 85, price: 100 },
         { tier: 'Tier 8', invites: 100, price: 120 }
-        */
+        */}
     ];
 
     // Filter out the tiers that the user has already unlocked
