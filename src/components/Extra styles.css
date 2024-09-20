@@ -108,9 +108,8 @@ input:checked + .slider:before {
 }
 .Contact:hover {
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
     color: #3e97ec;
-    font-size: 19px;
     font-style: italic;
     background: #03025e;
 }
