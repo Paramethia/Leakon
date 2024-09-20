@@ -107,6 +107,11 @@ input:checked + .slider:before {
     margin-top: 5.8cm;
 }
 .Contact:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    color: #3e97ec;
+    font-size: 19px;
+    font-style: italic;
     background: #03025e;
 }
 
@@ -115,12 +120,6 @@ input:checked + .slider:before {
    font-size: 18px;
    text-decoration: none;
    transition: 0.3s;  
-}
-
-.Contact a:hover {
-    color: #3e97ec;
-    font-size: 19px;
-    font-style: italic;
 }
 
 /* Loader */
