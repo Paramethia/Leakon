@@ -106,6 +106,9 @@ input:checked + .slider:before {
 .Contact {
     margin-top: 5.8cm;
 }
+.Contact:hover {
+    background: #03025e;
+}
 
 .Contact a {
    color: lightgrey;
