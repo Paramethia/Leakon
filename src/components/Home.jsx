@@ -254,6 +254,39 @@ const Home = () => {
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
+
+    switch(invites) {
+        case 5:
+            requiredInvites = 10; 
+            nextTier = 2;
+        break;
+        case 10:
+            requiredInvites = 20;
+            nextTier - 3;    
+        break;
+        case 20:
+            requiredInvites = 35;
+            nextTier = 4;
+        break;
+        case 35:
+            requiredInvites = 50;
+            nextTier = 5;
+        break;
+        case 50:
+            requiredInvites = 70;
+            nextTier = 6;
+        break;
+        case 70:
+            requiredInvites = 85;
+            nextTier = 7;
+        break;
+        case 85:
+            requiredInvites = 100;
+            nextTier = 8;
+        break;
+    }
+
+    requiredInvites -= invites;
     
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
@@ -272,37 +305,6 @@ const Home = () => {
     }
 
     useEffect(() => {
-        switch(invites) {
-            case 5:
-                requiredInvites = 10; 
-                nextTier = 2;
-            break;
-            case 10:
-                requiredInvites = 20;
-                nextTier - 3;    
-            break;
-            case 20:
-                requiredInvites = 35;
-                nextTier = 4;
-            break;
-            case 35:
-                requiredInvites = 50;
-                nextTier = 5;
-            break;
-            case 50:
-                requiredInvites = 70;
-                nextTier = 6;
-            break;
-            case 70:
-                requiredInvites = 85;
-                nextTier = 7;
-            break;
-            case 85:
-                requiredInvites = 100;
-                nextTier = 8;
-            break;
-        }
-        requiredInvites -= invites;
 
         const fetchInviteData = async () => {
              try {
