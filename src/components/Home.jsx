@@ -6,6 +6,7 @@ import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Progress } from '@/components/ui/progress"
 import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
 import './Extra styles.css';
@@ -247,6 +248,8 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
+    let requiredInvites = 5;
+    const nextTier = 1;
     let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
@@ -269,6 +272,38 @@ const Home = () => {
     }
 
     useEffect(() => {
+        switch(invites) {
+            case 5:
+                requiredInvites = 10; 
+                nextTier = 2;
+            break;
+            case 10:
+                requiredInvites = 20;
+                nextTier - 3;    
+            break;
+            case 20:
+                requiredInvites = 35;
+                nextTier = 4;
+            break;
+            case 35:
+                requiredInvites = 50;
+                nextTier = 5;
+            break;
+            case 50:
+                requiredInvites = 70;
+                nextTier = 6;
+            break;
+            case 70:
+                requiredInvites = 85;
+                nextTier = 7;
+            break;
+            case 85:
+                requiredInvites = 100;
+                nextTier = 8;
+            break;
+        }
+        requiredInvites -= invites;
+
         const fetchInviteData = async () => {
              try {
                 const response = await axios.post('https://invicon-back-end.onrender.com/invite-data', {username});
@@ -368,6 +403,21 @@ const Home = () => {
                                     <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Stats</h2>
                                 </div>
                                 <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
+                                {tier < 8 && (
+                                    <p className="text-gray-500 dark:text-gray-400">You need {requiredInvites} more invites to get to tier {nextTier} </p>
+                                )}
+                                {tier === 8 && (
+                                    <p className="text-gray-500 dark:text-gray-400">You have reached the highest tier. No more invites needed. </p>
+                                )}
+                                {/*
+                                <div className="grid gap-2">
+                                    <div className="flex items-center justify-between">
+                                        <span className="font-helvetica">Tier progress</span>
+                                        <span className="font-helvetica">{invites}/{requiredInvites}</span>
+                                    </div>
+                                    <Progress value={nextTier} aria-label="Referrals progress" />
+                                </div>
+                                */}
                             </div>
                             <div className="flex items-center justify-between">
                                 <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier - {tier}</div>
