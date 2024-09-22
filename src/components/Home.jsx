@@ -255,35 +255,27 @@ const Home = () => {
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
 
-    switch(invites) {
-        case 5:
-            requiredInvites = 10; 
-            nextTier = 2;
-        break;
-        case 10:
-            requiredInvites = 20;
-            nextTier - 3;    
-        break;
-        case 20:
-            requiredInvites = 35;
-            nextTier = 4;
-        break;
-        case 35:
-            requiredInvites = 50;
-            nextTier = 5;
-        break;
-        case 50:
-            requiredInvites = 70;
-            nextTier = 6;
-        break;
-        case 70:
-            requiredInvites = 85;
-            nextTier = 7;
-        break;
-        case 85:
-            requiredInvites = 100;
-            nextTier = 8;
-        break;
+    if (invites >= 5) {
+        requiredInvites = 10; 
+        nextTier = 2;
+    } else if (invites >= 10) {
+        requiredInvites = 20;
+        nextTier = 3;    
+    } else if (invites >= 20) {
+        requiredInvites = 35;
+        nextTier = 4;
+    } else if (invites >= 35) {
+        requiredInvites = 50;
+        nextTier = 5;
+    } else if (invites >= 50) {
+        requiredInvites = 70;
+        nextTier = 6;
+    } else if (invites >= 70) {
+        requiredInvites = 85;
+        nextTier = 7;
+    } else if (invites >= 85) {
+        requiredInvites = 100;
+        nextTier = 8;
     }
 
     requiredInvites -= invites;
@@ -406,10 +398,7 @@ const Home = () => {
                                 </div>
                                 <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
                                 {tier < 8 && (
-                                    <p className="text-gray-500 dark:text-gray-400">You need {requiredInvites} more invites to get to tier {nextTier} </p>
-                                )}
-                                {tier === 8 && (
-                                    <p className="text-gray-500 dark:text-gray-400">You have reached the highest tier. No more invites needed. </p>
+                                    <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more invites to get to tier <strong>{nextTier}</strong> </p>
                                 )}
                                 {/*
                                 <div className="grid gap-2">
