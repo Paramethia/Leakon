@@ -249,7 +249,7 @@ const Home = () => {
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
     let requiredInvites = 5;
-    const nextTier = 1;
+    let nextTier = 1;
     let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
