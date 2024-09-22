@@ -254,6 +254,31 @@ const Home = () => {
     const darkModeStyles = { backgroundColor: '#101424' };
     const lightModeStyles = { backgroundColor: '#ffffff' };
     const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
+
+    if (invites >= 5 || tier == 1) {
+        requiredInvites = 10; 
+        nextTier = 2;
+    } else if (invites >= 10 || tier == 2) {
+        requiredInvites = 20;
+        nextTier = 3;    
+    } else if (invites >= 20 || tier == 3) {
+        requiredInvites = 35;
+        nextTier = 4;
+    } else if (invites >= 35 || tier == 4) {
+        requiredInvites = 50;
+        nextTier = 5;
+    } else if (invites >= 50 || tier == 5) {
+        requiredInvites = 70;
+        nextTier = 6;
+    } else if (invites >= 70 || tier == 6) {
+        requiredInvites = 85;
+        nextTier = 7;
+    } else if (invites >= 85 ||  tier == 7) {
+        requiredInvites = 100;
+        nextTier = 8;
+    }
+        
+    requiredInvites -= invites;
     
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
@@ -287,31 +312,6 @@ const Home = () => {
             
         setTimeout(() => {
             fetchInviteData()
-
-            if (invites >= 5 || tier == 1) {
-                requiredInvites = 10; 
-                nextTier = 2;
-            } else if (invites >= 10 || tier == 2) {
-                requiredInvites = 20;
-                nextTier = 3;    
-            } else if (invites >= 20 || tier == 3) {
-                requiredInvites = 35;
-                nextTier = 4;
-            } else if (invites >= 35 || tier == 4) {
-                requiredInvites = 50;
-                nextTier = 5;
-            } else if (invites >= 50 || tier == 5) {
-                requiredInvites = 70;
-                nextTier = 6;
-            } else if (invites >= 70 || tier == 6) {
-                requiredInvites = 85;
-                nextTier = 7;
-            } else if (invites >= 85 ||  tier == 7) {
-                requiredInvites = 100;
-                nextTier = 8;
-            }
-        
-            requiredInvites -= invites;
         }, 428);
     }, [username]);
 
