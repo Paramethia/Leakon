@@ -263,7 +263,7 @@ ul {
      max-width: 768px
 }
 
-.Reward-claim button {
+#tier-buy-button {
     display: inline-block;
     margin-top: 44px;
     margin-bottom: 12px;
