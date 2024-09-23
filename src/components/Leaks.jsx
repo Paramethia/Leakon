@@ -294,14 +294,14 @@ const playorpause = (index) => {
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
-                  className="group relative flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow-md transition-all hover:bg-gray-100 dark:bg-gray-950 dark:hover:bg-gray-800"
+                  className="vid-con group relative flex flex-col items-start justify-between rounded-lg p-4 shadow-md transition-all bg-gray-950 hover:bg-gray-800"
                 >
                   <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
                     <video 
                         ref={(el) => (videoRefs.current[index] = el)}  
                         src={link} 
                         className={"object-cover rounded-lg"} 
-                        style={{ filter: !spoilers[index] ? 'blur(17px)' : 'none' }} 
+                        style={{ filter: !spoilers[index] ? 'blur(20px)' : 'none' }} 
                         controls={false} 
                     />
                     <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
