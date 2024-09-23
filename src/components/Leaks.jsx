@@ -294,7 +294,7 @@ const playorpause = (index) => {
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
-                  className="vid-con group relative flex flex-col items-start justify-between rounded-lg p-4 shadow-md transition-all bg-gray-950 hover:bg-gray-800"
+                  className="vid-con group relative flex flex-col items-start justify-between rounded-lg p-4 shadow-md transition-all bg-gray-300 hover:bg-gray-550"
                 >
                   <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
                     <video 
