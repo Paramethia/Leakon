@@ -153,6 +153,34 @@ input:checked + .slider:before {
   animation: load 1s infinite;
 }
 
+/* Tier info container */
+
+.Tier-info {
+    margin: 0 auto;
+    padding: 17px;
+    min-width: 288px;
+    max-width: 999px;
+    border: 4px inset #3e424b;
+}
+
+.Tier-info h4 {
+    font-size: 17px;
+    color: #ed7014;
+    margin-bottom: 18px;
+}
+.Tier-info a {
+    color: #3e97ec;
+}
+.Tier-info a:hover {
+    text-decoration: wavy underline;
+    color: #a1045a;
+}
+
+ul {
+    list-style-type: circle;
+    color: #bebdb8;
+}
+
 /* Payment options container */
 
 .Payment-options {
@@ -199,7 +227,7 @@ input:checked + .slider:before {
     width: 100%;
 }
 
-/* Rewards page */
+/* Leaks page */
 
 #dis-button {
     width: 250px;
@@ -216,30 +244,8 @@ input:checked + .slider:before {
     border: 2px solid #48494b;
 }
 
-.Tier-info {
-    margin: 0 auto;
-    padding: 17px;
-    min-width: 288px;
-    max-width: 999px;
-    border: 4px inset #3e424b;
-}
-
-.Tier-info h4 {
-    font-size: 17px;
-    color: #ed7014;
-    margin-bottom: 18px;
-}
-.Tier-info a {
-    color: #3e97ec;
-}
-.Tier-info a:hover {
-    text-decoration: wavy underline;
-    color: #a1045a;
-}
-
-ul {
-    list-style-type: circle;
-    color: #bebdb8;
+.Tier-reward {
+    background: #a2a19f /* or #d6cfc7 */
 }
 
 .Reward-claim button {
