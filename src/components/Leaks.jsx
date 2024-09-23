@@ -325,6 +325,8 @@ const playorpause = (index) => {
                   <center>
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
+                      <p className="text-center text-xl text-lime-600"> You unlocked tier {tier} 🔓 <span className="text-blue-500">{currentTier}</span> </p>
+
                       <a
                         key={tier}
                         href={rewardLinks[tier]}
@@ -333,7 +335,7 @@ const playorpause = (index) => {
                         className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
                       >
                         <button id="reward-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
-                          🔓 Get tier {tier} reward
+                           Get reward
                         </button>
                       </a>
                     )))}
