@@ -249,6 +249,7 @@ ul {
      background: #a5a5ad;
      margin-left: 20px;
      margin-right: 20px;
+     margin-bottom: 20px;
 }
 
 .Reward-claim {
@@ -332,14 +333,10 @@ ul {
 
     /* Leaks page */
 
-    .Tier-reward {
-        margin-bottom: 20px
-    }
-
     #tier-buy-button {
         margin-top: 44px;
         margin-bottom: 12px;
-        top: 0;
+        bottom: 0;
     }
 
 }
