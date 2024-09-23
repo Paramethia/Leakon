@@ -257,9 +257,7 @@ ul {
 }
 
 #tier-buy-button {
-    display: inline-block;
-    margin-top: 44px;
-    margin-bottom: 12px;
+    display: inline-block
 }
 
 /* Animations */
@@ -328,6 +326,17 @@ ul {
 
     #discord {
         right: 5px;
+    }
+
+    /* Leaks page */
+
+    .Tier-reward {
+        margin-bottom: 20px
+    }
+
+    #tier-buy-button {
+        margin-top: 44px;
+        margin-bottom: 12px
     }
 
 }
