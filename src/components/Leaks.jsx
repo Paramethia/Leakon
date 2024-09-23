@@ -325,7 +325,8 @@ const playorpause = (index) => {
                   <center>
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
-                      <p className="text-center text-xl text-lime-600"> You unlocked tier {tier} 🔓 <span className="text-blue-500">{currentTier}</span> </p>
+                      <>
+                      <p className="text-center text-xl text-lime-600"> You unlocked tier {tier} 🔓 </p>
 
                       <a
                         key={tier}
@@ -338,6 +339,7 @@ const playorpause = (index) => {
                            Get reward
                         </button>
                       </a>
+                      </>
                     )))}
 
                     {currentTier < 5 && (
