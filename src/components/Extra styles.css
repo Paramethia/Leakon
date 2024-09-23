@@ -253,6 +253,7 @@ ul {
 }
 
 .Rewards-claim {
+     margin: 0 auto;
      max-width: 768px
 }
 
@@ -332,6 +333,9 @@ ul {
 
     .Tier-reward {
         margin: 0 auto;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 28px;
     }
 
 }
