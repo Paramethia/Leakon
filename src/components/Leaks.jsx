@@ -297,7 +297,12 @@ const playorpause = (index) => {
                   className="group relative flex flex-col items-start justify-between rounded-lg bg-white p-4 shadow-md transition-all hover:bg-gray-100 dark:bg-gray-950 dark:hover:bg-gray-800"
                 >
                   <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
-                    <video ref={(el) => (videoRefs.current[index] = el)}  src={link} className={`w-full h-full object-cover rounded-lg ${!spoilers[index] ? "blur-lg" : ""}`} controls={false} />
+                    <video 
+                        ref={(el) => (videoRefs.current[index] = el)}  
+                        src={link} className={`w-full h-full object-cover rounded-lg ${!spoilers[index] ? "blur-lg" : ""}`} 
+                        style={{ filter: !spoilers[index] ? 'blur(10px)' : 'none' }} 
+                        controls={false} 
+                    />
                     <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
                       {playingIndex === index ? <FaPause /> : <FaPlay />}
                     </button>
