@@ -322,25 +322,25 @@ const playorpause = (index) => {
               <br /> <br />
 
               <div className="Reward-claim">
+                  <center>
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
-                      <>
-                      <center>
-                        <div key={tier} className="Tier-reward text-center shadow rounded-lg p-6 flex flex-col">
-                          <h2 className="text-lg font-bold text-2xl text-green-600"> Tier {tier} unlocked 🔓 </h2>
-                          <p className="text-gray-500 font-semibold dark:text-gray-400"> Download your reward </p>
-                          <p className="text-gray-500 dark:text-gray-400"> or watch it online </p>
-                          <a
-                            href={rewardLinks[tier]}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
-                          >
+
+                      <div key={tier} className="Tier-reward text-center shadow rounded-lg p-6 flex flex-col">
+                        <h2 className="text-lg font-bold text-2xl text-green-600"> Tier {tier} unlocked 🔓 </h2>
+                        <p className="text-gray-500 font-semibold dark:text-gray-400"> Download your reward </p>
+                        <p className="text-gray-500 dark:text-gray-400"> or watch it online </p>
+                        <a
+                          href={rewardLinks[tier]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
+                        >
                             <button id="reward-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                                 Claim reward
                             </button>
-                          </a>
-                        </div>
+                        </a>
+                      </div>
 
                     )))}
 
@@ -349,8 +349,7 @@ const playorpause = (index) => {
                           Buy a tier 🧧
                         </button>
                     )}
-                  </center>
-                  </>
+                </center>
               </div>
             </div>
           </div>
