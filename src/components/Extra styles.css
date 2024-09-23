@@ -259,6 +259,7 @@ ul {
 
 #tier-buy-button {
     display: inline-block;
+    margin-top: 44px;
     position: relative;
     bottom: 45px;
 }
@@ -334,7 +335,7 @@ ul {
     /* Leaks page */
 
     #tier-buy-button {
-        margin-top: 44px;
+        margin-top: 35px;
         margin-bottom: 12px;
         bottom: 0;
     }
