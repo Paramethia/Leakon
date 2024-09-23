@@ -244,12 +244,16 @@ ul {
     border: 2px solid #48494b;
 }
 
-.Tier-reward {
-    display: inline-block;
-    background: #a5a5ad;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 28px;
+@media only screen and (min-width: 789px) {
+
+    .Tier-reward {
+        display: inline-block;
+        background: #a5a5ad;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 28px;
+    }
+
 }
 
 .Reward-claim {
@@ -259,6 +263,7 @@ ul {
 
 .Reward-claim button {
     display: inline-block;
+    margin-top: 25px;
     margin-bottom: 12px;
 }
 
@@ -278,17 +283,26 @@ ul {
     }
 }
 
-/* Other devices designs */
+/* Tablet portrait designs */
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 788px) {
     
-     /* Top bar */
+     /* Home page */
      
      .Top-bar {
          z-index: 2;
          position: sticky;
          top: 0;
      }
+
+     /* Leaks page */
+
+    .Tier-reward {
+        display: inline-block;
+        background: #a5a5ad;
+        margin: 0 auto;
+        margin-bottom: 28px;
+    }
 }
 
 /* Mobile view Portrait view */
@@ -327,13 +341,6 @@ ul {
 
     #discord {
         right: 5px;
-    }
-
-    /* Leaks page */
-
-    .Tier-reward {
-        margin: 0 auto;
-        margin-bottom: 28px;
     }
 
 }
