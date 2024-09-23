@@ -423,9 +423,99 @@ const Home = () => {
                         )}
                     </div>
 
+                    <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+                        Tier info
+                    </h1>
+
+                    <div className="Tier-info">
+
+                        <h4> Download not necessary </h4>
+            
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
+            
+                        <ul>
+                            <li> A few leaked snap chat nudes. </li>
+                            <li> Small folder of leaked OF content. </li>
+                            {/*
+                            <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
+                            <li> 344MB folder of leaked OF & snap chat images. </li>
+                            <li> 4GB+ folder of leaked OF & snap chat videos. </li>
+                            */}
+                        </ul>
+            
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier leaks: </h2>
+            
+                        <ul>
+                            <li> Several leaked snap chat nudes. </li>
+                            <li> Medium folder of leaked OF content. </li>
+                            {/*
+                            <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
+                            <li> 464 folder of leaked images. </li>
+                            <li> 8GB+ folder of leaked videos. </li>
+                            */}
+                        </ul>
+            
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier leaks: </h2>
+            
+                        <ul>
+                            <li> Many leaked snap chat nudes. </li>
+                            <li> Large folder of leaked OF content. </li>
+                            <li> Weekly updates. </li>
+                            {/*
+                            <li> Previous rewards + <a href="https://www.instagram.com/AriKytsya/" target="_blank">Ari Kytsya</a>, <a href="https://www.instagram.com/puppiwii/?hl=en" target="_blank">puppiwii</a> & <a href="https://www.instagram.com/_hannah_0w0/?hl=en" target="_blank">hannah_owo</a>. </li>
+                            <li> 746MB folder of leaked images. </li>
+                            <li> 16GB+ folder of leaked videos. </li>
+                            */}
+                        </ul>
+            
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier leaks: </h2>
+            
+                        <ul>
+                            <li> Extra large (40GB+) folder of leaks. </li>
+                            <li> VIP access to best snap chat and only fans leaks. </li>
+                            <li> Several days a week updates. </li>
+                            {/*
+                            <li> Previous rewards + <a href="https://www.instagram.com/soogsx__/?hl=en" target="_blank">Soogsx</a>, <a href="https://www.instagram.com/breckiehill/?hl=en" target="_blank">Breckie Hill</a> & <a href="https://www.instagram.com/addisonivvy/?hl=en" target="_blank">Addison Ivy</a>. </li>
+                            <li> 1GB+ folder of leaked images </li>
+                            <li> 17GB+ folder of leaked videos. </li>
+                            */}
+                        </ul>
+                        {/*
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier leaks: </h2>
+            
+                        <ul>
+                            <li> Previous rewards + <a href="https://www.instagram.com/corinnakopf/" target="_blank">Corinna Kopf</a>, <a href="https://www.instagram.com/emar_bb/?hl=en" target="_blank">emarr_bb</a> & <a href="https://x.com/xmimirxse?lang=en" target="_blank">xmimirose</a>. </li>
+                            <li> 4GB+ folder of leaked images. </li>
+                            <li> 19GB+ folder of leaked  videos. </li>
+                        </ul>
+
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Sixth tier leaks: </h2>
+            
+                        <ul>
+                            <li> Previous rewards + Multi-pack folders of many OFs models. </li>
+                            <li> Snap chat teen nudes </li>
+                            <li> 34GB+ folder of leaked images & videos. </li>
+                        </ul>
+
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Seventh tier leaks: </h2>
+            
+                        <ul>
+                            <li> Previous rewards + <a href="https://x.com/amouranth" target="_blank">Amouranth</a>, <a href="https://x.com/levanabanana1?lang=en" target="_blank">levanabanana</a> & <a href="https://www.tiktok.com/@burchtwinsxo?lang=en" target="_blank">Burch twins</a>. </li>
+                            <li> 58GB+ folder of leaked images & videos. </li>
+                        </ul>
+
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Eighth tier leaks: </h2>
+            
+                        <ul>
+                            <li> All of the above rewards + <a href="https://www.instagram.com/sophieraiin/" target="_blank">Sophie Rain</a>, <a href="https://x.com/bunnydelphine" target="_blank">Belle Delphine</a> & a lot more. </li>
+                            <li> 200GB+ folder of leaked images & videos. </li>
+                        </ul>
+                        */}
+                    </div>
+
                     {tier < 8 && (
                         <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                            Tiers
+                            Tier requirements
                         </h1>
                     )}
 
