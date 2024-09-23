@@ -326,7 +326,7 @@ const playorpause = (index) => {
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
                       <>
-                      <p className="text-center text-xl text-lime-600"> You unlocked tier {tier} 🔓 </p>
+                      <p className="text-center text-xl text-green-600"> Tier {tier} unlocked 🔓 </p>
 
                       <a
                         key={tier}
