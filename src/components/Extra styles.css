@@ -245,7 +245,9 @@ ul {
 }
 
 .Tier-reward {
-    background: #a5a5ad
+    display: inline-block;
+    background: #a5a5ad;
+    margin-bottom: 22px;
 }
 
 .Rewards-claim {
