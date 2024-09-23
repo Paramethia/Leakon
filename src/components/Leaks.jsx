@@ -324,7 +324,7 @@ const playorpause = (index) => {
               <div className="Reward-claim">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
-                        
+                      <center>
                         <div key={tier} className="Tier-reward text-center shadow rounded-lg p-6 flex flex-col">
                           <h2 className="text-lg font-bold text-2xl text-green-600"> Tier {tier} unlocked 🔓 </h2>
                           <p className="text-gray-500 font-semibold dark:text-gray-400"> Download your reward </p>
@@ -342,7 +342,7 @@ const playorpause = (index) => {
                         </div>
 
                     )))}
-                  <center>
+
                     {currentTier < 5 && (
                         <button id="tier-buy-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={payOptionsOpen}>
                           Buy a tier 🧧
