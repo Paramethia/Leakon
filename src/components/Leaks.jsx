@@ -327,7 +327,7 @@ const playorpause = (index) => {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
                         
-                        <div key={tier} className="Tier-reward text-center bg-grey-200 shadow rounded-lg p-6 flex flex-col">
+                        <div key={tier} className="Tier-reward text-center bg-neutral-300 shadow rounded-lg p-6 flex flex-col">
                           <h2 className="text-lg font-bold text-2xl text-green-600"> Tier {tier} unlocked 🔓 </h2>
                           <p className="text-gray-500 font-semibold dark:text-gray-400"> Download your reward </p>
                           <p className="text-gray-500 dark:text-gray-400"> or watch it online </p>
