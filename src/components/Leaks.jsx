@@ -344,7 +344,7 @@ const playorpause = (index) => {
                     )))}
                   <center>
                     {currentTier < 5 && (
-                        <button className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={payOptionsOpen}>
+                        <button id="tier-buy-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={payOptionsOpen}>
                           Buy a tier 🧧
                         </button>
                     )}
