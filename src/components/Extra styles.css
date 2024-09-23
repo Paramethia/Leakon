@@ -247,15 +247,8 @@ ul {
 .Tier-reward {
      display: inline-block;
      background: #a5a5ad;
-}
-
-@media only screen and (min-width: 789px) {
-
-    .Tier-reward {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
+     margin-left: 20px;
+     margin-right: 20px;
 }
 
 .Reward-claim {
@@ -297,11 +290,6 @@ ul {
          top: 0;
      }
 
-     /* Leaks page */
-
-    .Tier-reward {
-        margin: 0 auto;
-    }
 }
 
 /* Mobile view Portrait view */
