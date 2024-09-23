@@ -247,7 +247,9 @@ ul {
 .Tier-reward {
     display: inline-block;
     background: #a5a5ad;
-    margin-bottom: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 28px;
 }
 
 .Rewards-claim {
@@ -324,6 +326,12 @@ ul {
 
     #discord {
         right: 5px;
+    }
+
+    /* Leaks page */
+
+    .Tier-reward {
+        margin: 0 auto;
     }
 
 }
