@@ -257,7 +257,8 @@ ul {
 }
 
 #tier-buy-button {
-    display: inline-block
+    display: inline-block;
+    margin-bottom: 64px;
 }
 
 /* Animations */
