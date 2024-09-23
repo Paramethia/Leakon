@@ -325,7 +325,7 @@ const playorpause = (index) => {
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
                       currentTier >= tier && (
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 mb-5 md:grid-cols-4 gap-6">
+                      <div className="flex justify-evenly">
                         
                         <div key={tier} className="Tier-reward text-center shadow rounded-lg p-6 flex flex-col">
                           <h2 className="text-lg font-bold text-2xl text-green-600"> Tier {tier} unlocked 🔓 </h2>
