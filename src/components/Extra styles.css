@@ -245,8 +245,11 @@ ul {
 }
 
 .Tier-reward {
-    display: inline-block;
     background: #a5a5ad
+}
+
+.Rewards-claim {
+     max-width: 768px
 }
 
 .Reward-claim button {
