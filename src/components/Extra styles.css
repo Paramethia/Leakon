@@ -244,14 +244,16 @@ ul {
     border: 2px solid #48494b;
 }
 
+.Tier-reward {
+     display: inline-block;
+     background: #a5a5ad;
+}
+
 @media only screen and (min-width: 789px) {
 
     .Tier-reward {
-        display: inline-block;
-        background: #a5a5ad;
         margin-left: 20px;
         margin-right: 20px;
-        margin-bottom: 28px;
     }
 
 }
@@ -263,7 +265,7 @@ ul {
 
 .Reward-claim button {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 44px;
     margin-bottom: 12px;
 }
 
@@ -298,10 +300,7 @@ ul {
      /* Leaks page */
 
     .Tier-reward {
-        display: inline-block;
-        background: #a5a5ad;
         margin: 0 auto;
-        margin-bottom: 28px;
     }
 }
 
