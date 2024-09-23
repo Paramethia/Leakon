@@ -258,7 +258,8 @@ ul {
 
 #tier-buy-button {
     display: inline-block;
-    margin-bottom: 64px;
+    position: relative;
+    top: 45px;
 }
 
 /* Animations */
@@ -337,7 +338,8 @@ ul {
 
     #tier-buy-button {
         margin-top: 44px;
-        margin-bottom: 12px
+        margin-bottom: 12px;
+        top: 0;
     }
 
 }
