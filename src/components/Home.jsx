@@ -248,7 +248,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
-    let requiredInvites = 5;
+    let requiredInvites = 4;
     let nextTier = 1;
     let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
