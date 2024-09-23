@@ -259,7 +259,7 @@ ul {
 #tier-buy-button {
     display: inline-block;
     position: relative;
-    top: 45px;
+    bottom: 45px;
 }
 
 /* Animations */
