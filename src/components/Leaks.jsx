@@ -299,8 +299,9 @@ const playorpause = (index) => {
                   <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
                     <video 
                         ref={(el) => (videoRefs.current[index] = el)}  
-                        src={link} className={`w-full h-full object-cover rounded-lg ${!spoilers[index] ? "blur-lg" : ""}`} 
-                        style={{ filter: !spoilers[index] ? 'blur(10px)' : 'none' }} 
+                        src={link} 
+                        className={"w-full h-full object-cover rounded-lg"} 
+                        style={{ filter: !spoilers[index] ? 'blur(24px)' : 'none' }} 
                         controls={false} 
                     />
                     <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
