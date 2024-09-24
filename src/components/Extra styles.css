@@ -15,11 +15,12 @@ aside {
 }
 
 .ham-menu {
-    width: 30px;
+    width: 35px;
+    padding: 3px;
 }
 
 .Logo {
-    max-width: 240px;	
+    max-width: 205px;	
 }
 
 /* Theme button styling */
