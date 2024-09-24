@@ -434,7 +434,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
             
                         <ul>
-                            <li> A few leaked snap chat teen nudes. </li>
+                            <li> Few leaked snap chat nudes. </li>
                             <li> Small folder of leaked OF content. </li>
                             {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
@@ -446,7 +446,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier leaks: </h2>
             
                         <ul>
-                            <li> Several leaked snap chat teen nudes. </li>
+                            <li> Several leaked snap chat nudes. </li>
                             <li> Medium folder of leaked OF content. </li>
                             {/*
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
@@ -458,7 +458,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier leaks: </h2>
             
                         <ul>
-                            <li> Many leaked snap chat teen nudes. </li>
+                            <li> Many leaked snap chat nudes. </li>
                             <li> Large folder of leaked OF content. </li>
                             <li> Weekly updates. </li>
                             {/*
