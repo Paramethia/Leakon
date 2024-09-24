@@ -317,7 +317,7 @@ const playorpause = (index) => {
 
             <div className="mt-10 space-y-4">
 
-              <h2 className="text-center text-2xl text-gray-500"}>
+              <h2 className="text-center text-2xl text-gray-500">
                   Receive a lot more with higher tiers.
               </h2>
                 
