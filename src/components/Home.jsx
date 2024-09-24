@@ -5,7 +5,7 @@ import axios from 'axios';
 import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';t
 //import { Progress } from '@/components/ui/progress';
 import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
@@ -434,7 +434,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
             
                         <ul>
-                            <li> Few leaked snap chat nudes. </li>
+                            <li> Few leaked snap chat teen nudes. </li>
                             <li> Small folder of leaked OF content. </li>
                             {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
@@ -446,7 +446,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier leaks: </h2>
             
                         <ul>
-                            <li> Several leaked snap chat nudes. </li>
+                            <li> Several leaked snap chat teen nudes. </li>
                             <li> Medium folder of leaked OF content. </li>
                             {/*
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
