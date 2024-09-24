@@ -230,9 +230,11 @@ ul {
 /* Leaks page */
 
 .vid-con {
+    display: inline-block;
     min-width: 280px;
     max-width: 355px;
     max-height: 635px;
+    margin: 25px 25px;
 }
 
 #dis-button {
