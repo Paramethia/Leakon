@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
-import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle } from 'react-icons/fa';
+import { FaMoon, FaSun, FaBars, FaTimes, FaPlay, FaPause, FaExpand, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle } from 'react-icons/fa';
 import './Extra styles.css';
 
 const Header = () => {
@@ -206,6 +206,17 @@ const playorpause = (index) => {
     }
   };
 
+  const toggleFullScreen = (index) => {
+    const videoElement = videoRefs.current[index];
+    if (!document.fullscreenElement) {
+      videoElement.requestFullscreen().catch(err => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
   const payOptionsOpen = () => {
        setIsPaymentConOpen(true);
   }
@@ -308,6 +319,9 @@ const playorpause = (index) => {
                     />
                     <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
                       {playingIndex === index ? <FaPause /> : <FaPlay />}
+                    </button>
+                    <button onClick={() => toggleFullScreen(index)} className="absolute bottom-2 right-2 bg-gray-800 text-white p-2 rounded-full">
+                       <FaExpand />
                     </button>
                   </div>
                 </div>
