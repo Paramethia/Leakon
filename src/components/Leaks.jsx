@@ -224,7 +224,9 @@ const playorpause = (index) => {
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1726269420/Leak_preview_vid_2_jk9u6d.mp4',
     'https://video.twimg.com/ext_tw_video/1604295303590547457/pu/vid/240x480/A2ixWD4QUFL7u3rG.mp4?tag=12',
     'https://video.twimg.com/ext_tw_video/1615548183693639680/pu/vid/264x480/U2AOYNHKsAQluEBb.mp4?tag=12',
-    'https://video.twimg.com/ext_tw_video/1605345387388305411/pu/vid/592x1280/d5HK50CLMhytB5s5.mp4?tag=12'
+    'https://video.twimg.com/ext_tw_video/1605345387388305411/pu/vid/592x1280/d5HK50CLMhytB5s5.mp4?tag=12',
+    'https://video.twimg.com/ext_tw_video/1611548409751654400/pu/vid/480x794/DZMLy9JAtElq-7eO.mp4?tag=12',
+    'https://video.twimg.com/ext_tw_video/1589082532502556673/pu/vid/448x848/IevM36BWt33yZ-tz.mp4?tag=12'
   ];
 
   const rewardLinks = {
