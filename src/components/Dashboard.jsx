@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </Link>
         <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
           <UsersIcon className="h-4 w-4" /> Invitations
-        </Link>>
+        </Link>
       </nav>
 
       <center>
