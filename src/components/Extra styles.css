@@ -16,11 +16,14 @@ aside {
 
 .ham-menu {
     width: 35px;
-    padding: 3px;
+    padding: 5px;
+}
+.ham-menu button {
+    margin: 0 auto;
 }
 
 .Logo {
-    max-width: 205px;	
+    max-width: 185px;	
 }
 
 /* Theme button styling */
