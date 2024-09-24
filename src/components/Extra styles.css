@@ -13,13 +13,13 @@ aside {
     margin: 0 auto;
     max-width: 768px;
 }
-
+/*
 .ham-menu {
     width: 30px;
 }
-
+*/
 .Logo {
-    width: 240px;	
+    max-width: 240px;	
 }
 
 /* Theme button styling */
