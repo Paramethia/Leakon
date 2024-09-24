@@ -15,7 +15,7 @@ const Header = () => {
         <Helmet>
             <title> Invicon - leaks </title>
         </Helmet>
-    );
+        );
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -128,6 +128,9 @@ const Leaks = () => {
   const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const previewButton = document.getElementById("preview-button");
+  const previewCon = document.querySelector('.Previews');
+  let visible = true;
   const [playingIndex, setPlayingIndex] = useState(null);
   const videoRefs = useRef([]);
   const darkModeStyles = { backgroundColor: '#101424' };
@@ -179,11 +182,23 @@ const Leaks = () => {
 
 const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
-  };
+};
 
 const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
 };
+
+const visibility = () => { 
+    if (visible) {
+        previewButton.innerText = "Show previews";
+        previewCon.style.display = "none";
+        visible = false;
+    } else {
+        previewButton.innerText = "Hide previews";
+        previewCon.style.display = "inline-block";
+        visible = true;
+    }
+}
 
 const toggleSpoiler = (index) => {
     setSpoilers(prev => {
@@ -236,7 +251,7 @@ const playorpause = (index) => {
     'https://video.twimg.com/ext_tw_video/1604295303590547457/pu/vid/240x480/A2ixWD4QUFL7u3rG.mp4?tag=12',
     'https://video.twimg.com/ext_tw_video/1615548183693639680/pu/vid/264x480/U2AOYNHKsAQluEBb.mp4?tag=12',
     'https://video.twimg.com/ext_tw_video/1605345387388305411/pu/vid/592x1280/d5HK50CLMhytB5s5.mp4?tag=12',
-    'https://video.twimg.com/ext_tw_video/1611548409751654400/pu/vid/480x794/DZMLy9JAtElq-7eO.mp4?tag=12',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1727207055/Cousin_snap_sfzsqs.mp4',
     'https://video.twimg.com/ext_tw_video/1589082532502556673/pu/vid/448x848/IevM36BWt33yZ-tz.mp4?tag=12'
   ];
 
@@ -293,17 +308,20 @@ const playorpause = (index) => {
             </div>
         </div>
 
-        <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+        <h1 className="text-center text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           Preview Leaks
         </h1>
-        <p className="text-center dark:text-gray-300 text-gray-700 text-2xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-          Get leaked only fans videos of one of the most famous Only Fans models and more. <br />
-          You can get more than 30GB worth of videos in a single tier you unlock. You can download or watch them online from Mega <br />
-          Here are the few previews of what you will get below:
+        <p className="text-center text-2xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+          These are previews of leaked only fans content & snap chat nudes we have. <br />
+          You can get more than 30GB worth of videos in a single tier you unlock. <br />
+          Here are the few previews below ⬇️
         </p>
+
+        <center><button id="preview-button" onClick={() => visibility()}> Hide previews </button></center>
+
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
-            <div className="flex-wrap justify-evenly">
+            <div className="Previews flex-wrap justify-evenly">
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
