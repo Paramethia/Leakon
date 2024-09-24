@@ -5,7 +5,7 @@ import axios from 'axios';
 import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';t
+import 'react-toastify/dist/ReactToastify.css';
 //import { Progress } from '@/components/ui/progress';
 import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
