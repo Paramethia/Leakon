@@ -67,11 +67,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
                     <HomeIcon className="h-4 w-4" /> Home
                 </Link>
-                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
-                    <UsersIcon className="h-4 w-4" /> Invitations
-                </Link>
                 <Link to="/leaks" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <CameraIcon className="h-4 w-4" /> Leaks
+                </Link>
+                <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+                    <UsersIcon className="h-4 w-4" /> Invitations
                 </Link>
             </nav>
             
@@ -434,7 +434,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
             
                         <ul>
-                            <li> A few leaked snap chat nudes. </li>
+                            <li> A few leaked snap chat teen nudes. </li>
                             <li> Small folder of leaked OF content. </li>
                             {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
@@ -446,7 +446,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier leaks: </h2>
             
                         <ul>
-                            <li> Several leaked snap chat nudes. </li>
+                            <li> Several leaked snap chat teen nudes. </li>
                             <li> Medium folder of leaked OF content. </li>
                             {/*
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
@@ -458,7 +458,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier leaks: </h2>
             
                         <ul>
-                            <li> Many leaked snap chat nudes. </li>
+                            <li> Many leaked snap chat teen nudes. </li>
                             <li> Large folder of leaked OF content. </li>
                             <li> Weekly updates. </li>
                             {/*
@@ -473,7 +473,7 @@ const Home = () => {
                         <ul>
                             <li> Extra large (40GB+) folder of leaks. </li>
                             <li> VIP access to best snap chat and only fans leaks. </li>
-                            <li> Several days a week updates. </li>
+                            <li> Daily updates. </li>
                             {/*
                             <li> Previous rewards + <a href="https://www.instagram.com/soogsx__/?hl=en" target="_blank">Soogsx</a>, <a href="https://www.instagram.com/breckiehill/?hl=en" target="_blank">Breckie Hill</a> & <a href="https://www.instagram.com/addisonivvy/?hl=en" target="_blank">Addison Ivy</a>. </li>
                             <li> 1GB+ folder of leaked images </li>
