@@ -290,7 +290,7 @@ const playorpause = (index) => {
         </p>
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
