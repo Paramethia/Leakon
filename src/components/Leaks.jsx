@@ -292,11 +292,11 @@ const playorpause = (index) => {
         </p>
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
-            <div className=" flex-wrap justify-evenly">
+            <div className="flex-wrap justify-evenly">
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
-                  className="vid-con group relative rounded-lg p-4 shadow-md transition-all bg-gray-300 hover:bg-gray-550"
+                  className="vid-con group relative rounded-lg p-4 shadow-md transition-all bg-gray-400 hover:bg-gray-600"
                 >
                   <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
                     <video 
@@ -317,9 +317,9 @@ const playorpause = (index) => {
 
             <div className="mt-10 space-y-4">
 
-              <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
+              <h2 className="text-center text-2xl text-gray-500"}>
                   Receive a lot more with higher tiers.
-              </p>
+              </h2>
                 
               <br />
 
