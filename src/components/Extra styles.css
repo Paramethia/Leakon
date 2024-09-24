@@ -342,6 +342,10 @@ ul {
 
     /* Leaks page */
 
+    .vid-con {
+        margin: 0;
+    }
+
     #tier-buy-button {
         margin-top: 35px;
         margin-bottom: 12px;
