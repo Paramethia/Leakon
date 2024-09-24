@@ -64,11 +64,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <Link to="/home" className="flex items-center text-white gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
           <HomeIcon className="h-4 w-4" /> Home
         </Link>
+        <Link to="/leaks" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+            <CameraIcon className="h-4 w-4" /> Leaks
+        </Link>
         <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
           <UsersIcon className="h-4 w-4" /> Invitations
-        </Link>
-        <Link to="/leaks" className="flex items-center text-white gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
-          <CameraIcon className="h-4 w-4" /> Leaks
         </Link>
       </nav>
 
@@ -294,7 +294,7 @@ const playorpause = (index) => {
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
-                  className="vid-con group relative flex flex-col items-start justify-between rounded-lg p-4 shadow-md transition-all bg-gray-300 hover:bg-gray-550"
+                  className="vid-con group relative rounded-lg p-4 shadow-md transition-all bg-gray-300 hover:bg-gray-550"
                 >
                   <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
                     <video 
