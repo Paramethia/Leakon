@@ -219,16 +219,6 @@ ul {
     width: 135px;
 }
 
-/* Footer */
-
-.Footer {
-    background-color: #363636;
-    padding-top: 0.5rem;
-    color: lightgrey;
-    width: 100%;
-    height: 2.5rem;
-}
-
 /* Dashboard page */
 
 .Invitees-con {
@@ -292,7 +282,8 @@ ul {
 
 .Reward-claim {
      margin: 0 auto;
-     max-width: 768px
+     max-width: 768px;
+     animation: tilt-shaking 2s linear infinite;
 }
 
 #tier-buy-button {
@@ -316,6 +307,22 @@ ul {
     } to {
         margin-left: 0%;
     }
+}
+
+@keyframes tilt-shaking {
+     0% { transform: rotate(0deg); }
+     25% { transform: rotate(5deg); }
+     50% { transform: rotate(0eg); }
+     75% { transform: rotate(-5deg); }
+     100% { transform: rotate(0deg); }
+}
+
+@keyframes tilt-n-move-shaking {
+     0% { transform: translate(0, 0) rotate(0deg); }
+     25% { transform: translate(5px, 5px) rotate(5deg); }
+     50% { transform: translate(0, 0) rotate(0eg); }
+     75% { transform: translate(-5px, 5px) rotate(-5deg); }
+     100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 /* Tablet portrait designs */
