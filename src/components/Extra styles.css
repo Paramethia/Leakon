@@ -278,12 +278,12 @@ ul {
      margin-left: 20px;
      margin-right: 20px;
      margin-bottom: 20px;
+     animation: tilt-n-move-shaking 2s linear infinite;
 }
 
 .Reward-claim {
      margin: 0 auto;
      max-width: 768px;
-     animation: tilt-shaking 2s linear infinite;
 }
 
 #tier-buy-button {
@@ -291,6 +291,7 @@ ul {
     margin-top: 44px;
     position: relative;
     bottom: 45px;
+    animation: tilt-shaking 2s linear infinite;
 }
 
 /* Animations */
