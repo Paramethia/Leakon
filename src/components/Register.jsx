@@ -34,10 +34,6 @@ const Register = () => {
         setTimeout(() => {
             note.style.display = 'none'
         }, 4800 );
-        {/*
-        const previewVideo = document.querySelector('video');
-        previewVideo.play()
-        */}
     });
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
