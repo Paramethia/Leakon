@@ -21,6 +21,7 @@ const Header = () => {
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+    const {username} = useContext(UserContext);
     let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
     if (inviteLink) code = inviteLink.slice(-8);
@@ -55,7 +56,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link to="/home" style={{ textDecoration: 'none' }}>
                     <div className="text-white flex items-center gap-2">
                         <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8"/>
-                        <h1 className="text-xl font-bold mt-2 font-helvetica">Invicon</h1>
+                        <h1 className="text-xl font-bold mt-2 font-helvetica">{username}</h1>
                     </div>
                 </Link>
                 <button className="md:hidden" onClick={toggleSidebar}>
