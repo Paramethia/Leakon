@@ -34,10 +34,10 @@ const Register = () => {
         setTimeout(() => {
             note.style.display = 'none'
         }, 4800 );
-
+        {/*
         const previewVideo = document.querySelector('video');
-        previewVideo.muted = true;
         previewVideo.play()
+        */}
     });
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
@@ -138,7 +138,7 @@ const Register = () => {
             <div className="hidden md:flex items-center justify-center md:w-1/2 bg-auto bg-black" style={{/* backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1726273826/Infamous_sophie_rain_spider-man_vid_image_pdfyeb.png)', 
                  backgroundSize: 'cover', backgroundPosition: 'center', backfaceVisibility: 'hidden', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'                                                           
             */}}>
-               <video src="https://res.cloudinary.com/doxalk3ms/video/upload/v1726400529/Preview_slide_show_shortened_hfs3cg.mp4" type="video/mp4" autoplay muted loop playsinline> You browser does not support the video tag. </video>
+               <video src="https://res.cloudinary.com/doxalk3ms/video/upload/v1726400529/Preview_slide_show_shortened_hfs3cg.mp4" type="video/mp4" autoPlay muted loop playsInline> You browser does not support the video tag. </video>
             </div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-400">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
