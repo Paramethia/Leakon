@@ -53,12 +53,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           style={{ backgroundColor: "#282434" }}
         >
             <div className="flex justify-between items-center mb-6">
-                <Link to="/home" style={{ textDecoration: 'none' }}>
-                    <div className="text-white flex items-center gap-2">
-                        <img src="https://res.cloudinary.com/doxalk3ms/image/upload/v1727356857/Invicon_navbar_logo_zwwnwa.png" alt="Invicon Logo" className="w-8 h-8"/>
-                        <h1 className="text-xl font-bold mt-2 font-helvetica">{username}</h1>
-                    </div>
-                </Link>
+                <div className="text-white flex items-center gap-2">
+                    <img src="https://res.cloudinary.com/doxalk3ms/image/upload/v1727356857/Invicon_navbar_logo_zwwnwa.png" alt="Invicon Logo" className="w-8 h-8"/>
+                    <h1 className="text-xl font-bold mt-2 font-helvetica">{username}</h1>
+                </div>
                 <button className="md:hidden" onClick={toggleSidebar}>
                     <FaTimes className="h-6 w-6 text-white" />
                 </button>
