@@ -334,7 +334,7 @@ const playorpause = (index) => {
                   key={index}
                   className="vid-con group relative rounded-lg p-4 shadow-md transition-all bg-gray-400 hover:bg-gray-600"
                 >
-                  <div className="flex-1 w-full relative" onClick={() => toggleSpoiler(index)}>
+                  <div className="flex-1 relative" onClick={() => toggleSpoiler(index)}>
                     <video 
                         ref={(el) => (videoRefs.current[index] = el)}  
                         src={link} 
