@@ -123,7 +123,7 @@ input:checked + .slider:before {
     transition: 0.2s;
     color: #3e97ec;
     font-style: italic;
-    background: #03025e;
+    background: #8a8a8a;
 }
 
 .Contact a {
