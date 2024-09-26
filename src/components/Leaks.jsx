@@ -338,18 +338,18 @@ const playorpause = (index) => {
                     <video 
                         ref={(el) => (videoRefs.current[index] = el)}  
                         src={link} 
-                        className={"object-cover rounded-lg"} 
+                        className={"rounded-lg"} 
                         style={{ filter: !spoilers[index] ? 'blur(20px)' : 'none' }} 
                         controls={false} 
                     />
                     <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
                       {playingIndex === index ? <FaPause /> : <FaPlay />}
                     </button>
-                    {/* Buggy */}
+                    {/*
                     <button onClick={() => toggleFullScreen(index)} className="absolute bottom-2 right-2 bg-gray-800 text-white p-2 rounded-full">
                        <FaExpand />
                     </button>
-                    
+                    */}
                   </div>
                 </div>
               ))}
