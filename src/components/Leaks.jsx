@@ -333,6 +333,7 @@ const playorpause = (index) => {
                 <div
                   key={index}
                   className="vid-con group relative rounded-lg p-4 shadow-md transition-all bg-gray-400 hover:bg-gray-600"
+                  onClick={() => toggleSpoiler(index)}
                 >
                 <video 
                     ref={(el) => (videoRefs.current[index] = el)}  
@@ -340,7 +341,6 @@ const playorpause = (index) => {
                     className={"relative rounded-lg"} 
                     style={{ filter: !spoilers[index] ? 'blur(20px)' : 'none' }} 
                     controls={false}
-                    onClick={() => toggleSpoiler(index)}
                 />
                 <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
                     {playingIndex === index ? <FaPause /> : <FaPlay />}
