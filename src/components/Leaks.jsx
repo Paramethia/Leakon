@@ -334,23 +334,22 @@ const playorpause = (index) => {
                   key={index}
                   className="vid-con group relative rounded-lg p-4 shadow-md transition-all bg-gray-400 hover:bg-gray-600"
                 >
-                  <div className="flex-1 relative" onClick={() => toggleSpoiler(index)}>
-                    <video 
-                        ref={(el) => (videoRefs.current[index] = el)}  
-                        src={link} 
-                        className={"rounded-lg"} 
-                        style={{ filter: !spoilers[index] ? 'blur(20px)' : 'none' }} 
-                        controls={false} 
-                    />
-                    <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
-                      {playingIndex === index ? <FaPause /> : <FaPlay />}
-                    </button>
-                    {/*
-                    <button onClick={() => toggleFullScreen(index)} className="absolute bottom-2 right-2 bg-gray-800 text-white p-2 rounded-full">
-                       <FaExpand />
-                    </button>
-                    */}
-                  </div>
+                <video 
+                    ref={(el) => (videoRefs.current[index] = el)}  
+                    src={link} 
+                    className={"relative rounded-lg"} 
+                    style={{ filter: !spoilers[index] ? 'blur(20px)' : 'none' }} 
+                    controls={false}
+                    onClick={() => toggleSpoiler(index)}
+                />
+                <button onClick={() => playorpause(index)} className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-3xl">
+                    {playingIndex === index ? <FaPause /> : <FaPlay />}
+                </button>
+                {/*
+                <button onClick={() => toggleFullScreen(index)} className="absolute bottom-2 right-2 bg-gray-800 text-white p-2 rounded-full">
+                    <FaExpand />
+                </button>
+                */}
                 </div>
               ))}
             </div>
