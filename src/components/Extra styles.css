@@ -233,27 +233,27 @@ ul {
 
 #preview-button {
     cursor: pointer;
-	background-color: #4b3f33;
+    background-color: #4b3f33;
     border: none;
     padding-bottom: 2px;
     margin-top: 24px;
-	height: 30px;
-	width: 5cm;
-	border-radius: 10px;
+    height: 30px;
+    width: 5cm;
+    border-radius: 10px;
     color: #0a0a23;
-	font-size: 17px;
-	font-family: Cursive;
+    font-size: 17px;
+    font-family: Cursive;
 }
 #preview-button:hover {
     transition: 0.3s ease 0s;
-	background-color: darkgrey;
+    background-color: darkgrey;
 }
 
 .vid-con {
     display: inline-block;
     min-width: 280px;
     max-width: 355px;
-    max-height: 635px;
+    max-height: 580px;
     margin: 25px 25px;
 }
 
