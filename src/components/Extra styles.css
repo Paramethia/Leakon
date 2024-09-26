@@ -1,13 +1,42 @@
-/* Side bar styling */
+/* Side navbar bar */
 
 aside {
     position: fixed;
     top: 0;
     bottom: 0;
     height: 100vh;
+} 
+
+.Navigation {
+    margin-top: 4cm;
+    font-size: 18px;
 }
 
-/* Top bar styling */
+.H-effect:hover {
+    transition: 0.3s;
+    filter: brightness(50%);
+}
+
+.Contact {
+    margin-top: 2.8cm;
+}
+
+.Contact:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    color: #3e97ec;
+    font-style: italic;
+    background: #020082;
+}
+
+.Contact a {
+   color: lightgrey;
+   font-size: 18px;
+   text-decoration: none;
+   transition: 0.3s;  
+}
+
+     /* Top bar styling */
 
 .Top-bar {
     margin: 0 auto;
@@ -78,6 +107,7 @@ input:checked + .slider:before {
 }
   
 /* Rounded sliders */
+
 .slider.round {
     border-radius: 34px;
     border-color: #ccc;
@@ -101,36 +131,6 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     height: 100%;
-}
-
-/* Hover effects and other stuff */ 
-
-.Navigation {
-    margin-top: 4cm;
-    font-size: 18px;
-}
-
-.H-effect:hover {
-    transition: 0.3s;
-    filter: brightness(50%);
-}
-
-.Contact {
-    margin-top: 2.8cm;
-}
-.Contact:hover {
-    cursor: pointer;
-    transition: 0.2s;
-    color: #3e97ec;
-    font-style: italic;
-    background: #8a8a8a;
-}
-
-.Contact a {
-   color: lightgrey;
-   font-size: 18px;
-   text-decoration: none;
-   transition: 0.3s;  
 }
 
 /* Loader */
