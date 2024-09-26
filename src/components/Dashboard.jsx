@@ -51,7 +51,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     >
       <div className="flex static justify-between items-center mb-6">
         <div className="text-white flex items-center gap-2">
-            <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
+            <img src="https://res.cloudinary.com/doxalk3ms/image/upload/v1727356857/Invicon_navbar_logo_zwwnwa.png" alt="Invicon Logo" className="w-8 h-8" />
             <h1 className="text-xl font-bold mt-2 font-helvetica">{username}</h1>
         </div>
         <button className="md:hidden" onClick={toggleSidebar}>
