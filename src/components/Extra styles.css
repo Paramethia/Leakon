@@ -116,7 +116,7 @@ input:checked + .slider:before {
 }
 
 .Contact {
-    margin-top: 5.8cm;
+    margin-top: 2.8cm;
 }
 .Contact:hover {
     cursor: pointer;
