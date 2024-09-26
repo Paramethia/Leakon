@@ -434,7 +434,7 @@ const Home = () => {
             
                         <ul>
                             <li> Few leaked snap chat teen nudes. </li>
-                            <li> Small folder of leaked OF content. </li>
+                            <li> 4GB+ folder of leaked OF content. </li>
                             {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
                             <li> 344MB folder of leaked OF & snap chat images. </li>
@@ -446,7 +446,7 @@ const Home = () => {
             
                         <ul>
                             <li> Several leaked snap chat teen nudes. </li>
-                            <li> Medium folder of leaked OF content. </li>
+                            <li> 8GB+ folder of leaked OF content. </li>
                             {/*
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
                             <li> 464 folder of leaked images. </li>
@@ -458,7 +458,7 @@ const Home = () => {
             
                         <ul>
                             <li> Many leaked snap chat nudes. </li>
-                            <li> Large folder of leaked OF content. </li>
+                            <li> 14GB+ folder of leaked OF content. </li>
                             <li> Weekly updates. </li>
                             {/*
                             <li> Previous rewards + <a href="https://www.instagram.com/AriKytsya/" target="_blank">Ari Kytsya</a>, <a href="https://www.instagram.com/puppiwii/?hl=en" target="_blank">puppiwii</a> & <a href="https://www.instagram.com/_hannah_0w0/?hl=en" target="_blank">hannah_owo</a>. </li>
@@ -470,7 +470,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier leaks: </h2>
             
                         <ul>
-                            <li> Extra large (40GB+) folder of leaks. </li>
+                            <li> 20GB+ folder of leaks. </li>
                             <li> VIP access to best snap chat and only fans leaks. </li>
                             <li> Daily updates. </li>
                             {/*
