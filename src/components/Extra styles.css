@@ -271,6 +271,14 @@ ul {
     border: 2px solid #48494b;
 }
 
+hr {
+    height: 5px;
+    max-width: 768px;
+    border-radius: 5px;
+    background: lightgray;
+    margin: 0 auto;
+}
+
 .Tier-reward {
      display: inline-block;
      background: #a5a5ad;
