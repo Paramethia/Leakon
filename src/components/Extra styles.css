@@ -272,11 +272,10 @@ ul {
 }
 
 hr {
-    height: 5px;
+    height: 8px;
     max-width: 768px;
     border-radius: 5px;
     background: lightgray;
-    margin: 0 auto;
 }
 
 .Tier-reward {
