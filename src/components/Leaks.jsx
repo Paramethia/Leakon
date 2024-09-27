@@ -352,6 +352,8 @@ const playorpause = (index) => {
             </div>
             <center><a href="https://discord.gg/qN4w9ckCPQ" target="_blank"><button id="dis-button"> Check out more previews here </button></a></center>
 
+            <hr />
+
             <div className="mt-10 space-y-4">
 
               <h2 className="text-center text-2xl text-gray-500">
@@ -397,6 +399,7 @@ const playorpause = (index) => {
                 </center>
               </div>
             </div>
+            <hr />
           </div>
         </div>
       </main>
