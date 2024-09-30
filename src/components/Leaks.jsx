@@ -323,7 +323,7 @@ const playorpause = (index) => {
           Here are the few previews below <br /> ⬇️
         </p>
 
-        <center><button id="preview-button" onClick={() => visibility()}> {visible ? "Hide previews" : "Show previews" /> </center>
+        <center><button id="preview-button" onClick={() => visibility()}> {visible ? "Hide previews" : "Show previews"} </button> </center>
 
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
