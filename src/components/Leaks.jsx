@@ -127,6 +127,7 @@ const Leaks = () => {
   const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  //const [visible, setVisiblity] = useState(true);
   let visible = true;
   const [playingIndex, setPlayingIndex] = useState(null);
   const videoRefs = useRef([]);
