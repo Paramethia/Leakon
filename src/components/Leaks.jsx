@@ -187,9 +187,9 @@ const toggleSidebar = () => {
 
 const visibility = () => { 
     if (visible) {
-        setVisible(!visible);
+        setVisiblity(!visible);
     } else {
-        setVisible(visible);
+        setVisiblity(visible);
     }
 }
 
