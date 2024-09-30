@@ -190,12 +190,12 @@ const toggleSidebar = () => {
 
 const visibility = () => { 
     if (visible) {
-        previewButton.innerText = "Show previews";
+        previewButton.innerHTML = "Show previews";
         previewCon.style.display = "none";
         disButton.style.display = "none";
         visible = false;
     } else {
-        previewButton.innerText = "Hide previews";
+        previewButton.innerHTML = "Hide previews";
         previewCon.style.display = "inline-block";
         disButton.style.display = "inline-block";
         visible = true;
