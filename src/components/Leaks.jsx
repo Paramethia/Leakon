@@ -127,8 +127,7 @@ const Leaks = () => {
   const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  //const [visible, setVisiblity] = useState(true);
-  let visible = true;
+  const [visible, setVisiblity] = useState(true);
   const [playingIndex, setPlayingIndex] = useState(null);
   const videoRefs = useRef([]);
   const darkModeStyles = { backgroundColor: '#101424' };
@@ -188,9 +187,9 @@ const toggleSidebar = () => {
 
 const visibility = () => { 
     if (visible) {
-        visible = false;
+        setVisible(!visible);
     } else {
-        visible = true;
+        setVisible(visible);
     }
 }
 
