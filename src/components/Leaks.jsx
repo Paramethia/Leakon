@@ -190,12 +190,12 @@ const toggleSidebar = () => {
 
 const visibility = () => { 
     if (visible) {
-        previewButton.innerHTML = "Show previews";
+        //previewButton.innerHTML = "Show previews";
         previewCon.style.display = "none";
         disButton.style.display = "none";
         visible = false;
     } else {
-        previewButton.innerHTML = "Hide previews";
+        //previewButton.innerHTML = "Hide previews";
         previewCon.style.display = "inline-block";
         disButton.style.display = "inline-block";
         visible = true;
@@ -320,10 +320,10 @@ const playorpause = (index) => {
         <p className="text-center text-2xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           These are previews of leaked only fans content & snap chat nudes we have. <br />
           You can get more than 30GB worth of videos in a single tier you unlock. <br />
-          Here are the few previews below ⬇️
+          Here are the few previews below <br /> ⬇️
         </p>
 
-        <center><button id="preview-button" onClick={() => visibility()}> Hide previews </button></center>
+        <center><button id="preview-button" onClick={() => visibility()}> {visible ? "Hide previews" : "Show previews" /> </center>
 
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
