@@ -186,11 +186,7 @@ const toggleSidebar = () => {
 };
 
 const visibility = () => { 
-    if (visible) {
-        setVisiblity(!visible);
-    } else {
-        setVisiblity(visible);
-    }
+    setVisiblity(!visible)
 }
 
 const toggleSpoiler = (index) => {
