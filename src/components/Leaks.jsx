@@ -127,9 +127,6 @@ const Leaks = () => {
   const [currentTier, setCurrentTier] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const previewButton = document.getElementById("preview-button");
-  const previewCon = document.querySelector(".Previews");
-  const disButton = document.getElementById("dis-button");
   let visible = true;
   const [playingIndex, setPlayingIndex] = useState(null);
   const videoRefs = useRef([]);
@@ -190,14 +187,8 @@ const toggleSidebar = () => {
 
 const visibility = () => { 
     if (visible) {
-        //previewButton.innerHTML = "Show previews";
-        previewCon.style.display = "none";
-        disButton.style.display = "none";
         visible = false;
     } else {
-        //previewButton.innerHTML = "Hide previews";
-        previewCon.style.display = "inline-block";
-        disButton.style.display = "inline-block";
         visible = true;
     }
 }
@@ -327,7 +318,8 @@ const playorpause = (index) => {
 
         <div className="w-full pt-4 pb-12 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
-            <div className="Previews flex-wrap justify-evenly">
+            {visible && (
+              <div className="Previews flex-wrap justify-evenly">
               {videoLinks.map((link, index) => (
                 <div
                   key={index}
@@ -350,7 +342,8 @@ const playorpause = (index) => {
                 </div>
               ))}
             </div>
-            <center><a href="https://discord.gg/qN4w9ckCPQ" target="_blank"><button id="dis-button"> Check out more previews here </button></a></center>
+           )}
+            <center>{visible && ( <a href="https://discord.gg/qN4w9ckCPQ" target="_blank"><button id="dis-button"> Check out more previews here </button></a> )}</center>
 
             <center> <hr /> </center>
 
