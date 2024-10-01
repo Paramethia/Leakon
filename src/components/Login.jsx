@@ -61,7 +61,7 @@ const Login = () => {
 
         <ToastContainer />
 
-        <div className="flex  h-screen">
+        <div className="flex h-screen">
             <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/doxalk3ms/image/upload/v1723931827/Invicon_register_or_log_in_image_xfeg1y.png)' }}></div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-400">
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
@@ -96,7 +96,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105"> Submit </button>
+                        <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105"> Log in </button>
                     </form>
                    
                   
