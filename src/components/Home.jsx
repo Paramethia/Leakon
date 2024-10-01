@@ -395,7 +395,7 @@ const Home = () => {
                                 <div className="flex items-center justify-between">
                                     <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Stats</h2>
                                 </div>
-                                <p className="text-gray-500 dark:text-gray-400">You have invited a total of {invites} people.</p>
+                                <p className="text-gray-500 dark:text-gray-400">You have invited a total of <strong>{invites}</strong> people.</p>
                                 {tier < 8 && (
                                     <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more invites to get to tier <strong>{nextTier}</strong> </p>
                                 )}
@@ -433,7 +433,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
             
                         <ul>
-                            <li> Few leaked snap chat teen nudes. </li>
+                            <li> 422MB folder of leaked snap chat teen nudes. </li>
                             <li> 4GB+ folder of leaked OF content. </li>
                             {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
@@ -445,7 +445,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier leaks: </h2>
             
                         <ul>
-                            <li> Several leaked snap chat teen nudes. </li>
+                            <li> 937MB folder of leaked snap chat nudes. </li>
                             <li> 8GB+ folder of leaked OF content. </li>
                             {/*
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
@@ -457,7 +457,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier leaks: </h2>
             
                         <ul>
-                            <li> Many leaked snap chat nudes. </li>
+                            <li> 1.4GB folder of leaked snap chat nudes. </li>
                             <li> 14GB+ folder of leaked OF content. </li>
                             <li> Weekly updates. </li>
                             {/*
