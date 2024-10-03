@@ -175,7 +175,7 @@ const Dashboard = () => {
                         </div>
                         <Link to="/home" style={{ textDecoration: 'none' }} className="Logo flex-1">
                             <div className="text-white flex items-center gap-2 justify-center md:justify-start">
-                                <img src="https://res.cloudinary.com/dw7w2at8k/image/upload/v1721763323/00f6d818-53e4-43fd-819d-1efb5932af3c-removebg-preview_jwgmzt.png" alt="Invicon Logo" className="w-8 h-8" />
+                                <img src="Invicon top bar logo.png" alt="Invicon Logo" className="w-8 h-8" />
                                 <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
                             </div>
                         </Link>
