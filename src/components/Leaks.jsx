@@ -134,7 +134,7 @@ const Leaks = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
   const [spoilers, setSpoilers] = useState([]);
   const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
-  let moan = new Audio('https://res.cloudinary.com/doxalk3ms/video/upload/v1724628435/ahh_sound_effect_gukkzc.mp4');
+  let moan = new Audio('public/ahh sound effect.mp3');
 
   if (storedUsername) username = storedUsername;
 
