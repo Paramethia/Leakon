@@ -51,7 +51,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     >
       <div className="flex static justify-between items-center mb-6">
         <div className="text-white flex items-center gap-2">
-            <img src="https://res.cloudinary.com/doxalk3ms/image/upload/v1727356857/Invicon_navbar_logo_zwwnwa.png" alt="Invicon Logo" className="w-8 h-8" />
+            <img src="Invicon navbar logo.png" alt="Invicon Logo" className="w-8 h-8" />
             <h1 className="text-xl font-bold mt-2 font-helvetica">{username}</h1>
         </div>
         <button className="md:hidden" onClick={toggleSidebar}>
@@ -234,7 +234,7 @@ const playorpause = (index) => {
   }
 
   const videoLinks = [
-    'https://res.cloudinary.com/doxalk3ms/video/upload/v1721763778/Sophie_Rain_spiderman_OF_vid_zo9uq2.mp4',
+    'https://res.cloudinary.com/doxalk3ms/video/upload/v1727959702/Sophie_Rain_spider-man_video_cbp5rv.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770897/Sophie_rain_leak_nmfi8v.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1721770907/Sophie_rain_leak_2_cgxlrh.mp4',
     'https://res.cloudinary.com/doxalk3ms/video/upload/v1725916461/Preview_OF_leak_by_Leakon_akoxgy.mp4',
