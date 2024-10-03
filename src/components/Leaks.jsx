@@ -134,7 +134,7 @@ const Leaks = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
   const [spoilers, setSpoilers] = useState([]);
   const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
-  let moan = new Audio('public/ahh sound effect.mp3');
+  let moan = new Audio('ahh sound effect.mp3');
 
   if (storedUsername) username = storedUsername;
 
