@@ -429,14 +429,14 @@ const Home = () => {
                     </div>
 
                     <h1 className="text-center dark:text-gray-300 text-gray-700 text-4xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
-                        Tier info
+                        Tier rewards
                     </h1>
 
                     <div className="Tier-info">
 
                         <h4> Download not necessary </h4>
             
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier: </h2>
             
                         <ul>
                             <li> 422MB folder of leaked snap chat nudes. </li>
@@ -448,7 +448,7 @@ const Home = () => {
                             */}
                         </ul>
             
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier: </h2>
             
                         <ul>
                             <li> 937MB folder of leaked snap chat nudes. </li>
@@ -460,7 +460,7 @@ const Home = () => {
                             */}
                         </ul>
             
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier: </h2>
             
                         <ul>
                             <li> 1.4GB folder of leaked snap chat nudes. </li>
@@ -473,7 +473,7 @@ const Home = () => {
                             */}
                         </ul>
             
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier: </h2>
             
                         <ul>
                             <li> 20GB+ folder of leaks. </li>
@@ -486,7 +486,7 @@ const Home = () => {
                             */}
                         </ul>
                         {/*
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier: </h2>
             
                         <ul>
                             <li> Previous rewards + <a href="https://www.instagram.com/corinnakopf/" target="_blank">Corinna Kopf</a>, <a href="https://www.instagram.com/emar_bb/?hl=en" target="_blank">emarr_bb</a> & <a href="https://x.com/xmimirxse?lang=en" target="_blank">xmimirose</a>. </li>
@@ -494,7 +494,7 @@ const Home = () => {
                             <li> 19GB+ folder of leaked  videos. </li>
                         </ul>
 
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Sixth tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Sixth tier: </h2>
             
                         <ul>
                             <li> Previous rewards + Multi-pack folders of many OFs models. </li>
@@ -502,14 +502,14 @@ const Home = () => {
                             <li> 34GB+ folder of leaked images & videos. </li>
                         </ul>
 
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Seventh tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Seventh tier: </h2>
             
                         <ul>
                             <li> Previous rewards + <a href="https://x.com/amouranth" target="_blank">Amouranth</a>, <a href="https://x.com/levanabanana1?lang=en" target="_blank">levanabanana</a> & <a href="https://www.tiktok.com/@burchtwinsxo?lang=en" target="_blank">Burch twins</a>. </li>
                             <li> 58GB+ folder of leaked images & videos. </li>
                         </ul>
 
-                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Eighth tier leaks: </h2>
+                        <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Eighth tier: </h2>
             
                         <ul>
                             <li> All of the above rewards + <a href="https://www.instagram.com/sophieraiin/" target="_blank">Sophie Rain</a>, <a href="https://x.com/bunnydelphine" target="_blank">Belle Delphine</a> & a lot more. </li>
