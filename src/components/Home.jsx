@@ -439,7 +439,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier leaks: </h2>
             
                         <ul>
-                            <li> 422MB folder of leaked snap chat teen nudes. </li>
+                            <li> 422MB folder of leaked snap chat nudes. </li>
                             <li> 4GB+ folder of leaked OF content. </li>
                             {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
