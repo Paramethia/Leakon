@@ -403,7 +403,7 @@ const Home = () => {
                                   )}
                                 </p>
                                 {tier < 8 && (
-                                    <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more {invites === 1 ? "invite" : "invites"} to get to tier <strong>{nextTier}</strong> </p>
+                                    <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more {requiredInvites === 1 ? "invite" : "invites"} to get to tier <strong>{nextTier}</strong> </p>
                                 )}
                                 {/*
                                 <div className="grid gap-2">
