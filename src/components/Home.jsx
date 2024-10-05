@@ -395,10 +395,13 @@ const Home = () => {
                                 <div className="flex items-center justify-between">
                                     <h2 className="text-xl font-semibold text-gray-700 dark:text-white">Stats</h2>
                                 </div>
-                                <p className="text-gray-500 dark:text-gray-400">You have invited a total of <strong>{invites}</strong> people.</p>
-                                {tier < 8 && (
-                                    <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more invites to get to tier <strong>{nextTier}</strong> </p>
-                                )}
+                                <p className="text-gray-500 dark:text-gray-400">
+                                  {invites >= 2 || invites === 0 ? (
+                                    <>You have invited a total of <strong>{invites}</strong> people.</>
+                                  ) : (
+                                    <>You have invited <strong>{invites}</strong> person.</>
+                                  )}
+                                </p>
                                 {/*
                                 <div className="grid gap-2">
                                     <div className="flex items-center justify-between">
