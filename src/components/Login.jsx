@@ -22,6 +22,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     let storedUsername = localStorage.getItem("username");
+    const storedLink = localStorage.getItem("inviteLink");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -30,7 +31,8 @@ const Login = () => {
             .then(result => {
                 console.log('Server response:', result);
                 if (result.data === "Correct username and password.") {
-                    if(storedUsername) localStorage.removeItem("username");
+                    if (storedUsername) localStorage.removeItem("username");
+                    if (storedLink) localStorage.removeItem("inviteLink");
                     localStorage.setItem("username", username);
                     navigate('/home');
                 } else {
