@@ -31,8 +31,10 @@ const Login = () => {
             .then(result => {
                 console.log('Server response:', result);
                 if (result.data === "Correct username and password.") {
-                    if (storedUsername) localStorage.removeItem("username");
-                    if (storedLink) localStorage.removeItem("inviteLink");
+                    if (username != storedUsername) {
+                        localStorage.removeItem("username");
+                        localStorage.removeItem("inviteLink");
+                    }
                     localStorage.setItem("username", username);
                     navigate('/home');
                 } else {
