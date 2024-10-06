@@ -412,9 +412,9 @@ const Home = () => {
                                                 <span className="font-helvetica">Tier progress</span>
                                                 <span className="font-helvetica">{invites}/{invites + requiredInvites}</span>
                                             </div>
-                                            <div className="w-full h-4 bg-gray-400 rounded-lg overflow-hidden">
+                                            <div className="mt-2 max-w-[500px] h-5 border-black - border-2 bg-gray-300 rounded-lg overflow-hidden">
                                                 <div
-                                                    className="h-full bg-blue-500"
+                                                    className="h-full bg-[#3e97ec]"
                                                     style={{ width: `${progressPercentage}%` }}
                                                 ></div>
                                             </div>
