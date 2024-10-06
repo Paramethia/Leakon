@@ -26,7 +26,7 @@ const Login = () => {
     let storedUsername = localStorage.getItem("username");
     const storedLink = localStorage.getItem("inviteLink");
 
-    const togglePasswordVisiblity = () => {
+    const togglePasswordVisibility = () => {
         setPasswordVisibility(!passwordVsible)
     }
 
