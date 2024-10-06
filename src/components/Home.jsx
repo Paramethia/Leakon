@@ -6,7 +6,6 @@ import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//import { Progress } from '@/components/ui/progress';
 import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
 import './Extra styles.css';
@@ -278,6 +277,8 @@ const Home = () => {
     }
         
     requiredInvites -= invites;
+
+    const progressPercentage = (invites / (invites + requiredInvites)) * 100;
     
     const toggleTheme = () => {
         setIsDarkMode(!isDarkMode);
@@ -403,17 +404,23 @@ const Home = () => {
                                   )}
                                 </p>
                                 {tier < 8 && (
-                                    <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more {requiredInvites === 1 ? "invite" : "invites"} to get to tier <strong>{nextTier}</strong> </p>
+                                    <>
+                                       <p className="text-gray-500 dark:text-gray-400">You need <strong>{requiredInvites}</strong> more {requiredInvites === 1 ? "invite" : "invites"} to get to tier <strong>{nextTier}</strong> </p>
+                                        
+                                        <div className="mb-4">
+                                            <div className="flex items-center justify-between">
+                                                <span className="font-helvetica">Tier progress</span>
+                                                <span className="font-helvetica">{invites}/{invites + requiredInvites}</span>
+                                            </div>
+                                            <div className="w-full h-4 bg-gray-400 rounded-lg overflow-hidden">
+                                                <div
+                                                    className="h-full bg-blue-500"
+                                                    style={{ width: `${progressPercentage}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </>
                                 )}
-                                {/*
-                                <div className="grid gap-2">
-                                    <div className="flex items-center justify-between">
-                                        <span className="font-helvetica">Tier progress</span>
-                                        <span className="font-helvetica">{invites}/{requiredInvites}</span>
-                                    </div>
-                                    <Progress value={nextTier} aria-label="Referrals progress" />
-                                </div>
-                                */}
                             </div>
                             <div className="flex items-center justify-between">
                                 <div className="text-2xl font-bold text-gray-700 dark:text-white">Tier - {tier}</div>
