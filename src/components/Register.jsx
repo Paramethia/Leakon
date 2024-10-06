@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
 import { toast, ToastContainer, Bounce, Flip, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Register.css';
 
 const Header = () => {
@@ -40,6 +41,10 @@ const Register = () => {
 
     let alreadyReg = localStorage.getItem("username");
     let [warning, setWarning] = useState("");
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -172,12 +177,12 @@ const Register = () => {
                             />
                         </div>
                           <p Id="Email-note"> Ensure you remember your password if you don't put in your email. </p>
-                        <div className="mb-6 text-left">
+                        <div className="relative mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
                             </label>
                             <input
-                                type="password"
+                                type={passwordVisible ? "text" : "password"}
                                 minlength="4"
                                 maxlength="17"
                                 placeholder="Create password"
@@ -186,6 +191,13 @@ const Register = () => {
                                 onChange={(event) => setPassword(event.target.value)}
                                 required
                             />
+                            <button
+                                type="button"
+                                className="absolute inset-y-0 right-0 px-3 py-2"
+                                onClick={togglePasswordVisibility}
+                            >
+                                {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                            </button>
                         </div>
                         {warning && <p className="text-red-500 text-sm mt-1">{warning}</p>}
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Register </button>
