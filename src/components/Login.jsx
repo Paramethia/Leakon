@@ -105,7 +105,7 @@ const Login = () => {
                                 onChange={(event) => setPassword(event.target.value)}
                                 required
                             />
-                            <button type="button" className="absolute right-2 bottom-3 p-1" onClick={togglePasswordVisibility}>
+                            <button type="button" className="absolute right-2 bottom-2 p-1" onClick={togglePasswordVisibility}>
                                 {passwordVisible ? <FaEyeSlash /> : <FaEye />}
                             </button>
                         </div>
