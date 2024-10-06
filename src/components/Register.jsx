@@ -192,8 +192,8 @@ const Register = () => {
                                 onChange={(event) => setPassword(event.target.value)}
                                 required
                             />
-                            <button type="button" className="w-6 h-6 absolute right-3 bottom-2 p-1" onClick={togglePasswordVisibility}>
-                                {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                            <button type="button" className="absolute right-3 bottom-2 p-1" onClick={togglePasswordVisibility}>
+                                {passwordVisible ? <FaEyeSlash className="w-4 h-4" /> : <FaEye className="w-4 h-4" />}
                             </button>
                         </div>
                         {warning && <p className="text-red-500 text-sm mt-1">{warning}</p>}
