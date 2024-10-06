@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
 import { toast, ToastContainer, Bounce } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 
@@ -20,11 +21,16 @@ const Header = () => {
 const Login = () => {
     const {username, setName} = useContext(UserContext);
     const [password, setPassword] = useState('');
+    let [passwordVisible, setPasswordVisible] = useState(false);
     const navigate = useNavigate();
     let storedUsername = localStorage.getItem("username");
     const storedLink = localStorage.getItem("inviteLink");
 
-    const handleSubmit = (event) => {
+    const togglePasswordVisiblity = () => {
+        setPasswordVisibility(!passwordVsible)
+    }
+
+    const handleLogin = (event) => {
         event.preventDefault();
         
         axios.post('https://invicon-back-end.onrender.com/login', { username, password })
@@ -71,7 +77,7 @@ const Login = () => {
                 <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
                 <div className="bg-gray-300 p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
                     <h3 className="mb-6 text-2xl font-bold  text-dark">Log in</h3>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleLogin}>
                         <div className="mb-4 text-left">
                             <label htmlFor="exampleInputEmail1" className="block text-sm font-bold mb-2">
                                 Username:
@@ -86,12 +92,12 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div className="mb-6 text-left">
+                        <div className="relative mb-6 text-left">
                             <label htmlFor="exampleInputPassword1" className="block text-sm font-bold mb-2">
                                 Password:
                             </label>
                             <input
-                                type="password" 
+                                type={passwordVisible ? "text" : "password"}
                                 maxlength="17"
                                 placeholder="Enter password"
                                 className="form-control block w-full bg-gray-200 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -99,6 +105,9 @@ const Login = () => {
                                 onChange={(event) => setPassword(event.target.value)}
                                 required
                             />
+                            <button type="button" className="absolute inset-y-0 right-0 px-3 py-2" onClick={togglePasswordVisibility}>
+                                {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                            </button>
                         </div>
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md hover:bg-dark transition duration-300 ease-in-out transform hover:scale-105"> Log in </button>
                     </form>
