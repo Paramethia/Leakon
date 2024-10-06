@@ -26,6 +26,7 @@ const Register = () => {
     const {username, setName} = useContext(UserContext);
     const {email, setEmail} =  useContext(UserContext);
     const [password, setPassword] = useState('');
+    let [passwordVisible, setPasswordVisible] = useState(false);
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
 
