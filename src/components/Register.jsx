@@ -194,7 +194,7 @@ const Register = () => {
                             />
                             <button
                                 type="button"
-                                className="w-5 h-5 absolute inset-y-0 right-0 px-3 py-2"
+                                className="w-6 h-6 absolute right-2 bottom-2 py-2"
                                 onClick={togglePasswordVisibility}
                             >
                                 {passwordVisible ? <FaEyeSlash /> : <FaEye />}
