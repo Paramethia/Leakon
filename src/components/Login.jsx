@@ -21,7 +21,7 @@ const Header = () => {
 const Login = () => {
     const {username, setName} = useContext(UserContext);
     const [password, setPassword] = useState('');
-    let [passwordVisible, setPasswordVisible] = useState(false);
+    let [passwordVisible, setPasswordVisiblility] = useState(false);
     const navigate = useNavigate();
     let storedUsername = localStorage.getItem("username");
     const storedLink = localStorage.getItem("inviteLink");
