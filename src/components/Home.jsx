@@ -414,7 +414,7 @@ const Home = () => {
                                             </div>
                                             <div className="mt-2 max-w-[500px] h-5 border-black - border-2 bg-gray-300 rounded-lg overflow-hidden">
                                                 <div
-                                                    className="h-full bg-[#3e97ec]"
+                                                    className="h-full bg-blue-400"
                                                     style={{ width: `${progressPercentage}%` }}
                                                 ></div>
                                             </div>
