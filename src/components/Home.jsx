@@ -236,13 +236,13 @@ const PaymentOptions = ({ onClose }) => {
         }
     }
 
-    if (ppBuy || bitBuy || otherBuy)  {
-        buying()
-    }
-
     const ppBuying = () => { ppBuy = true }
     const bitBuying = () => { bitBuy = true }
     const otherBuying = () => { otherBuy = true }
+
+    if (ppBuy || bitBuy || otherBuy)  {
+        buying()
+    }
     
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
@@ -253,16 +253,16 @@ const PaymentOptions = ({ onClose }) => {
                 <h2 className="text-lg font-bold text-gray-700 dark:text-white mb-4 text-center">Select Payment Method</h2>
                 <div className="grid gap-4">
                     <a href="https://www.paypal.com/paypalme/KyrinKompi" target="_blank">
-                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600" onClick={() => ppBuying()}> <FaPaypal className="w-6 h-6 mr-2 inline" /> PayPal </button>
+                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600" onClick={ppBuying}> <FaPaypal className="w-6 h-6 mr-2 inline" /> PayPal </button>
                     </a>
                     <p className="text-xs text-black">
                         <span className="font-bold">NOTE:</span> Ensure you include a message with your username when sending the money.
                     </p>
                     <a href="https://t.me/daemozon" target="_blank">
-                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600" onClick={() => bitBuying()}> <FaBitcoin className="w-6 h-6 mr-2 inline" /> Crypto </button>
+                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600" onClick={bitBuying}> <FaBitcoin className="w-6 h-6 mr-2 inline" /> Crypto </button>
                     </a>
                     <a href="https://t.me/daemozon">
-                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600" onClick={() => otherBuying()}> <FaWallet className="w-6 h-6 mr-2 inline" /> Other </button>
+                       <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600" onClick={otherBuying}> <FaWallet className="w-6 h-6 mr-2 inline" /> Other </button>
                     </a>
                 </div>
             </div>
