@@ -311,21 +311,13 @@ const Home = () => {
 
     const progressPercentage = (invites / (invites + requiredInvites)) * 100;
     
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
-    };
+    const toggleTheme = () => { setIsDarkMode(!isDarkMode) }
 
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
+    const toggleSidebar = () => { setIsSidebarOpen(!isSidebarOpen) }
 
-    const payOptionsOpen = () => {
-        setIsPaymentConOpen(true);
-    }
+    const payOptionsOpen = () => { setIsPaymentConOpen(true) }
 
-    const payOptionsClose = () => {
-        setIsPaymentConOpen(false)
-    }
+    const payOptionsClose = () => { setIsPaymentConOpen(false) }
 
     useEffect(() => {
 
