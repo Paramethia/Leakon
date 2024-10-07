@@ -238,16 +238,16 @@ const PaymentOptions = ({ onClose }) => {
     }
 
     const ppBuying = () => { 
-        buying();
-        ppBuy = true 
+        ppBuy = true;
+        buying()
     }
     const bitBuying = () => { 
-        buying();
-        bitBuy = true 
+        bitBuy = true;
+        buying()
     }
     const otherBuying = () => { 
-        buying();
-        otherBuy = true 
+        otherBuy = true;
+        buying()
     }
     
     return (
