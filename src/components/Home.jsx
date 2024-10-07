@@ -235,14 +235,20 @@ const PaymentOptions = ({ onClose }) => {
             console.error(err);
         }
 
-        if (ppBuy === true || bitBuy === true || otherBuy === true)  {
-           buying()
-        }
     }
 
-    const ppBuying = () => { ppBuy = true }
-    const bitBuying = () => { bitBuy = true }
-    const otherBuying = () => { otherBuy = true }
+    const ppBuying = () => { 
+        buying();
+        ppBuy = true 
+    }
+    const bitBuying = () => { 
+        buying();
+        bitBuy = true 
+    }
+    const otherBuying = () => { 
+        buying();
+        otherBuy = true 
+    }
     
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-8">
