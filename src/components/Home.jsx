@@ -234,11 +234,10 @@ const PaymentOptions = ({ onClose }) => {
         } catch (err) {
             console.error(err);
         }
+    }
 
-        if (ppBuy || bitBuy || otherBuy)  {
-           buying()
-        }
-
+    if (ppBuy || bitBuy || otherBuy)  {
+        buying()
     }
 
     const ppBuying = () => { ppBuy = true }
