@@ -220,7 +220,7 @@ const PaymentOptions = ({ onClose }) => {
 
     const buying = async () => {
         try {
-            const response = await axios.post("https://invicon-back-end.onrender.com/tier-buy", {username})
+            const response = await axios.post("https://invicon-back-end.onrender.com/tier-buy", {username, ppBuy, bitBuy, otherBuy})
 
             if (response.data === "User chose paypal payment method.") {
                 console.log(response.data)
