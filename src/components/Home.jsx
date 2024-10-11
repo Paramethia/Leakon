@@ -468,7 +468,7 @@ const Home = () => {
             
                         <ul>
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
-                            <li> 44MB folder of leaked OF & snap chat images. </li>
+                            <li> 442MB folder of leaked OF & snap chat images. </li>
                             <li> 4GB+ folder of leaked OF & snap chat videos. </li>
                         </ul>
             
@@ -476,13 +476,13 @@ const Home = () => {
             
                         <ul>
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
-                            <li> 964 folder of leaked images. </li>
+                            <li> 964MB folder of leaked images. </li>
                             <li> 8GB+ folder of leaked videos. </li>
                         </ul>
             
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier: </h2>
             
-                        <ul>*
+                        <ul>
                             <li> Previous rewards + <a href="https://www.instagram.com/AriKytsya/" target="_blank">Ari Kytsya</a>, <a href="https://www.instagram.com/puppiwii/?hl=en" target="_blank">puppiwii</a> & <a href="https://www.instagram.com/_hannah_0w0/?hl=en" target="_blank">hannah_owo</a>. </li>
                             <li> 1.4 folder of leaked images. </li>
                             <li> 16GB+ folder of leaked videos. </li>
@@ -492,7 +492,7 @@ const Home = () => {
             
                         <ul>
                             <li> Previous rewards + <a href="https://www.instagram.com/soogsx__/?hl=en" target="_blank">Soogsx</a>, <a href="https://www.instagram.com/breckiehill/?hl=en" target="_blank">Breckie Hill</a> & <a href="https://www.instagram.com/addisonivvy/?hl=en" target="_blank">Addison Ivy</a>. </li>
-                            <li> 2.1GB+ folder of leaked images </li>
+                            <li> 2.1GB folder of leaked images </li>
                             <li> 17GB+ folder of leaked videos. </li>
                         </ul>
 
@@ -508,7 +508,6 @@ const Home = () => {
             
                         <ul>
                             <li> Previous rewards + over 40 OF models including <a href="https://www.instagram.com/realskybri/?hl=en" target="_blank">Sky Bri</a>. </li>
-                            <li> Snap chat teen nudes </li>
                             <li> 34GB+ folder of leaked images & videos. </li>
                         </ul>
 
