@@ -277,7 +277,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [invites, setInvites] = useState();
     const [tier, setTier] = useState();
-    let requiredInvites = 4;
+    let requiredInvites = 5;
     let nextTier = 1;
     let {username} = useContext(UserContext);
     const darkModeStyles = { backgroundColor: '#101424' };
@@ -302,7 +302,7 @@ const Home = () => {
     } else if (invites >= 10 || tier === 2) {
         requiredInvites = 20;
         nextTier = 3;
-    } else if (invites >= 4 || tier === 1) {
+    } else if (invites >= 5 || tier === 1) {
         requiredInvites = 10;
         nextTier = 2;
     }
@@ -339,16 +339,14 @@ const Home = () => {
     }, [username]);
 
     const availableTiers = [
-        { tier: 'Tier 1', invites: 4, price: 8 },
+        { tier: 'Tier 1', invites: 5, price: 8 },
         { tier: 'Tier 2', invites: 10, price: 15 },
         { tier: 'Tier 3', invites: 20, price: 25 },
-        { tier: 'Tier 4', invites: 35, price: 40 }
-        /*
+        { tier: 'Tier 4', invites: 35, price: 40 },
         { tier: 'Tier 5', invites: 50, price: 60 },
         { tier: 'Tier 6', invites: 70, price: 80 },
         { tier: 'Tier 7', invites: 85, price: 100 },
         { tier: 'Tier 8', invites: 100, price: 120 }
-        */
     ];
 
     // Filter out the tiers that the user has already unlocked
@@ -403,7 +401,7 @@ const Home = () => {
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger leaks. <br />
                         Alternatively, you can buy the tiers to get instant access to the leaks if you are unable to invite people. Prices will be shown below. <br />
-                        You can check the previews of what rewards you will get in the <Link id="R-page" to="/leaks"> leaks page </Link>.
+                        You can check the previews of what leaks you will get in the <Link id="R-page" to="/leaks"> leaks page </Link>.
                     </p>
                 </div> 
                 <div className="max-w-3xl mx-auto grid gap-6">
@@ -469,53 +467,35 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> First tier: </h2>
             
                         <ul>
-                            <li> 422MB folder of leaked snap chat nudes. </li>
-                            <li> 4GB+ folder of leaked OF content. </li>
-                            {/*
                             <li> <a href="https://www.instagram.com/esterbron/?hl=en" target="_blank">Esterbron</a> OF leaks. </li>
-                            <li> 344MB folder of leaked OF & snap chat images. </li>
+                            <li> 44MB folder of leaked OF & snap chat images. </li>
                             <li> 4GB+ folder of leaked OF & snap chat videos. </li>
-                            */}
                         </ul>
             
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Second tier: </h2>
             
                         <ul>
-                            <li> 937MB folder of leaked snap chat nudes. </li>
-                            <li> 8GB+ folder of leaked OF content. </li>
-                            {/*
                             <li> Previous reward + <a href="https://www.tiktok.com/@dreamy_moo?lang=en" target="_blank">dreamymoo</a> & <a href="https://www.instagram.com/melztube/?hl=en" target="_blank">melztube</a> leaks. </li>
-                            <li> 464 folder of leaked images. </li>
+                            <li> 964 folder of leaked images. </li>
                             <li> 8GB+ folder of leaked videos. </li>
-                            */}
                         </ul>
             
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Third tier: </h2>
             
-                        <ul>
-                            <li> 1.4GB folder of leaked snap chat nudes. </li>
-                            <li> 14GB+ folder of leaked OF content. </li>
-                            <li> Weekly updates. </li>
-                            {/*
+                        <ul>*
                             <li> Previous rewards + <a href="https://www.instagram.com/AriKytsya/" target="_blank">Ari Kytsya</a>, <a href="https://www.instagram.com/puppiwii/?hl=en" target="_blank">puppiwii</a> & <a href="https://www.instagram.com/_hannah_0w0/?hl=en" target="_blank">hannah_owo</a>. </li>
-                            <li> 746MB folder of leaked images. </li>
+                            <li> 1.4 folder of leaked images. </li>
                             <li> 16GB+ folder of leaked videos. </li>
-                            */}
                         </ul>
             
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fourth tier: </h2>
             
                         <ul>
-                            <li> 20GB+ folder of leaks. </li>
-                            <li> VIP access to best snap chat and only fans leaks. </li>
-                            <li> Daily updates. </li>
-                            {/*
                             <li> Previous rewards + <a href="https://www.instagram.com/soogsx__/?hl=en" target="_blank">Soogsx</a>, <a href="https://www.instagram.com/breckiehill/?hl=en" target="_blank">Breckie Hill</a> & <a href="https://www.instagram.com/addisonivvy/?hl=en" target="_blank">Addison Ivy</a>. </li>
-                            <li> 1GB+ folder of leaked images </li>
+                            <li> 2.1GB+ folder of leaked images </li>
                             <li> 17GB+ folder of leaked videos. </li>
-                            */}
                         </ul>
-                        {/*
+
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Fifth tier: </h2>
             
                         <ul>
@@ -527,7 +507,7 @@ const Home = () => {
                         <h2 className="text-2xl text center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}> Sixth tier: </h2>
             
                         <ul>
-                            <li> Previous rewards + Multi-pack folders of many OFs models. </li>
+                            <li> Previous rewards + over 40 OF models including <a href="https://www.instagram.com/realskybri/?hl=en" target="_blank">Sky Bri</a>. </li>
                             <li> Snap chat teen nudes </li>
                             <li> 34GB+ folder of leaked images & videos. </li>
                         </ul>
@@ -543,9 +523,9 @@ const Home = () => {
             
                         <ul>
                             <li> All of the above rewards + <a href="https://www.instagram.com/sophieraiin/" target="_blank">Sophie Rain</a>, <a href="https://x.com/bunnydelphine" target="_blank">Belle Delphine</a> & a lot more. </li>
-                            <li> 200GB+ folder of leaked images & videos. </li>
+                            <li> 88GB+ folder of leaked images & videos. </li>
                         </ul>
-                        */}
+
                     </div>
 
                     {tier < 8 && (
