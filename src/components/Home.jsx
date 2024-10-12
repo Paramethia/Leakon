@@ -27,10 +27,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     
     if (inviteLink) code = inviteLink.slice(-8);
 
-    const logOut = () => { 
-        localStorage.removeItem('username');
-        localStorage.removeItem('inviteLink');
-    }
+    const logOut = () => { localStorage.removeItem('username') }
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
