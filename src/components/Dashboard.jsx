@@ -6,7 +6,7 @@ import { UserContext } from './UserContext';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiLogOut as LoutIccon, FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import './Extra styles.css';
 
@@ -22,6 +22,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   const {username} = useContext(UserContext);
   let inviteLink = localStorage.getItem('inviteLink');
   let code = inviteLink.slice(-8);
+
+  const logOut = () => { localStorage.removeItem("username") }
 
   const handleCopyReferralCode = () => {
     navigator.clipboard.writeText(inviteLink);
@@ -64,10 +66,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <HomeIcon className="h-4 w-4" /> Home
         </Link>
         <Link to="/leaks" className="flex items-center text-white  gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
-                    <CameraIcon className="h-4 w-4" /> Leaks
-                </Link>
+            <CameraIcon className="h-4 w-4" /> Leaks
+        </Link>
         <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'underline' }}>
-          <UsersIcon className="h-4 w-4" /> Invitations
+          <UsersIcon className="h-4 w-4" /> Dashboard
+        </Link>
+        <Link to="/login" onClick={logOut} className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+            <LoutIcon className="h-4 w-4" /> Log out
         </Link>
       </nav>
 
