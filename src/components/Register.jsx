@@ -40,7 +40,7 @@ const Register = () => {
     
     // To check if the user already has an account on the device to prevent creating and inviting multiple acccount on the same device.
 
-    let alreadyReg = localStorage.getItem("username");
+    let alreadyReg = localStorage.getItem("username") || localStorage.getItem("inviteLink");
     let [warning, setWarning] = useState("");
 
     const togglePasswordVisibility = () => {
