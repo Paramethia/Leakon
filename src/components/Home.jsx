@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+ import React, { useState, useContext, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
@@ -6,7 +6,7 @@ import { UserContext } from './UserContext';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer, Bounce, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiLogin as LogIcon, FiLogOut as OutIcon,  FiCopy as CopyIcon } from 'react-icons/fi';
+import { FiHome as HomeIcon, FiCamera as CameraIcon, FiUsers as UsersIcon, FiMail as ConIcon, FiLogOut as LoutIcon,  FiCopy as CopyIcon } from 'react-icons/fi';
 import { FaMoon, FaSun, FaBars, FaTimes, FaPaypal, FaBitcoin, FaWallet, FaTimesCircle, FaDiscord } from 'react-icons/fa';
 import './Extra styles.css';
 
@@ -21,13 +21,13 @@ const Header = () => {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const {username} = useContext(UserContext);
+    let storedUsername = localStorage.getItem('usernamke");
     let inviteLink = localStorage.getItem('inviteLink');
     let code = "ABC123";
-    let [hovered, setHovered] = useState(false);
-
-    const hovering = () => { setHovered(hovered) }
     
     if (inviteLink) code = inviteLink.slice(-8);
+
+    const logOut = () => { localStorage.removeItem('username') }
 
     const handleCopyReferralCode = () => {
         navigator.clipboard.writeText(inviteLink);
@@ -75,8 +75,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link to="/dashboard" className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
                     <UsersIcon className="h-4 w-4" /> Dashboard
                 </Link>
-                <Link to="/login" onMouseOver={() => hovering() } className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
-                    {hovered ? <LoginIcon className="h-4 w-4" /> : <OutIcon className="h-4 w-4" /> } Log out
+                <Link to="/login" onClick={logOut} className="flex text-white items-center gap-2 rounded-md px-3 py-2 font-helvetica transition-colors H-effect" style={{ textDecoration: 'none' }}>
+                    <LoutIcon className="h-4 w-4" /> Log out
                 </Link>
             </nav>
             
