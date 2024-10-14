@@ -529,7 +529,7 @@ const Home = () => {
             
                         <ul>
                             <li> All of the above rewards + <a href="https://www.instagram.com/sophieraiin/" target="_blank">Sophie Rain</a>, <a href="https://x.com/bunnydelphine" target="_blank">Belle Delphine</a> & a lot more. </li>
-                            <li> 88GB+ folder of leaked images & videos. </li>
+                            <li> 89GB+ folder of leaked images & videos. </li>
                         </ul>
 
                     </div>
