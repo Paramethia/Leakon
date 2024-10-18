@@ -424,7 +424,7 @@ const playorpause = (index) => {
                <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Coming soon </p>
 
               <center>
-                    <button id="watch-ad-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={}>
+                    <button id="watch-ad-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                           Watch an ad 📺
                     </button>
                     {/*[1, 2, 3, 4, 5, 6, 7, 8].map() => (
