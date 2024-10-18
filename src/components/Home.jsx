@@ -407,7 +407,7 @@ const Home = () => {
                     </h1>
                     <p className="text-gray-500" style={{ color: isDarkMode ? '#a0aec0' : '#4a5568' }}>
                         You invite people using your own generated invite link. The more invites you get, the more tiers you unlock to earn better and bigger leaks. <br />
-                        Alternatively, you can watch adds to get a few free rewards OR buy tiers to get instant access to the leaks if you are unable to invite people. Prices will be shown below. <br />
+                        Alternatively, you can watch ads to get a few rewards OR buy tiers to get instant access to the leaks if you are unable to invite people. Prices will be shown below. <br />
                         You can check the previews of what leaks you will get in the <Link id="R-page" to="/leaks"> leaks page </Link>. You can also access your unlocked rewards there.
                     </p>
                 </div> 
