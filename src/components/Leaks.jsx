@@ -139,9 +139,13 @@ const Leaks = () => {
   const lightModeStyles = { backgroundColor: '#ffffff' };
   const [spoilers, setSpoilers] = useState([]);
   const [isPaymentConOpen, setIsPaymentConOpen] = useState(false);
+  const adsWatched = localStorage.getItem("adsWatched");
+  let seconds = 0;
+  let minutes = 0;
   let moan = new Audio('ahh sound effect.mp3');
 
   if (storedUsername) username = storedUsername;
+  if (!adsWatched) adsWatched = 0;
 
   let NotLogged = () => {
         toast.error("You are not logged in.", {
@@ -415,17 +419,23 @@ const playorpause = (index) => {
                   Extra Free rewards
               </h2>
 
+              <br />
+
+               <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Coming soon </p>
+
               <center>
-                    <p className="text-center text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Coming soon </p>
-                    {/*[1, 2, 3, 4, 5, 6, 7, 8].map((tier) => (
-                      currentTier >= tier && (
+                    <button id="watch-ad-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={}>
+                          Watch an ad 📺
+                    </button>
+                    {/*[1, 2, 3, 4, 5, 6, 7, 8].map() => (
+                      adsWatched >= 8 && (
 
                       <div key={tier} className="Tier-reward text-center shadow rounded-lg p-6 flex flex-col">
-                        <h2 className="text-lg font-bold text-2xl text-green-600"> Tier {tier} unlocked 🔓 </h2>
+                        <h2 className="text-lg font-bold text-2xl text-lime-600"> Reward unlocked 🔓 </h2>
                         <p className="text-gray-500 font-semibold dark:text-gray-400"> Download your reward </p>
                         <p className="text-gray-500 dark:text-gray-400"> or watch it online </p>
                         <a
-                          href={rewardLinks[tier]}
+                          href={advertLinks[adsWatched]}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-center bg-[#282434] text-white font-bold py-2 px-4 rounded transition-colors hover:bg-[#3c3a4e]"
@@ -438,7 +448,7 @@ const playorpause = (index) => {
 
                     )))}
 
-                    {currentTier < 8 && (
+                    {adsWatched < 12 && (
                         <button id="tier-buy-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md" onClick={payOptionsOpen}>
                           Buy a tier 🧧
                         </button>
