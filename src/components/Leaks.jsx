@@ -421,7 +421,7 @@ const playorpause = (index) => {
 
               <br />
 
-               <p className="text-xl text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Coming soon </p>
+               <p className="text-xl text-center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Coming soon </p>
 
               <center>
                     <button id="watch-ad-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
