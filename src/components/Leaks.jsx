@@ -329,7 +329,7 @@ const playorpause = (index) => {
         </h1>
         <p className="text-center text-2xl" style={{ color: isDarkMode ? '#ffffff' : '#1a202c' }}>
           These are previews of leaked only fans content & snap chat nudes we have. <br />
-          You can get more than 30GB worth of videos in a single tier you unlock. <br />
+          You can get more than 50GB worth of videos in a single tier you unlock. <br />
           Here are the few previews below <br /> ⬇️
         </p>
 
@@ -423,6 +423,8 @@ const playorpause = (index) => {
 
                <p className="text-xl text-center text-gray-500" style={{ color: isDarkMode ? '#ffffff' : '#1a202c'}}> Coming soon </p>
 
+              <br />
+                
               <center>
                     <button id="watch-ad-button" className="bg-gray-500 hover:bg-blue-500 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-md">
                           Watch an ad 📺
