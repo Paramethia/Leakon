@@ -113,10 +113,10 @@ const PaymentOptions = ({ onClose }) => {
                     <p className="text-xs text-black">
                         <span className="font-bold">NOTE:</span> Ensure you include a message with your username when sending the money.
                     </p>
-                    <a href="https://t.me/daemozon" target="_blank">
+                    <a href="https://www.instagram.com/poison8x/profilecard/?igsh=MWRnejFnNzRwN3U3OA==" target="_blank">
                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaBitcoin className="w-6 h-6 mr-2 inline" /> Crypto </button>
                     </a>
-                    <a href="https://t.me/daemozon">
+                    <a href="https://www.instagram.com/poison8x/profilecard/?igsh=MWRnejFnNzRwN3U3OA==" target="_blank">
                        <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"> <FaWallet className="w-6 h-6 mr-2 inline" /> Other </button>
                     </a>
                 </div>
