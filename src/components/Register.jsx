@@ -14,7 +14,7 @@ import './Register.css';
 const Header = () => {
     return ( 
         <Helmet>
-            <title> Invicon - register </title>
+            <title> Leakon - register </title>
         </Helmet>
     );
 };
@@ -143,7 +143,7 @@ const Register = () => {
                <video src="https://res.cloudinary.com/doxalk3ms/video/upload/v1726400529/Preview_slide_show_shortened_hfs3cg.mp4" type="video/mp4" autoPlay muted loop playsInline> You browser does not support the video tag. </video>
             </div>
             <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-400">
-                <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
+                <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Leakon</h1>
                 <div className="bg-gray-300 p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
                     <h3 className="mb-6 text-2xl font-bold text-dark">Register</h3>
                     <form onSubmit={handleRegister}>
@@ -200,7 +200,6 @@ const Register = () => {
                         <button type="submit" className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Register </button>
                     </form>
                     <p className="my-4 mx-2">Already have an account? <Link to='/login' className='text-dark'>Log in</Link></p>
-                    {/* <button onClick={clearCache} className="w-full bg-dark text-white py-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105"> Clear cache </button> */}
                 </div>
             </div>
         </div>
