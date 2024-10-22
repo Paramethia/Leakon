@@ -17,6 +17,10 @@ video {
     width: 380px;
     height: 580px;
 }
+
+h1 {
+    font-family: Roboto
+}
   
 #Email-note {
     font-size: 12px;
