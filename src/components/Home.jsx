@@ -13,7 +13,7 @@ import './Extra styles.css';
 const Header = () => {
     return ( 
         <Helmet>
-            <title> Invicon - home </title>
+            <title> Leakon - home </title>
             <meta name="description" content="Welcome to Invicon" />
         </Helmet>
     );
@@ -387,7 +387,7 @@ const Home = () => {
                     <Link to="/home" style={{ textDecoration: 'none' }} className="Logo flex-1">
                         <div className="text-white flex items-center gap-2 justify-center md:justify-start">
                             <img src="Invicon top bar logo.png" alt="Invicon Logo" className="w-8 h-8" />
-                            <h1 className="text-2xl font-bold font-helvetica">Invicon</h1>
+                            <h1 className="text-2xl font-bold font-helvetica">Leakon</h1>
                         </div>
                     </Link>
                     <div className="Theme">
