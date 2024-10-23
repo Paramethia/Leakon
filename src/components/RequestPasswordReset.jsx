@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Header = () => {
     return (
         <Helmet>
-            <title> Invicon - reset request </title>
+            <title> Leakon - reset request </title>
         </Helmet>
     );
 };
@@ -73,7 +73,7 @@ const RequestPasswordReset = () => {
     <div className="flex h-screen">
       <div className="hidden md:block md:w-1/2 bg-auto" style={{ backgroundImage: 'url(https://res.cloudinary.com/dw7w2at8k/image/upload/v1720626946/Home_1_d6rirw.png)' }}></div>
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-100">
-          <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Invicon</h1>
+          <h1 className="block md:hidden mb-6 text-4xl font-bold text-dark">Leakon</h1>
           <div className="bg-white p-8 rounded shadow-md w-3/4 animate__animated animate__fadeInRight">
       
             <form onSubmit={handleSubmit}>
